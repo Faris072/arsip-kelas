@@ -20,6 +20,13 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/home', function () {
+    return view('home',[
+        'css' => 'css/home.css',
+        'js' => ''
+    ]);
+});
+
 Route::get('/angkatan', function(){
     return view('angkatan', [
         'css' => 'css/angkatan.css',

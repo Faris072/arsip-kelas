@@ -35,6 +35,14 @@ $(document).ready(function () {
         }
     });
 
+        $.ajax({
+            type: 'GET',
+            url: '/home',
+            success: function(data){
+                $('#content').html(data);
+                $('.loading').css('display', 'none');
+            }
+        });
 
     $('.sidebar-menu').on('click', function (e) {
         // e.preventDefault();
@@ -58,7 +66,8 @@ $(document).ready(function () {
             // url : window.location.pathname,//pathname untuk mengambil url
             url: "/" + url1,
             beforeSend: function(){//menampilkan loading sebelum ajax dikirim
-                $('#content').addClass('loading');
+                $('#content').html('');
+                $('.loading').css('display', 'block');
             },
             // dataType : "Json",//menggunakan dataType hanya untuk benar2 menggunakan json
             success: function (data) { //data adalah responseText nya kalau di manual
@@ -68,6 +77,7 @@ $(document).ready(function () {
                     let js = $('#linkJS').text();
                     $('#css').attr('href', css);
                     $('#js').attr('src', js);
+                    $('.loading').css('display', 'none');
                 });
                 // document.getElementById('content').innerHTML = data;
             },

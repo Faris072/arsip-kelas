@@ -5,10 +5,11 @@
             <h5>nama</h5>
             <h6>Guru Matematika</h6>
         </center>
+        <hr>
     </div>
     <div class="menu-sidebar">
         <ul>
-            <li><a href="/" class="sidebar-menu" data-url="/" style="background-color: rgba(255,255,255,0.5); width:90%; margin:auto;"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#" class="sidebar-menu" data-url="home" style="background-color: rgba(255,255,255,0.5); width:90%; margin:auto;"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="#" class="sidebar-menu" data-url="angkatan" ><i class="fas fa-user-graduate"></i> Angkatan</a></li>
             <li><a href="#" class="sidebar-menu" data-url="angkatan" ><i class="fas fa-star"></i> Favorit</a></li>
             <li><a href="#" class="sidebar-menu" data-url="angkatan" ><i class="fas fa-user-cog"></i> Setting Kelas</a></li>
