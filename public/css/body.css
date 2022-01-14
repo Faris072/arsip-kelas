@@ -2,6 +2,10 @@
     font-family: 'Mulish', sans-serif;
 }
 
+.loading{
+    background-image: url('asets/loading.gif');
+}
+
 body{
     overflow: hidden;
     background-color:lightgray;

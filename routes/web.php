@@ -20,10 +20,10 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/pesananku', function(){
-    return view('pesananku', [
-        'css' => 'css/pesananku.css',
-        'js' => 'js/pesananku.js'
+Route::get('/angkatan', function(){
+    return view('angkatan', [
+        'css' => 'css/angkatan.css',
+        'js' => 'js/angkatan.js'
     ]);
 });
 
