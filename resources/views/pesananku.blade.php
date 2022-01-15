@@ -1,5 +1,4 @@
 <span style="display: none;" id="linkCSS"><?php echo $css ?></span>
-<span style="display: none;" id="linkJS"><?php echo $js ?></span>
 <br>
 <center>
     <div class="pesananku">
@@ -67,3 +66,5 @@
         </div>
     </div>
 </center>
+{{-- js --}}
+<script id="js" src="js/pesananku.js"></script>

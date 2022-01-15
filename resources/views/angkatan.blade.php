@@ -1,5 +1,4 @@
 <span style="display: none;" id="linkCSS"><?php echo $css ?></span>
-<span style="display: none;" id="linkJS"><?php echo $js ?></span>
 @for ($j=0;$j<5;$j++)
 <div class="kategori pb-2 mt-3 pr-3" data-toggle="collapse" data-target="#akt2020">
     <table width="100%">
@@ -24,8 +23,7 @@
                         <div class="btn-card d-flex" style="justify-content:space-between;">
                             <a href="#" class="btn btn-primary p-1" style="font-size:100%; padding:0.2vw;"
                                 data-toggle="modal" data-target="#detail">DETAIL</a>
-                            <a href="#" class="btn btn-success p-1"
-                                style="font-size:100%; padding:0.2vw; right:0;">MASUK Kelas</a>
+                            <a href="#" class="akt-ruangkelas btn btn-success p-1" data-url="/ruangkelas" style="font-size:100%; padding:0.2vw; right:0;">MASUK Kelas</a>
                         </div>
                     </div>
                 </div>
@@ -102,3 +100,5 @@
     </div>
 </div>
 @endfor
+{{-- js --}}
+<script id="js" src="js/angkatan.js"></script>

@@ -1,6 +1,5 @@
 <br>
 <span style="display: none;" id="linkCSS"><?php echo $css; ?></span>
-    <span style="display: none;" id="linkJS"><?php echo $js; ?></span>
     <div class="kategori pb-2 pr-3">
         <table width="100%">
             <tr>

@@ -15,15 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome',[
-        'css' => 'css/home.css',
-        'js' => ''
+        'css' => 'css/home.css'
     ]);
 });
 
 Route::get('/home', function () {
     return view('home',[
-        'css' => 'css/home.css',
-        'js' => ''
+        'css' => 'css/home.css'
     ]);
 });
 
@@ -37,6 +35,17 @@ Route::get('/angkatan', function(){
 Route::get('/profil', function(){
     return view('profil', [
         'css' => '',
-        'js' => ''
+    ]);
+});
+
+Route::get('/ruangkelas', function(){
+    return view('ruangkelas', [
+        'css' => '',
+    ]);
+});
+
+Route::get('/favorit', function(){
+    return view('angkatan', [
+        'css' => 'css/favorit.css',
     ]);
 });

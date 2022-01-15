@@ -1,5 +1,4 @@
 <span style="display: none;" id="linkCSS"><?php echo $css ?></span>
-<span style="display: none;" id="linkJS"><?php echo $js ?></span>
 <div class="container">
     <div class="aksi mt-4">
         <a href="#" class="btn btn-success">Setting Profil</a>
@@ -51,3 +50,5 @@
         </table>
     </div>
 </div>
+{{-- js --}}
+<script id="js" src="js/profil.js"></script>

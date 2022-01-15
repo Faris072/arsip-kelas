@@ -1,3 +1,5 @@
+/* css tidak perlu di tulis manual karena dia bisa otomatis mencari sebelum halaman di load */
+/* css bisa merefresh otomatis di sumbernya dengan hanya mengganti alamat src saja melalui js */
 * {
     font-family: 'Mulish', sans-serif;
 }
