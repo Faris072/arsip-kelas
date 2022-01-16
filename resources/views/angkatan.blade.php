@@ -1,3 +1,6 @@
+<div class="paths p-3 bg-light">
+    <a href="#" class="path" data-url="/home" onclick="klikhome()">Home</a> / <a href="#" class="path" data-url="/angkatan">Angkatan</a>
+</div>
 <span style="display: none;" id="linkCSS"><?php echo $css ?></span>
 @for ($j=0;$j<5;$j++)
 <div class="kategori pb-2 mt-3 pr-3" data-toggle="collapse" data-target="#akt2020">

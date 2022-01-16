@@ -71,9 +71,7 @@ $('.sidebar-menu').on('click', function (e) {
             $('#content').html(data);
             $(window).ajaxComplete(function () { //jika ajax sudah selesai maka jalankan perintah berikut
                 let css = $('#linkCSS').text();
-                let js = $('#linkJS').text();
                 $('#css').attr('href', css);
-                $('#js').attr('src', js);
                 $('.loading').css('display', 'none');
             });
             // document.getElementById('content').innerHTML = data;

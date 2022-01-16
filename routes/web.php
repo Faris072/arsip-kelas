@@ -40,7 +40,7 @@ Route::get('/profil', function(){
 
 Route::get('/ruangkelas', function(){
     return view('ruangkelas', [
-        'css' => '',
+        'css' => 'css/ruangkelas.css',
     ]);
 });
 

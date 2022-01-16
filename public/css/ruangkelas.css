@@ -1,0 +1,21 @@
+.items{
+    justify-content:space-around;
+}
+
+.item{
+    background-color:white;
+    padding:2px;
+    width:20%;
+    height:20%;
+    border-radius:10px;
+    padding
+}
+
+.item img{
+    border-radius:10px;
+}
+
+.settingkelas{
+    background-color:blue;
+    padding:2%;
+}

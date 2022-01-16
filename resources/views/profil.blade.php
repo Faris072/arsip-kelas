@@ -1,3 +1,6 @@
+<div class="paths p-3 bg-light">
+    <a href="#" class="path" data-url="/home" onclick="klikhome()">Home</a> / <a href="#" class="path" data-url="/profil">Profil</a>
+</div>
 <span style="display: none;" id="linkCSS"><?php echo $css ?></span>
 <div class="container">
     <div class="aksi mt-4">

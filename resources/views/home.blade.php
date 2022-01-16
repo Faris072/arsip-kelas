@@ -1,3 +1,6 @@
+<div class="paths p-3 bg-light">
+    <a href="#" class="path" data-url="/home">Home</a>
+</div>
 <br>
 <span style="display: none;" id="linkCSS"><?php echo $css; ?></span>
     <div class="kategori pb-2 pr-3">
@@ -125,3 +128,5 @@
             </div>
         @endwhile
     </div>
+{{-- js --}}
+<script src="js/home.js"></script>

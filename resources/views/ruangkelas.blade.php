@@ -1,6 +1,30 @@
+<div class="paths p-3 bg-light">
+    <a href="#" class="path" data-url="/home" onclick="klikhome();">Home</a> / <a href="#" class="path" data-url="/angkatan">Angkatan</a> / <a href="#" class="path" data-url="/ruangkelas">Ruang Kelas</a>
+</div>
+<br>
 <span style="display: none;" id="linkCSS"><?php echo $css ?></span>
 <div class="ruangkelas">
     <div class="settingkelas">
+        <div class="items d-flex">
+            <div class="item">
+                <div class="image">
+                    <img src="storage/default/konten.jpg" alt="" style="width:100%">
+                </div>
+                <div class="ket">
+                    <p>Diam</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image">
+                    <img src="storage/default/konten.jpg" alt="" style="width:100%">
+                </div>
+                <div class="ket">
+                    <p>Diam</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kelas">
         <div class="row">
             <div class="col-3">
                 <div class="card">
@@ -17,4 +41,4 @@
     </div>
 </div>
 {{-- js --}}
-<script id="js" src="js/ruangkelas.js"></script>
+<script src="js/ruangkelas.js"></script>
