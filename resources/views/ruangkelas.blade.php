@@ -6,22 +6,25 @@
 <div class="ruangkelas">
     <div class="settingkelas">
         <div class="items d-flex">
-            <div class="item">
+            @for ($i=0;$i<10;$i++)
+            <div class="item m-3">
                 <div class="image">
                     <img src="storage/default/konten.jpg" alt="" style="width:100%">
                 </div>
-                <div class="ket">
-                    <p>Diam</p>
+                <div class="ket pt-3">
+                    <center><p>Diam</p></center>
                 </div>
             </div>
-            <div class="item">
-                <div class="image">
-                    <img src="storage/default/konten.jpg" alt="" style="width:100%">
-                </div>
-                <div class="ket">
-                    <p>Diam</p>
-                </div>
-            </div>
+            @endfor
+        </div>
+        <div class="navslide">
+            <center>
+                <form>
+                    <input type="radio" name="radio" checked="checked">
+                    <input type="radio" name="radio">
+                    <input type="radio" name="radio">
+                </form>
+            </center>
         </div>
     </div>
     <div class="kelas">

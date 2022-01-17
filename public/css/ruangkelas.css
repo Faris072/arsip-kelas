@@ -1,14 +1,17 @@
 .items{
-    justify-content:space-around;
+    flex-wrap: nowrap;
+    position:absolute;
+    overflow:hidden;
 }
 
 .item{
     background-color:white;
     padding:2px;
-    width:20%;
-    height:20%;
+    width:150px;
+    height:150px;
     border-radius:10px;
-    padding
+    padding:0.7%;
+    margin:auto;
 }
 
 .item img{
@@ -16,6 +19,9 @@
 }
 
 .settingkelas{
-    background-color:blue;
+    background-color:#92d7ef;
     padding:2%;
+    border-radius:10px;
+    padding-left:15px;
+    height:250px;
 }
