@@ -180,3 +180,11 @@ body {
     color: white;
     box-shadow: 0px 0px 10px -0px rgba(0, 0, 0, 0.5);
 }
+
+#btn-top{
+    position:fixed;
+    right:40px;
+    bottom:40px;
+    z-index:9999;
+    border-radius:100%;
+}

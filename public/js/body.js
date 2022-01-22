@@ -2,6 +2,18 @@
 // jika menggunakan ajax saat berpindah halaman di refresh terakhir sehingga fungsi js mungkin tidak berfungsi. js tidak bisa diload dengan berganti alamat src nya begitu saja karena yang di load adalah js yang sebelum di ganti alamat src nya
 // maka dari itu untuk refresh src js harus menggunakan manual dari element html yang terrefresh
 // itulah alasan kenapa hanya body.js yang hanya di blade templating engine sedangkan yang lain manual di halaman yang bersangkutan karena body.js hanya mengatasi js di sidebar dan navbar sedangkan yg lain mengatasi halaman content masing-masing
+$('#btn-top').fadeOut();
+$('.content').scroll(function() {
+    if($(this).scrollTop() > 500){
+        $('#btn-top').fadeIn();
+    }
+    else{
+        $('#btn-top').fadeOut();
+    }
+});
+$('#btn-top').on('click', function(){
+    $('.content').animate({scrollTop:0},400);
+});
 
 if (window.innerWidth <= 920) {
     $('#btn-sidebar').html('<i class="fas fa-bars"></i>');
@@ -58,6 +70,7 @@ $('.sidebar-menu').on('click', function (e) {
     });
 
     let url1 = $(this).attr('data-url');
+    let btnTop = `<button class="btn btn-primary" id="btn-top">Top</button>`;
     $.ajax({
         type: "GET",
         // url : window.location.pathname,//pathname untuk mengambil url

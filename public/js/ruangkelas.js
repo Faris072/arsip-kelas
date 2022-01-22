@@ -26,3 +26,13 @@ $('.path').on('click', function (){
         },
     });
 });
+
+
+$('.headsetting').on('click', function(){
+    if($(this).hasClass('.headsettingmlegkug')){
+        $(this).addClass('headsettingmlengkung');
+    }
+    else{
+        $(this).removeClass('headsettingmlengkung');
+    }
+});
