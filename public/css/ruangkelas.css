@@ -11,10 +11,16 @@
     border-radius:10px;
     padding:0.7%;
     margin:auto;
+    box-shadow: -3px 4px 5px;
 }
 
-.item img{
+.item:hover{
+    box-shadow: 0px 2px 7px;
+}
+
+.items .item .image img{
     border-radius:10px;
+    height:90px;
 }
 
 .settingkelas{

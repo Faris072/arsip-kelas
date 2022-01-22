@@ -4,26 +4,52 @@
 <br>
 <span style="display: none;" id="linkCSS"><?php echo $css ?></span>
 <div class="ruangkelas">
-<div class="headsetting p-3" data-target="#set" data-toggle="collapse">
+    <div class="judul pb-1">
+        <center><h2><b>X MIPA 5</b></h2></center>
+    </div>
+    <div class="headsetting p-3" data-target="#set" data-toggle="collapse">
         <center><h5><b>Setting Kelas</b></h5></center>
     </div>
     <div class="settingkelas collapse" id="set">
         <div class="items d-flex pl-3">
-            @for ($i=0;$i<10;$i++)
             <div class="item m-2">
                 <div class="image">
-                    <img src="storage/default/konten.jpg" alt="" style="width:100%">
+                    <img src="asets/siswa1.png" alt="" style="width:100%;">
                 </div>
                 <div class="ket pt-3">
-                    <center><p>Diam</p></center>
+                    <center><p><b>Siswa</b></p></center>
                 </div>
             </div>
-            @endfor
+            <div class="item m-2">
+                <div class="image">
+                    <img src="asets/absen.png" alt="" style="width:100%;">
+                </div>
+                <div class="ket pt-3">
+                    <center><p><b>Presensi</b></p></center>
+                </div>
+            </div>
+            <div class="item m-2">
+                <div class="image">
+                    <img src="asets/detailkelas.png" alt="" style="width:100%;">
+                </div>
+                <div class="ket pt-3">
+                    <center><p><b>Detail</b></p></center>
+                </div>
+            </div>
+            <div class="item m-2">
+                <div class="image">
+                    <img src="asets/detailkelas.png" alt="" style="width:100%;">
+                </div>
+                <div class="ket pt-3">
+                    <center><p><b>Detail Kelas</b></p></center>
+                </div>
+            </div>
         </div>
     </div>
     <br><br>
     <div class="kelas">
         <div class="row d-flex p-3" style="justify-content:space-between;">
+            <?php $i = 10 ?>
             @while ($i != 0)
                 <?php $i--; ?>
                 <div class="col-md-4 col-6 p-0 pb-3">
@@ -42,7 +68,7 @@
                     </div>
                     {{-- endCard --}}
                     <!-- Modal -->
-                    <div class="modal fade bd-example-modal-lg" id="detail" tabindex="-1" role="dialog"
+                    <div class="modal fade bd-example-modal-lg" id="detail" role="dialog"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
