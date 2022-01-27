@@ -36,3 +36,20 @@ $('.headsetting').on('click', function(){
         $(this).removeClass('headsettingmlengkung');
     }
 });
+
+$('#menu-setpresensi').on('click', function(){
+    $.ajax({
+        type: 'GET',
+        url: '/ruangkelaspresensi',
+        beforeSend: function(){
+
+        },
+        error: function (data, data1){
+            $('#ruangkelaspresensi').html(data.status + '<br>' + data1);
+        },
+        success: function (data) {
+            $('#ruangkelaspresensi').html(data);
+        }
+    });
+});
+

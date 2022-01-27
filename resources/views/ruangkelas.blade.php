@@ -28,7 +28,7 @@
                     </center>
                 </div>
             </div>
-            <div class="item m-2" data-toggle="modal" data-target="#set-presensi">
+            <div class="item m-2" id="menu-setpresensi" data-toggle="modal" data-target="#set-presensi">
                 <div class="image">
                     <img src="asets/absen.png" alt="" style="width:100%;">
                 </div>
@@ -141,94 +141,10 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body" style="height:70vh; overflow-y:auto;">
-                            <div class="tgl-presensi">
-                                <div class="headtglpresensi mb-3">
-                                    <h6><b>Tanggal Presensi</b></h6>
-                                </div>
-                                <div class="isitglpresensi">
-                                    <button class="btn btn-primary">20-12-2021</button>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="set-presensi">
-                                <div class="headsetpresensi mb-1">
-                                    <h6><b>Presensi</b></h6>
-                                </div>
-                                <div class="detailpresensi mb-3">
-                                    <table width="100%">
-                                        <tr>
-                                            <td>Tanggal Presensi</td>
-                                            <td>:</td>
-                                            <td>10-10-2022</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nama Presensi</td>
-                                            <td>:</td>
-                                            <td>UAS</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Deskripsi</td>
-                                            <td>:</td>
-                                            <td>Blablabla</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="isipresensi">
-                                    <table celpadding="0" class="table table-hover table-striped">
-                                        <thead class="table-primary p-5">
-                                            <tr>
-                                                <th>No. Absen</th>
-                                                <th>Nama</th>
-                                                <th>Gender</th>
-                                                <th>Kehadiran</th>
-                                                <th>Aksi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="table-hover">
-                                            @for($i = 0; $i < 30; $i++)
-                                            <tr>
-                                                <td>{{ $i+1 }}</td>
-                                                <td>Noname</td>
-                                                <td>L</td>
-                                                <td>Hadir</td>
-                                                <td><button class="btn btn-success" data-toggle="modal" data-target="#ubah">Ubah</button>
-                                                </td>
-                                            </tr>
-                                            @endfor
-                                        </tbody>
-                                    </table>
-                                    <!-- Modal -->
-                                    <div class="modal modal-presensi fade" id="ubah" tabindex="-1" role="dialog"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel"><b>Noname</b></h5>
-                                                    <button type="button" class="close" data-dismiss="modal" data-target=".modal-presensi"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>Silahkan pilih presensi untuk siswa <span
-                                                            style="color:blue;">Noname</span> di bawah ini!</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-success">Hadir</button>
-                                                    <button type="button" class="btn btn-primary">Izin</button>
-                                                    <button type="button" class="btn btn-danger">Alpha</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="modal-body" id="ruangkelaspresensi" style="height:70vh; overflow-y:auto;">
                         </div>
                         <div class="modal-footer">
-                            <a href="#" type="button" class="btn btn-info">Pesan Sekarang</a>
-                            <a href="#" type="button" class="btn btn-success">Chat</a>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <a href="#" type="button" class="btn btn-success">Tambah Presensi</a>
                         </div>
                     </div>
                 </div>
@@ -389,10 +305,10 @@
                 <div class="col-md-4 col-6 p-0 pb-3">
                     {{-- card --}}
                     <div class="card m-0" style="width: 100%; height:100%;">
-                        <img class="card-img-top" src="/storage/default/konten.jpg" alt="Card image cap">
+                        <h5 class="card-header"><b>Matematika</b></h5>
                         <div class="card-body" style="padding:1vw;">
                             <h5 class="card-title" style=""><b>UAS 1</b></h5>
-                            <p class="card-text"><span>Matematika</span> | <span>X MIPA 5</span></p>
+                            <p class="card-text text-muted">Date: <span>10/12/2022</span> | <span>X MIPA 5</span></p>
                             <div class="btn-card d-flex" style="justify-content:space-between;">
                                 <a href="#" class="btn btn-primary p-1" style="font-size:100%; padding:0.2vw;"
                                     data-toggle="modal" data-target="#detail">Deskripsi</a>

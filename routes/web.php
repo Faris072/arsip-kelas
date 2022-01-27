@@ -49,3 +49,15 @@ Route::get('/favorit', function(){
         'css' => 'css/favorit.css',
     ]);
 });
+
+Route::get('/ruangkelaspresensi', function(){
+    return view('ruangkelas/ruangkelaspresensi', [
+        'css' => ''
+    ]);
+});
+
+Route::get('/bodypresensi', function(){
+    return view('ruangkelas/bodypresensi', [
+        'css' => ''
+    ]);
+});
