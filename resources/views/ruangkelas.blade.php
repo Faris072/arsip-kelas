@@ -64,66 +64,42 @@
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel"><b>Modal title</b></h5>
+                            <h5 class="modal-title" id="exampleModalLabel"><b>Siswa</b></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body" style="height:70vh; overflow-y:auto;">
-                            <div class="gambar">
-                                <center>
-                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="0"
-                                                class="active"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                        </ol>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img class="d-block" id="gambar0" style="width:70%;"
-                                                    src="/storage/default/konten.jpg" alt="First slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block" id="gambar0" style="width:70%;"
-                                                    src="/storage/default/konten.jpg" alt="Second slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block" id="gambar0" style="width:70%;"
-                                                    src="/storage/default/konten.jpg" alt="Third slide">
-                                            </div>
-                                        </div>
-                                        <a class="carousel-control-prev" style="background-color:black;"
-                                            href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" style="background-color:black;"
-                                            href="#carouselExampleIndicators" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </div>
-                                </center>
+                            <div class="head mb-2">
+                                <h5><b>Kelas XI MIPA 5</b></h5>
                             </div>
-                            <div class="harga pt-2">
-                                <h5><b>Harga:</b></h5>
-                                <p>Rp100.000</p>
-                            </div>
-                            <div class="deskripsi">
-                                <h5><b>Deskripsi:</b></h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum architecto,
-                                    odit eaque repellendus unde, odio saepe quidem optio cupiditate numquam blanditiis
-                                    non recusandae. Cumque a consequuntur excepturi eaque dolorum!</p>
-                            </div>
-                            <div class="stok">
-                                <h5><b>Stok:</b></h5>
-                                <p>100</p>
+                            <hr>
+                            <div class="isi">
+                                <table class="table">
+                                    <tr class="table-primary">
+                                        <th><b>No. Absen</b></th>
+                                        <th><b>Nama</b></th>
+                                        <th><b>Gender</b></th>
+                                        <th><b>No. Telp</b></th>
+                                        <th><b>Email</b></th>
+                                        <th colspan="2"><b>Aksi</b></th>
+                                    </tr>
+                                    @for ($i= 0; $i<20; $i++)
+                                    <tr>
+                                        <td>{{ $i }}</td>
+                                        <td>Faris</td>
+                                        <td>Laki-Laki</td>
+                                        <td>085706389042</td>
+                                        <td>farisbos.mfs@gmail.com</td>
+                                        <td><a href="#" class="btn btn-warning">Edit</a></td>
+                                        <td><a href="#" class="btn btn-danger">Hapus</a></td>
+                                    </tr>
+                                    @endfor
+                                </table>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <a href="#" type="button" class="btn btn-info">Pesan Sekarang</a>
-                            <a href="#" type="button" class="btn btn-success">Chat</a>
+                            <a href="#" type="button" class="btn btn-success">Tambah Siswa</a>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -156,62 +132,17 @@
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel"><b>Modal title</b></h5>
+                            <h5 class="modal-title" id="exampleModalLabel"><b>Detail Kelas</b></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body" style="height:70vh; overflow-y:auto;">
-                            <div class="gambar">
-                                <center>
-                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="0"
-                                                class="active"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                        </ol>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img class="d-block" id="gambar0" style="width:70%;"
-                                                    src="/storage/default/konten.jpg" alt="First slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block" id="gambar0" style="width:70%;"
-                                                    src="/storage/default/konten.jpg" alt="Second slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block" id="gambar0" style="width:70%;"
-                                                    src="/storage/default/konten.jpg" alt="Third slide">
-                                            </div>
-                                        </div>
-                                        <a class="carousel-control-prev" style="background-color:black;"
-                                            href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" style="background-color:black;"
-                                            href="#carouselExampleIndicators" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </div>
-                                </center>
-                            </div>
-                            <div class="harga pt-2">
-                                <h5><b>Harga:</b></h5>
-                                <p>Rp100.000</p>
-                            </div>
-                            <div class="deskripsi">
-                                <h5><b>Deskripsi:</b></h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum architecto,
-                                    odit eaque repellendus unde, odio saepe quidem optio cupiditate numquam blanditiis
-                                    non recusandae. Cumque a consequuntur excepturi eaque dolorum!</p>
-                            </div>
-                            <div class="stok">
-                                <h5><b>Stok:</b></h5>
-                                <p>100</p>
-                            </div>
+                            <center>
+                                <div class="gambar" style="background-image:url('storage/default/konten.jpg'); width:240px; height:200px;">
+                                    <input type="file">
+                                </div>
+                            </center>
                         </div>
                         <div class="modal-footer">
                             <a href="#" type="button" class="btn btn-info">Pesan Sekarang</a>
