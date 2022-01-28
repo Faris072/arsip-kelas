@@ -53,3 +53,23 @@
 .modalset{
     width:100vw;
 }
+
+#close-ubahpresensi{
+    border:0.5px solid lightgray;
+    border-radius:5px;
+}
+
+#close-ubahpresensi:hover{
+    background-color:red;
+    color:white;
+}
+
+#close-tambahpresensi{
+    border:0.5px solid lightgray;
+    border-radius:5px;
+}
+
+#close-tambahpresensi:hover{
+    background-color:red;
+    color:white;
+}

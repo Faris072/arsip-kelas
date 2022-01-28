@@ -5,7 +5,7 @@ function klikhome(){
         'width': '90%;',
         'margin': 'auto'
     });
-}
+};
 
 $('.path').on('click', function (){
     let url = $(this).attr('data-url');
@@ -15,6 +15,28 @@ $('.path').on('click', function (){
         beforeSend: function(){
             $('#content').html('');
             $('.loading').css('display','block');
+        },
+        success: function (data) {
+            $('#content').html(data);
+            $(document).ajaxComplete(function(){
+                let css = $('#linkCSS').text();
+                $('#css').attr('href', css);
+                $('.loading').css('display', 'none');
+            });
+        },
+    });
+});
+
+$('#masuk-kelas').on('click', function (){
+    $.ajax({
+        type: 'GET',
+        url: '/ruangkelas',
+        beforesend: function(){
+            $('#content').html('');
+            $('.loading').css('display','block');
+        },
+        error: function (a, b) {
+            $('.set-presensi').html(a.status + '<br>' + b);
         },
         success: function (data) {
             $('#content').html(data);

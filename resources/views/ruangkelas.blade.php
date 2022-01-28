@@ -144,7 +144,7 @@
                         <div class="modal-body" id="ruangkelaspresensi" style="height:70vh; overflow-y:auto;">
                         </div>
                         <div class="modal-footer">
-                            <a href="#" type="button" class="btn btn-success">Tambah Presensi</a>
+                            <a href="#" type="button" id="tambah-presensi" class="btn btn-success">Tambah Presensi</a>
                         </div>
                     </div>
                 </div>
@@ -368,3 +368,4 @@
 <br><br>
 {{-- js --}}
 <script src="js/ruangkelas.js"></script>
+<script src="js/ruangkelas/tambahpresensi.js"></script>

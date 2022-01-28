@@ -19,7 +19,7 @@
             <td> Blablabla</td>
         </tr>
     </table>
-    <button class="btn btn-primary">Ubah Presensi</button>
+    <button class="btn btn-primary" id="ubahpresensi">Ubah Presensi</button>
 </div>
 <div class="isipresensi">
     <table celpadding="0" class="table table-hover table-striped">
@@ -79,3 +79,5 @@
         </tbody>
     </table>
 </div>
+<script src="js/ruangkelas/bodypresensi.js"></script>
+

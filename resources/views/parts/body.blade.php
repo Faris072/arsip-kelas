@@ -11,7 +11,7 @@
         <div class="loading">
             <div style="position:absolute; margin:auto; top:0; bottom:0; right:0; left:0;" class="loadingio-spinner-wedges-zleg5tqhh8b"><div class="ldio-mwke7scbiil"><div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div></div></div>
         </div>
-        <button class="btn btn-primary" id="btn-top"><i class="fas fa-arrow-up"></i></button>
+        <button class="btn btn-primary fixed" id="btn-top"><i class="fas fa-arrow-up"></i></button>
         <div class="container" id="content">
             <br>
             @yield('body')

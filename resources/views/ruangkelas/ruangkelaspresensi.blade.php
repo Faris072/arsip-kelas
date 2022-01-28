@@ -12,4 +12,4 @@
 <div class="set-presensi">
 
 </div>
-<script src="js/ruangkelas/presensi.js"></script>
+<script src="js/ruangkelas/ruangkelaspresensi.js"></script>

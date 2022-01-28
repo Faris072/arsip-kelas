@@ -61,3 +61,27 @@ Route::get('/bodypresensi', function(){
         'css' => ''
     ]);
 });
+
+Route::get('/ubahpresensi', function() {
+    return view('ruangkelas/ubahpresensi',[
+        'css' => ''
+    ]);
+});
+
+Route::get('/tambahpresensi', function() {
+    return view('ruangkelas/tambahpresensi',[
+        'css' => ''
+    ]);
+});
+
+
+
+
+
+
+
+
+
+Route::get('/cobacetak', function(){
+    return view('cobacetak');
+});

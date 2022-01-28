@@ -1,16 +1,14 @@
-$('.tg-presensi').on('click', function(){
-    $('.tg-presensi').removeClass('active');
-    $(this).addClass('active');
+$('#close-tambahpresensi').on('click', function() {
     $.ajax({
-        type: 'GET',
+        type: "GET",
         url: '/bodypresensi',
         beforesend: function(){
 
         },
-        error: function (data, data1){
+        error: function(data, data1) {
             $('.set-presensi').html(data.status + '<br>' + data1);
         },
-        success: function (data) {
+        success: function(data){
             $('.set-presensi').html(data);
         }
     });
