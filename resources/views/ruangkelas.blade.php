@@ -202,7 +202,7 @@
                                     <input type="text" name="tanggal_mapel" id="tanggal-mapel" class="form-control">
                                     <br>
                                     <label for="tanggal-mapel"><b>Tanggal Mapel:</b></label>
-                                    <input type="date" name="tanggal_mapel" id="tanggal-mapel" class="form-control">
+                                    <input type="date" name="tanggal_mapel" id="tanggal-mapel" class="form-control" value="{{ date('Y-m-d') }}">
                                     <br>
                                     <label for="deskripsi-mapel"><b>Deskripsi Mapel: </b></label>
                                     <textarea name="deskripsi_mapel" id="deskripsi-mapel"></textarea>
