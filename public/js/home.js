@@ -28,12 +28,18 @@ $('.path').on('click', function (){
 });
 
 $('#masuk-kelas').on('click', function (){
+    $('.sidebar-menu').css('background-color','rgba(255,255,255,0)');
     $.ajax({
         type: 'GET',
         url: '/ruangkelas',
-        beforesend: function(){
+        beforeSend: function(){
             $('#content').html('');
-            $('.loading').css('display','block');
+            $('.loading').css('display', 'block');
+            $('#sidebar-angkatan').css({
+                'background-color': 'rgba(255,255,255,0.5)',
+                'width': '90%;',
+                'margin': 'auto'
+            });
         },
         error: function (a, b) {
             $('.set-presensi').html(a.status + '<br>' + b);
