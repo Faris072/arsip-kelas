@@ -53,3 +53,13 @@ $('#menu-setpresensi').on('click', function(){
     });
 });
 
+
+$('#send-settingkelas').on('click', function(e){
+    e.preventDefault();
+    if($('#gantifoto')[0].files.length == 0){
+        swal("Data Kosong!", "Silahkan masukkan foto!", "error");
+    }
+    else{
+        swal("Oops!", "Masih dalam pengembangan", "warning");
+    }
+});

@@ -48,13 +48,13 @@
                     </center>
                 </div>
             </div>
-            <div class="item m-2" data-toggle="modal" data-target="#set-detail">
+            <div class="item m-2" data-toggle="modal" data-target="#tambah-mapel">
                 <div class="image">
                     <img src="asets/detailkelas.png" alt="" style="width:100%;">
                 </div>
                 <div class="ket pt-3">
                     <center>
-                        <p><b>Detail Kelas</b></p>
+                        <p><b>Tambah Mapel</b></p>
                     </center>
                 </div>
             </div>
@@ -138,11 +138,39 @@
                             </button>
                         </div>
                         <div class="modal-body" style="height:70vh; overflow-y:auto;">
-                            <center>
-                                <div class="gambar" style="background-image:url('storage/default/konten.jpg'); width:240px; height:200px;">
-                                    <input type="file">
+                            <div class="container">
+                                <div class="container">
+                                    <div class="container">
+                                        <form action="" method="post" id="form-setting-kelas">
+                                        <center>
+                                            <img src="/storage/default/konten.jpg" style="background-image:url('storage/default/konten.jpg'); width:240px; height:200px;">
+                                            <br>
+                                            <label for="gantifoto" id="label-ubahfoto" class="btn btn-primary"><i class="fas fa-upload pr-2"></i> Pilih Foto</label>
+                                            <input type="file" name="fotokelas" id="gantifoto">
+                                            <br><br>
+                                        </center>
+                                            <label for="angkatan"><b>Angkatan: </b></label>
+                                            <select name="angkatan" class="form-control" id="angkatan">
+                                                @for($i = 1980; $i <= date('Y'); $i++)
+                                                @if($i == date('Y'))
+                                                <option value="{{ $i }}" selected="selected">{{ $i }}</option>
+                                                @else
+                                                <option value="{{ $i }}">{{ $i }}</option>
+                                                @endif
+                                                @endfor
+                                            </select>
+                                            <br>
+                                            <label for="namakelas"><b>Nama Kelas: </b></label>
+                                            <input type="text" name="namakelas" id="namakelas" class="form-control">
+                                            <br>
+                                            <label for="deskripsi"><b>Deskripsi:</b></label>
+                                            <textarea name="deskripsi" id="deskripsi"></textarea>
+                                            <br>
+                                            <input type="submit" class="btn btn-primary form-control" id="send-settingkelas" value="Setting Kelas">
+                                        </form>
+                                    </div>
                                 </div>
-                            </center>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <a href="#" type="button" class="btn btn-info">Pesan Sekarang</a>
@@ -154,71 +182,36 @@
             </div>
             {{-- endModal --}}
             <!-- Modal -->
-            <div class="modal fade bd-example-modal-xl" id="set-detailkelas" tabindex="-1" role="dialog"
+            <div class="modal fade bd-example-modal-xl" id="tambah-mapel" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel"><b>Modal title</b></h5>
+                            <h5 class="modal-title" id="exampleModalLabel"><b>Tambah Mapel</b></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body" style="height:70vh; overflow-y:auto;">
-                            <div class="gambar">
-                                <center>
-                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="0"
-                                                class="active"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                        </ol>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img class="d-block" id="gambar0" style="width:70%;"
-                                                    src="/storage/default/konten.jpg" alt="First slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block" id="gambar0" style="width:70%;"
-                                                    src="/storage/default/konten.jpg" alt="Second slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block" id="gambar0" style="width:70%;"
-                                                    src="/storage/default/konten.jpg" alt="Third slide">
-                                            </div>
-                                        </div>
-                                        <a class="carousel-control-prev" style="background-color:black;"
-                                            href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" style="background-color:black;"
-                                            href="#carouselExampleIndicators" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </div>
-                                </center>
-                            </div>
-                            <div class="harga pt-2">
-                                <h5><b>Harga:</b></h5>
-                                <p>Rp100.000</p>
-                            </div>
-                            <div class="deskripsi">
-                                <h5><b>Deskripsi:</b></h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum architecto,
-                                    odit eaque repellendus unde, odio saepe quidem optio cupiditate numquam blanditiis
-                                    non recusandae. Cumque a consequuntur excepturi eaque dolorum!</p>
-                            </div>
-                            <div class="stok">
-                                <h5><b>Stok:</b></h5>
-                                <p>100</p>
+                            <div class="container">
+                                <form action="">
+                                    <label for="nama-mapel"><b>Nama Mapel:</b></label>
+                                    <input type="text" name="nama_mapel" id="nama-mapel" class="form-control">
+                                    <br>
+                                    <label for="namanilai-mapel"><b>Nama Nilai Mapel:</b></label>
+                                    <input type="text" name="tanggal_mapel" id="tanggal-mapel" class="form-control">
+                                    <br>
+                                    <label for="tanggal-mapel"><b>Tanggal Mapel:</b></label>
+                                    <input type="date" name="tanggal_mapel" id="tanggal-mapel" class="form-control">
+                                    <br>
+                                    <label for="deskripsi-mapel"><b>Deskripsi Mapel: </b></label>
+                                    <textarea name="deskripsi_mapel" id="deskripsi-mapel"></textarea>
+                                    <br>
+                                    <input type="submit" value="Tambah Mapel" class="btn btn-success form-control">
+                                </form>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <a href="#" type="button" class="btn btn-info">Pesan Sekarang</a>
-                            <a href="#" type="button" class="btn btn-success">Chat</a>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -300,3 +293,5 @@
 {{-- js --}}
 <script src="js/ruangkelas.js"></script>
 <script src="js/ruangkelas/tambahpresensi.js"></script>
+<script>CKEDITOR.replace( 'deskripsi' );</script>
+<script>CKEDITOR.replace( 'deskripsi-mapel' );</script>

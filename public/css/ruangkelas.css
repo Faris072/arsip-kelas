@@ -73,3 +73,12 @@
     background-color:red;
     color:white;
 }
+
+#gantifoto{
+    display:none;
+}
+
+#label-ubahfoto{
+    margin-top:10px;
+    width:244px;
+}
