@@ -104,7 +104,11 @@ Route::get('/mapel', function(){
     ]);
 });
 
-
+Route::get('/detailmapel', function(){
+    return view('/mapel/detailmapel',[
+        'css' => ''
+    ]);
+});
 
 
 

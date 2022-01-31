@@ -9,26 +9,12 @@
 {{-- endlinkcss --}}
 
 <div class="card">
-    <div class="card-header" style="cursor: pointer" data-toggle="collapse" data-target="#detail-mapel">
+    <div class="card-header d-flex" style="cursor: pointer; justify-content:space-between;" data-toggle="collapse" data-target="#detail-mapel">
         <h5><b>Matematika</b> / <b><span style="color:blue;">UAS 1</span></b></h5>
+        <i class="fas fa-caret-down fa-2x"></i>
     </div>
     <div class="collapse card-body" id="detail-mapel">
-        <h5><b>Kelas: </b></h5>
-        <p>XI MIPA 5</p>
-        <h5><b>Mapel: </b></h5>
-        <p>MATEMATIKA</p>
-        <h5><b>Nama Nilai: </b></h5>
-        <p>UAS 1</p>
-        <h5><b>Deskripsi:</b></h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni expedita, sunt sequi ea velit accusamus modi
-            officiis mollitia illo eveniet quae illum qui doloremque! Incidunt porro tenetur magnam labore. Placeat?</p>
-        <h5><b>Tanggal Dibuat: </b></h5>
-        <p>10/10/2022</p>
-        <h5><b>Aksi:</b></h5>
-        <div class="aksi d-flex">
-            <a href="#" class="btn btn-primary px-5">Edit</a>
-            <a href="#" class="btn btn-danger px-5 ml-3">Hapus Mapel</a>
-        </div>
+
     </div>
 </div>
 <br><br>
@@ -43,7 +29,7 @@
                     <div class="btn_group">
                         <input type="text" class="form-control" placeholder="Search" spellcheck="false"
                             data-ms-editor="true">
-                        <button class="btn btn-default ml-3" id="pesananku-reload" title="Reload">Cetak</button>
+                        <button class="btn btn-default ml-3" title="Reload">Cetak</button>
                     </div>
                 </div>
             </div>
@@ -124,3 +110,4 @@
 
 {{-- js --}}
 <script src="js/mapel.js"></script>
+

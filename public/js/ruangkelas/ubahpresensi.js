@@ -9,6 +9,7 @@ $('#close-ubahpresensi').on('click', function() {
             $('.set-presensi').html(data.status + '<br>' + data1);
         },
         success: function(data){
+            $('#tambah-presensi').css('display', 'block');
             $('.set-presensi').html(data);
         }
     });
