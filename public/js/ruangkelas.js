@@ -96,4 +96,25 @@ $('#tambah-siswa').on('click', function(){
     });
 });
 
+$('.masuk-mapel').on('click', function(){
+    $.ajax({
+        type: 'GET',
+        url: '/mapel',
+        beforesend: function(){
+            $('.loading').css('display', 'block');
+        },
+        error: function (data, data1){
+            $('#content').html(data.status + '<br>' + data1);
+        },
+        success: function (data) {
+            $('#content').html(data);
+            $(document).ajaxComplete(function(){
+                let css = $('#linkCSS').text();
+                $('#css').attr('href', css);
+                $('.loading').css('display', 'none');
+            });
+        }
+    });
+});
+
 

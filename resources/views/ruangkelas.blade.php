@@ -216,7 +216,7 @@
                             <div class="btn-card d-flex" style="justify-content:space-between;">
                                 <a href="#" class="btn btn-primary p-1" style="font-size:100%; padding:0.2vw;"
                                     data-toggle="modal" data-target="#detail">Deskripsi</a>
-                                <a href="#" class="btn btn-success p-1"
+                                <a href="#" class="btn btn-success p-1 masuk-mapel"
                                     style="font-size:100%; padding:0.2vw; right:0;">Masuk Mapel</a>
                             </div>
                         </div>

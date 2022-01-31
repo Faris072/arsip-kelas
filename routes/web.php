@@ -92,6 +92,12 @@ Route::get('/tambahsiswa', function(){
     ]);
 });
 
+Route::get('/mapel', function(){
+    return view('/mapel',[
+        'css' => ''
+    ]);
+});
+
 
 
 
