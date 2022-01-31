@@ -15,7 +15,7 @@
             <td>Laki-Laki</td>
             <td>085706389042</td>
             <td>farisbos.mfs@gmail.com</td>
-            <td><a href="#" class="btn btn-warning">Edit</a></td>
+            <td><a href="#" class="btn btn-warning edit-siswa">Edit</a></td>
             <td><a href="#" class="btn btn-danger">Hapus</a></td>
         </tr>
         @endfor

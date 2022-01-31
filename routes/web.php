@@ -56,6 +56,12 @@ Route::get('/favorit', function(){
     ]);
 });
 
+Route::get('/editsiswa', function(){
+    return view('ruangkelas/editsiswa', [
+        'css' => '',
+    ]);
+});
+
 Route::get('/ruangkelaspresensi', function(){
     return view('ruangkelas/ruangkelaspresensi', [
         'css' => ''
@@ -107,4 +113,10 @@ Route::get('/mapel', function(){
 
 Route::get('/cobacetak', function(){
     return view('cobacetak');
+});
+
+Route::get('/cobacrud', function(){
+    return view('ruangkelas/cobacrud',[
+        'css' => '',
+    ]);
 });

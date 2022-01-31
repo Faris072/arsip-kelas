@@ -92,3 +92,13 @@
     background-color:red;
     color:white;
 }
+
+#close-editsiswa{
+    border:0.5px solid lightgray;
+    border-radius:5px;
+}
+
+#close-editsiswa:hover{
+    background-color:red;
+    color:white;
+}
