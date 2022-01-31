@@ -118,43 +118,39 @@
                             </button>
                         </div>
                         <div class="modal-body" style="height:70vh; overflow-y:auto;">
-                            <div class="container">
-                                <div class="container">
-                                    <div class="container">
-                                        <form action="" method="post" id="form-setting-kelas">
-                                        <center>
-                                            <img src="/storage/default/konten.jpg" style="background-image:url('storage/default/konten.jpg'); width:240px; height:200px;">
-                                            <br>
-                                            <label for="gantifoto" id="label-ubahfoto" class="btn btn-primary"><i class="fas fa-upload pr-2"></i> Pilih Foto</label>
-                                            <input type="file" name="fotokelas" id="gantifoto">
-                                            <br><br>
-                                        </center>
-                                            <label for="angkatan"><b>Angkatan: </b></label>
-                                            <select name="angkatan" class="form-control" id="angkatan">
-                                                @for($i = 1980; $i <= date('Y'); $i++)
-                                                @if($i == date('Y'))
-                                                <option value="{{ $i }}" selected="selected">{{ $i }}</option>
-                                                @else
-                                                <option value="{{ $i }}">{{ $i }}</option>
-                                                @endif
-                                                @endfor
-                                            </select>
-                                            <br>
-                                            <label for="namakelas"><b>Nama Kelas: </b></label>
-                                            <input type="text" name="namakelas" id="namakelas" class="form-control">
-                                            <br>
-                                            <label for="deskripsi"><b>Deskripsi:</b></label>
-                                            <textarea name="deskripsi" id="deskripsi"></textarea>
-                                            <br>
-                                            <input type="submit" class="btn btn-primary form-control" id="send-settingkelas" value="Setting Kelas">
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+                            <form action="" method="post" id="form-setting-kelas">
+                                <center>
+                                    <img src="/storage/default/konten.jpg"
+                                        style="background-image:url('storage/default/konten.jpg'); width:240px; height:200px;">
+                                    <br>
+                                    <label for="gantifoto" id="label-ubahfoto" class="btn btn-primary"><i
+                                            class="fas fa-upload pr-2"></i> Pilih Foto</label>
+                                    <input type="file" name="fotokelas" id="gantifoto">
+                                    <br><br>
+                                </center>
+                                <label for="angkatan"><b>Angkatan: </b></label>
+                                <select name="angkatan" class="form-control" id="angkatan">
+                                    @for ($i = 1980; $i <= date('Y'); $i++)
+                                        @if ($i == date('Y'))
+                                            <option value="{{ $i }}" selected="selected">{{ $i }}
+                                            </option>
+                                        @else
+                                            <option value="{{ $i }}">{{ $i }}</option>
+                                        @endif
+                                    @endfor
+                                </select>
+                                <br>
+                                <label for="namakelas"><b>Nama Kelas: </b></label>
+                                <input type="text" name="namakelas" id="namakelas" class="form-control">
+                                <br>
+                                <label for="deskripsi"><b>Deskripsi:</b></label>
+                                <textarea name="deskripsi" id="deskripsi"></textarea>
+                                <br>
+                                <input type="submit" class="btn btn-primary form-control" id="send-settingkelas"
+                                    value="Setting Kelas">
+                            </form>
                         </div>
                         <div class="modal-footer">
-                            <a href="#" type="button" class="btn btn-info">Pesan Sekarang</a>
-                            <a href="#" type="button" class="btn btn-success">Chat</a>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
@@ -182,7 +178,8 @@
                                     <input type="text" name="tanggal_mapel" id="tanggal-mapel" class="form-control">
                                     <br>
                                     <label for="tanggal-mapel"><b>Tanggal Mapel:</b></label>
-                                    <input type="date" name="tanggal_mapel" id="tanggal-mapel" class="form-control" value="{{ date('Y-m-d') }}">
+                                    <input type="date" name="tanggal_mapel" id="tanggal-mapel" class="form-control"
+                                        value="{{ date('Y-m-d') }}">
                                     <br>
                                     <label for="deskripsi-mapel"><b>Deskripsi Mapel: </b></label>
                                     <textarea name="deskripsi_mapel" id="deskripsi-mapel"></textarea>
@@ -273,5 +270,9 @@
 {{-- js --}}
 <script src="js/ruangkelas.js"></script>
 <script src="js/ruangkelas/tambahpresensi.js"></script>
-<script>CKEDITOR.replace( 'deskripsi' );</script>
-<script>CKEDITOR.replace( 'deskripsi-mapel' );</script>
+<script>
+    CKEDITOR.replace('deskripsi');
+</script>
+<script>
+    CKEDITOR.replace('deskripsi-mapel');
+</script>
