@@ -58,6 +58,16 @@
                     </center>
                 </div>
             </div>
+            <div class="item m-2" data-toggle="modal" data-target="#tambah-mapel">
+                <div class="image">
+                    <img src="asets/detailkelas.png" alt="" style="width:100%;">
+                </div>
+                <div class="ket pt-3">
+                    <center>
+                        <p><b>Hapus Kelas</b></p>
+                    </center>
+                </div>
+            </div>
             <!-- Modal -->
             <div class="modal fade bd-example-modal-xl" id="set-siswa" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">

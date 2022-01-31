@@ -11,5 +11,4 @@ $('#btn-editmapel').on('click', function(e){
             $('#detail-mapel').html(data);
         },
     });
-
 });

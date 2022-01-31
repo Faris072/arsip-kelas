@@ -2,7 +2,7 @@ bismillahirohmanirrohim
 
 #fitur kurang:
     #front end:
-    3. edit mapel
+    1. Hapus Kelas
 
     #back end:
     blass
