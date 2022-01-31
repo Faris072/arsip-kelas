@@ -63,3 +63,37 @@ $('#send-settingkelas').on('click', function(e){
         swal("Oops!", "Masih dalam pengembangan", "warning");
     }
 });
+
+$('#menu-setsiswa').on('click',function(){
+    $.ajax({
+        type: 'GET',
+        url: '/setsiswa',
+        beforesend: function(){
+
+        },
+        error: function (data, data1){
+            $('#modal-setsiswa').html(data.status + '<br>' + data1);
+        },
+        success: function (data) {
+            $('#modal-setsiswa').html(data);
+        }
+    });
+});
+
+$('#tambah-siswa').on('click', function(){
+    $.ajax({
+        type: 'GET',
+        url: '/tambahsiswa',
+        beforesend: function(){
+
+        },
+        error: function (data, data1){
+            $('#isi-setsiswa').html(data.status + '<br>' + data1);
+        },
+        success: function (data) {
+            $('#isi-setsiswa').html(data);
+        }
+    });
+});
+
+

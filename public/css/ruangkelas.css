@@ -82,3 +82,13 @@
     margin-top:10px;
     width:244px;
 }
+
+#close-tambahsiswa{
+    border:0.5px solid lightgray;
+    border-radius:5px;
+}
+
+#close-tambahsiswa:hover{
+    background-color:red;
+    color:white;
+}

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="id">
 <head>
-    <title>{{-- $title --}}</title>
+    <title>Arsip Kelas</title>
     @include('parts\cdnbootstrap')
 </head>
 <body>

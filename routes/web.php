@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('/root',[
+        'css' => ''
+    ]);
+});
+
+Route::get('/welcome', function () {
     return view('welcome',[
         'css' => 'css/home.css'
     ]);
@@ -74,6 +80,17 @@ Route::get('/tambahpresensi', function() {
     ]);
 });
 
+Route::get('/setsiswa', function(){
+    return view('ruangkelas/setsiswa',[
+        'css' => ''
+    ]);
+});
+
+Route::get('/tambahsiswa', function(){
+    return view('ruangkelas/tambahsiswa',[
+        'css' => ''
+    ]);
+});
 
 
 

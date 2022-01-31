@@ -18,7 +18,7 @@
     </div>
     <div class="settingkelas collapse" id="set">
         <div class="items d-flex pl-3">
-            <div class="item m-2" data-toggle="modal" data-target="#set-siswa">
+            <div class="item m-2" data-toggle="modal" data-target="#set-siswa" id="menu-setsiswa">
                 <div class="image">
                     <img src="asets/siswa1.png" alt="" style="width:100%;">
                 </div>
@@ -74,32 +74,12 @@
                                 <h5><b>Kelas XI MIPA 5</b></h5>
                             </div>
                             <hr>
-                            <div class="isi">
-                                <table class="table">
-                                    <tr class="table-primary">
-                                        <th><b>No. Absen</b></th>
-                                        <th><b>Nama</b></th>
-                                        <th><b>Gender</b></th>
-                                        <th><b>No. Telp</b></th>
-                                        <th><b>Email</b></th>
-                                        <th colspan="2"><b>Aksi</b></th>
-                                    </tr>
-                                    @for ($i= 0; $i<20; $i++)
-                                    <tr>
-                                        <td>{{ $i }}</td>
-                                        <td>Faris</td>
-                                        <td>Laki-Laki</td>
-                                        <td>085706389042</td>
-                                        <td>farisbos.mfs@gmail.com</td>
-                                        <td><a href="#" class="btn btn-warning">Edit</a></td>
-                                        <td><a href="#" class="btn btn-danger">Hapus</a></td>
-                                    </tr>
-                                    @endfor
-                                </table>
+                            <div class="isi" id="modal-setsiswa">
+
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <a href="#" type="button" class="btn btn-success">Tambah Siswa</a>
+                            <a href="#" type="button" id="tambah-siswa" class="btn btn-success">Tambah Siswa</a>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
