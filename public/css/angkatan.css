@@ -163,3 +163,12 @@
     }
     .panel .panel-heading .btn_group{ text-align: center; }
 }
+
+#gantifoto{
+    display:none;
+}
+
+#label-ubahfoto{
+    margin-top:10px;
+    width:244px;
+}

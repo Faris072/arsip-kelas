@@ -25,8 +25,10 @@
         <h5><b>Tanggal Dibuat: </b></h5>
         <p>10/10/2022</p>
         <h5><b>Aksi:</b></h5>
-        <a href="#" class="btn btn-primary px-5">Edit</a>
-        <a href="#" class="btn btn-danger px-5 ml-3">Hapus Mapel</a>
+        <div class="aksi d-flex">
+            <a href="#" class="btn btn-primary px-5">Edit</a>
+            <a href="#" class="btn btn-danger px-5 ml-3">Hapus Mapel</a>
+        </div>
     </div>
 </div>
 <br><br>
