@@ -50,7 +50,7 @@
             </div>
             <div class="item m-2" data-toggle="modal" data-target="#tambah-mapel">
                 <div class="image">
-                    <img src="asets/detailkelas.png" alt="" style="width:100%;">
+                    <img src="asets/tambah.png" alt="" style="width:100%;">
                 </div>
                 <div class="ket pt-3">
                     <center>
@@ -58,9 +58,9 @@
                     </center>
                 </div>
             </div>
-            <div class="item m-2" data-toggle="modal" data-target="#tambah-mapel">
+            <div class="item m-2" data-toggle="modal" data-target="#modal-hapuskelas">
                 <div class="image">
-                    <img src="asets/detailkelas.png" alt="" style="width:100%;">
+                    <img src="asets/hapus.png" alt="" style="width:100%;">
                 </div>
                 <div class="ket pt-3">
                     <center>
@@ -205,6 +205,27 @@
                 </div>
             </div>
             {{-- endModal --}}
+            {{-- modal --}}
+            <div class="modal" tabindex="-1" role="dialog" id="modal-hapuskelas">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"><b>Hapus Kelas</b></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p><b>Apakah anda yakin akan menghapus kelas X MIPA 5?</b> kelas yang anda hapus akan hilang beserta dengan mapel dan nilai yang anda buat di kelas ini.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger">Hapus Kelas</button>
+                            <button type="button" class="btn btn-success" data-dismiss="modal">Batalkan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- endmodal --}}
         </div>
     </div>
     <br><br>
