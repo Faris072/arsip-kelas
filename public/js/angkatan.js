@@ -55,3 +55,35 @@ $(document).ready(function() {
     });
 
 });
+
+$('#btn-tambahkelas').on('click', function(e) {
+    e.preventDefault();
+    let formData = $('#form-tambah-kelas').serialize();//serialize untuk mengambil data apapun dari form
+    console.log(formData);
+    // //UNTUK CSRF. dan metanya di cdnbootstrap.blade.php
+    // $.ajaxSetup({
+    //     headers: {
+    //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    //     }
+    // });
+    $.ajax({
+        method: 'POST',
+        url: '/angkatan',
+        data: formData,
+        beforeSend: function(){
+            $('#content').html('');
+            $('.loading').css('display','block');
+        },
+        success: function (data) {
+            $('#content').html(data);
+            $(document).ajaxComplete(function(){
+                let css = $('#linkCSS').text();
+                $('#css').attr('href', css);
+                $('.loading').css('display', 'none');
+            });
+        },
+        error: function(xhr, thrownError){
+            $('#content').html(xhr.statur+'<br>'+thrownError);
+        },
+    });
+});

@@ -8,6 +8,7 @@
 <br>
 <div class="tambahkelas d-flex" style="justify-content:flex-end;">
     <a href="#" class="btn btn-success px-5 py-2" data-toggle="modal" data-target="#tambahkelas">Tambah Kelas</a>
+    {{-- modal --}}
     <div class="modal fade bd-example-modal-xl" id="tambahkelas" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
@@ -19,12 +20,13 @@
                     </button>
                 </div>
                 <div class="modal-body" style="height:70vh; overflow-y:auto;">
-                    <form action="" method="post" id="form-setting-kelas">
+                    <form action="" method="post" id="form-tambah-kelas">
+                        @csrf
                         <center>
                             <br>
                             <label for="gantifoto" id="label-ubahfoto" class="btn btn-primary"><i
                                     class="fas fa-upload pr-2"></i> Pilih Foto</label>
-                            <input type="file" name="fotokelas" id="gantifoto">
+                            <input type="file" name="foto_kelas" id="gantifoto">
                             <br><br>
                         </center>
                         <label for="angkatan"><b>Angkatan: </b></label>
@@ -40,12 +42,12 @@
                         </select>
                         <br>
                         <label for="namakelas"><b>Nama Kelas: </b></label>
-                        <input type="text" name="namakelas" id="namakelas" class="form-control">
+                        <input type="text" name="nama_kelas" id="namakelas" class="form-control">
                         <br>
                         <label for="deskripsi"><b>Deskripsi:</b></label>
                         <textarea name="deskripsi" id="deskripsi-tambahkelas"></textarea>
                         <br>
-                        <input type="submit" class="btn btn-success form-control" id="send-settingkelas"
+                        <input type="submit" class="btn btn-success form-control" id="btn-tambahkelas"
                             value="Tambah Kelas">
                     </form>
                 </div>
@@ -55,6 +57,7 @@
             </div>
         </div>
     </div>
+    {{-- endmodal --}}
 </div>
 <br>
 

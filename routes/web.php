@@ -31,12 +31,7 @@ Route::get('/home', function () {
     ]);
 });
 
-Route::get('/angkatan', function(){
-    return view('angkatan', [
-        'css' => 'css/angkatan.css',
-        'js' => 'js/angkatan.js'
-    ]);
-});
+Route::resource('/angkatan','App\http\Controllers\kelasController');
 
 Route::get('/profil', function(){
     return view('profil', [

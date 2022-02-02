@@ -14,7 +14,9 @@ class kelasController extends Controller
      */
     public function index()
     {
-        //
+        return view('angkatan', [
+            'css' => 'css/angkatan.css'
+        ]);
     }
 
     /**
@@ -35,7 +37,30 @@ class kelasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request['id_kelas'] = 1000000000;
+
+        if(empty($request['fotokelas'])){
+            $request['fotokelas'] = 'default.jpg';
+        }
+        else{
+            $namafoto = $request->file('foto_kelas')->getClientOriginalName();
+            $ekstensi = $request->file('foto_kelas')->getClientOriginalExtension();
+            $fotokelas = mt_rand(1000000000,9999999999) + $ekstensi;
+            $request->file('foto_kelas')->storeAs('/fotokelas', $namafoto);
+        }
+
+        $validatedData = $request->validate([
+            'foto_kelas' => 'max:1024|mimes:jpg,jpeg,png,csv',
+            'angkatan' => 'required',
+            'nama_kelas' => 'required|max:20',
+            'deskripsi' => '',
+            'id_kelas' => 'required',
+            'id' => 'required'
+        ]);
+
+        kelas::create($validatedData);
+
+        return redirect('/angkatan');
     }
 
     /**
