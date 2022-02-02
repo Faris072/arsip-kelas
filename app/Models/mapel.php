@@ -10,4 +10,14 @@ class mapel extends Model
     use HasFactory;
 
     protected $table = 'mapel';
+
+    protected $primaryKey = 'id_mapel';
+
+    public function kelas(){
+        return $this->belongsTo(kelas::class);
+    }
+
+    public function nilai(){
+        return $this->hasMany(nilai::class);
+    }
 }

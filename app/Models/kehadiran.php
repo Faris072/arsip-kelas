@@ -10,4 +10,14 @@ class kehadiran extends Model
     use HasFactory;
 
     protected $table = 'kehadiran';
+
+    protected $primaryKey = 'id_kehadiran';
+
+    public function presensi(){
+        return $this->belongsTo(presensi::class);
+    }
+
+    public function siswa(){
+        return $this->belongsTo(siswa::class);
+    }
 }
