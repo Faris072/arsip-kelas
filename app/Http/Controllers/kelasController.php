@@ -23,6 +23,14 @@ class kelasController extends Controller
         ]);
     }
 
+    public function index2($id_kelas){
+        $datas = kelas::all()->where('id_kelas', $id_kelas);
+        return view('ruangkelas', [
+            'css' => 'css/ruangkelas.css',
+            'datas' => $datas
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -48,7 +56,7 @@ class kelasController extends Controller
             'foto_kelas' => 'max:1024',
             'angkatan' => 'required',
             'nama_kelas' => 'required|max:20',
-            'deskripsi' => '',
+            'deskripsi_kelas' => '',
             // 'id_kelas' => 'required',
             'id' => 'required'
         ]);
@@ -86,9 +94,9 @@ class kelasController extends Controller
      * @param  \App\Models\kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function edit(kelas $kelas)
+    public function edit($id_kelas)
     {
-        //
+        // $data = kelas::all();
     }
 
     /**
@@ -98,9 +106,36 @@ class kelasController extends Controller
      * @param  \App\Models\kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, kelas $kelas)
+    public function update2(Request $request, $id_kelas)
     {
-        //
+        $fotodefault = kelas::find($id_kelas);
+
+        $validatedData = $request->validate([
+            'foto_kelas' => 'max:1024',
+            'angkatan' => 'required',
+            'nama_kelas' => 'required|max:20',
+            'deskripsi_kelas' => ''
+        ]);
+
+        if(empty($request['foto_kelas'])){
+            $request['foto_kelas'] = $fotodefault->foto_kelas;
+        }
+        else{
+            $namafoto = $request->file('foto_kelas')->getClientOriginalName();
+            $ekstensi = $request->file('foto_kelas')->getClientOriginalExtension();
+            $fotokelas = mt_rand(1000000000,9999999999) .'.'. $ekstensi;
+            $request->file('foto_kelas')->storeAs('/fotokelas', $fotokelas);
+            $request['foto_kelas'] = $fotokelas;
+        }
+
+        kelas::where('id_kelas', $id_kelas)->update([
+            'foto_kelas' => $request->foto_kelas,
+            'angkatan' => $request->angkatan,
+            'nama_kelas' => $request->nama_kelas,
+            'deskripsi_kelas' => $request->deskripsi_kelas
+        ]);
+
+        return redirect('/ruangkelas/'.$id_kelas);
     }
 
     /**
@@ -109,8 +144,11 @@ class kelasController extends Controller
      * @param  \App\Models\kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(kelas $kelas)
+    public function destroy($id_kelas)
     {
-        //
+        kelas::destroy($id_kelas);
+
+        return redirect('/angkatan');
     }
+
 }

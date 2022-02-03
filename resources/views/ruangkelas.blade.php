@@ -1,14 +1,18 @@
 <div class="paths p-3 bg-light">
+    @foreach ($datas as $data)
     <a href="#" class="path" data-url="/home" onclick="klikhome();">Home</a> / <a href="#"
         class="path" data-url="/angkatan">Angkatan</a> / <a href="#" class="path"
-        data-url="/ruangkelas">Ruang Kelas</a>
+        data-url="/ruangkelas/{{ $data->id_kelas }}">Ruang Kelas</a>
+    @endforeach
 </div>
 <br>
 <span style="display: none;" id="linkCSS"><?php echo $css; ?></span>
 <div class="ruangkelas">
     <div class="judul pb-1">
         <center>
-            <h2><b>X MIPA 5</b></h2>
+            @foreach ($datas as $data)
+            <h2><b>{{ $data->nama_kelas }}</b></h2>
+            @endforeach
         </center>
     </div>
     <div class="headsetting p-3" data-target="#set" data-toggle="collapse">
@@ -128,20 +132,22 @@
                             </button>
                         </div>
                         <div class="modal-body" style="height:70vh; overflow-y:auto;">
-                            <form action="" method="post" id="form-setting-kelas">
+                            @foreach($datas as $data)
+                            <form action="" data-url="/ruangkelas/{{ $data->id_kelas }}/update" method="POST" enctype="multipart/form-data" id="form-setting-kelas">
+                                @csrf
                                 <center>
-                                    <img src="/storage/default/konten.jpg"
-                                        style="background-image:url('storage/default/konten.jpg'); width:240px; height:200px;">
+                                    <img src="/storage/fotokelas/{{ $data->foto_kelas }}"
+                                        style="background-image:url('storage/fotokelas/{{ $data->foto_kelas }}'); width:240px; height:200px;">
                                     <br>
                                     <label for="gantifoto" id="label-ubahfoto" class="btn btn-primary"><i
                                             class="fas fa-upload pr-2"></i> Pilih Foto</label>
-                                    <input type="file" name="fotokelas" id="gantifoto">
+                                    <input type="file" name="foto_kelas" id="gantifoto">
                                     <br><br>
                                 </center>
                                 <label for="angkatan"><b>Angkatan: </b></label>
                                 <select name="angkatan" class="form-control" id="angkatan">
                                     @for ($i = 1980; $i <= date('Y'); $i++)
-                                        @if ($i == date('Y'))
+                                        @if ($i == $data->angkatan)
                                             <option value="{{ $i }}" selected="selected">{{ $i }}
                                             </option>
                                         @else
@@ -151,14 +157,15 @@
                                 </select>
                                 <br>
                                 <label for="namakelas"><b>Nama Kelas: </b></label>
-                                <input type="text" name="namakelas" id="namakelas" class="form-control">
+                                <input type="text" name="nama_kelas" id="namakelas" class="form-control" value="{{ $data->nama_kelas}}"
                                 <br>
-                                <label for="deskripsi"><b>Deskripsi:</b></label>
-                                <textarea name="deskripsi" id="deskripsi"></textarea>
+                                <label for="deskripsi_kelas"><b>Deskripsi:</b></label>
+                                <input type="text" name="deskripsi_kelas" id="deskripsi_kelas" value="{{ $data->deskripsi_kelas }}"
                                 <br>
                                 <input type="submit" class="btn btn-primary form-control" id="send-settingkelas"
                                     value="Setting Kelas">
                             </form>
+                            @endforeach
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -219,7 +226,12 @@
                             <p><b>Apakah anda yakin akan menghapus kelas X MIPA 5?</b> kelas yang anda hapus akan hilang beserta dengan mapel dan nilai yang anda buat di kelas ini.</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-danger">Hapus Kelas</button>
+                            @foreach($datas as $data)
+                            <form action="" id="form-hapus-kelas" data-url="/ruangkelas/{{ $data->id_kelas }}/delete" method="POST" >
+                                @csrf
+                                <input type="submit" class="btn btn-danger" value="Hapus Kelas"></input>
+                            </form>
+                            @endforeach
                             <button type="button" class="btn btn-success" data-dismiss="modal">Batalkan</button>
                         </div>
                     </div>
@@ -302,7 +314,7 @@
 <script src="js/ruangkelas.js"></script>
 <script src="js/ruangkelas/tambahpresensi.js"></script>
 <script>
-    CKEDITOR.replace('deskripsi');
+    CKEDITOR.replace('deskripsi_kelas');
 </script>
 <script>
     CKEDITOR.replace('deskripsi-mapel');

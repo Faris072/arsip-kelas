@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" id="css">
     {{-- CSRF TOKEN LARAVEL JQUERY --}}
-    {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <style>
 

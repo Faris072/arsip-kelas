@@ -54,14 +54,35 @@ $('#menu-setpresensi').on('click', function(){
 });
 
 
-$('#send-settingkelas').on('click', function(e){
+$('#form-setting-kelas').on('submit', function(e){
     e.preventDefault();
-    if($('#gantifoto')[0].files.length == 0){
-        swal("Data Kosong!", "Silahkan masukkan foto!", "error");
-    }
-    else{
-        swal("Oops!", "Masih dalam pengembangan", "warning");
-    }
+    let desc = CKEDITOR.instances['deskripsi_kelas'].getData();;//supaya ckeditor bisa masuk di database
+    let formData = new FormData($(this)[0]);
+    formData.append('deskripsi_kelas', desc);
+    let url1 = $(this).attr('data-url');
+    $.ajax({
+        method: 'POST',
+        enctype: 'multipart/form-data',
+        url: url1,
+        data: formData,
+        processData: false,//untuk mengirim file dari formData()
+        contentType: false,//sama
+        beforeSend: function(){
+            $('#content').html('');
+            $('.loading').css('display','block');
+        },
+        success: function (data) {
+            $('#content').html(data);
+            $(document).ajaxComplete(function(){
+                let css = $('#linkCSS').text();
+                $('#css').attr('href', css);
+                $('.loading').css('display', 'none');
+            });
+        },
+        error: function(xhr, thrownError){
+            $('#content').html(xhr.statur+'<br>'+thrownError);
+        }
+    });
 });
 
 $('#menu-setsiswa').on('click',function(){
@@ -116,5 +137,32 @@ $('.masuk-mapel').on('click', function(){
         }
     });
 });
+
+$('#form-hapus-kelas').on('submit', function(e) {
+    e.preventDefault();
+    let data = $(this).serialize();
+    let url = $(this).attr('data-url');
+    $.ajax({
+        method: 'POST',
+        url: url,
+        data: data,
+        beforeSend: function(){
+            $('#content').html('');
+            $('.loading').css('display','block');
+        },
+        success: function (data) {
+            $('#content').html(data);
+            $(document).ajaxComplete(function(){
+                let css = $('#linkCSS').text();
+                $('#css').attr('href', css);
+                $('.loading').css('display', 'none');
+            });
+        },
+        error: function(xhr, thrownError){
+            $('#content').html(xhr.statur+'<br>'+thrownError);
+        },
+    });
+});
+
 
 

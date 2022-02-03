@@ -58,8 +58,10 @@ $(document).ready(function() {
 
 $('#form-tambah-kelas').on('submit', function(e) {
     e.preventDefault();
+    let desc = CKEDITOR.instances['deskripsi-tambahkelas'].getData();;//supaya ckeditor bisa masuk di database
     // let formData = $('#form-tambah-kelas').serialize();//serialize untuk mengambil data apapun dari form tapi tidak untuk file
     let formData = new FormData($(this)[0]);//untuk mengirim file kita mangguanakan formData($(form)[0])
+    formData.append('deskripsi_kelas', desc);
     $.ajax({
         method: 'POST',
         url: '/angkatan',
@@ -84,3 +86,4 @@ $('#form-tambah-kelas').on('submit', function(e) {
         },
     });
 });
+

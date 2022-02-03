@@ -46,7 +46,7 @@
                         <input type="text" name="nama_kelas" id="namakelas" class="form-control">
                         <br>
                         <label for="deskripsi"><b>Deskripsi:</b></label>
-                        <textarea name="deskripsi" id="deskripsi-tambahkelas"></textarea>
+                        <textarea name="deskripsi_kelas" id="deskripsi-tambahkelas"></textarea>
                         <br>
                         <input type="submit" class="btn btn-success form-control" id="btn-tambahkelas"
                             value="Tambah Kelas">
@@ -64,7 +64,7 @@
 
 @foreach ($angkatan as $akt)
 <div class="data">
-    <div class="kategori pb-2 mt-3 pr-3" data-toggle="collapse" data-target="#akt2020">
+    <div class="kategori pb-2 mt-3 pr-3" data-toggle="collapse" data-target="#akt{{ $akt->angkatan }}">
         <table width="100%">
             <tr>
                 <td valign="bottom" style="margin-bottom:0;">
@@ -74,7 +74,7 @@
             </tr>
         </table>
     </div>
-    <div class="collapse angkatan" id="akt2020">
+    <div class="collapse angkatan" id="akt{{ $akt->angkatan }}">
         <div class="row d-flex p-3" style="justify-content:space-between;">
             @foreach ($datas as $data)
                 @if($data->angkatan == $akt->angkatan)
@@ -87,15 +87,15 @@
                             <p class="card-text"><span>{{ $data->angkatan }}</span></p>
                             <div class="btn-card d-flex" style="justify-content:space-between;">
                                 <a href="#" class="btn btn-primary p-1" style="font-size:100%; padding:0.2vw;"
-                                    data-toggle="modal" data-target="#detail">DETAIL</a>
-                                <a href="#" class="akt-ruangkelas btn btn-success p-1" data-url="/ruangkelas"
+                                    data-toggle="modal" data-target="#detail{{ $akt->angkatan }}">DETAIL</a>
+                                <a href="#" class="akt-ruangkelas btn btn-success p-1" data-url="/ruangkelas/{{ $data->id_kelas }}"
                                     style="font-size:100%; padding:0.2vw; right:0;">MASUK Kelas</a>
                             </div>
                         </div>
                     </div>
                     {{-- endCard --}}
                     <!-- Modal -->
-                    <div class="modal fade bd-example-modal-lg" id="detail" tabindex="-1" role="dialog"
+                    <div class="modal fade bd-example-modal-lg" id="detail{{ $akt->angkatan }}" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
@@ -180,7 +180,11 @@
 </div>
 @endforeach
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
 {{-- js --}}
 <script id="js" src="js/angkatan.js"></script>
 <script>

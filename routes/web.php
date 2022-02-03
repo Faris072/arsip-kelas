@@ -31,17 +31,17 @@ Route::get('/home', function () {
     ]);
 });
 
+
+// kelas
 Route::resource('/angkatan','App\http\Controllers\kelasController');
+Route::get('/ruangkelas/{id_kelas}','App\http\Controllers\kelasController@index2');
+Route::post('/ruangkelas/{id_kelas}/update','App\http\Controllers\kelasController@update2');
+Route::post('/ruangkelas/{id_kelas}/delete','App\http\Controllers\kelasController@destroy');
+//end kelas
 
 Route::get('/profil', function(){
     return view('profil', [
         'css' => '',
-    ]);
-});
-
-Route::get('/ruangkelas', function(){
-    return view('ruangkelas', [
-        'css' => 'css/ruangkelas.css',
     ]);
 });
 
