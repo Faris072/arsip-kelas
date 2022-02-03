@@ -13,6 +13,8 @@ class kelas extends Model
 
     protected $primaryKey = 'id_kelas';
 
+    protected $guarded = ['id_kelas'];
+
     public function user(){
         return $this->belongsTo(user::class);
     }

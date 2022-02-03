@@ -14,8 +14,12 @@ class kelasController extends Controller
      */
     public function index()
     {
+        $data = kelas::all()->sortByDesc('created_at');
+        $angkatans = kelas::distinct()->get('angkatan')->sortByDesc('angkatan');// untuk desc gunakan sortByDesc() untuk asc gunakan sortBy(). menggunakan get karena jika menggunakan all data tidak bisa dibaca
         return view('angkatan', [
-            'css' => 'css/angkatan.css'
+            'css' => 'css/angkatan.css',
+            'datas' => $data,
+            'angkatan' => $angkatans
         ]);
     }
 
@@ -37,26 +41,28 @@ class kelasController extends Controller
      */
     public function store(Request $request)
     {
-        $request['id_kelas'] = 1000000000;
+        // $request['id_kelas'] = 1000000000;
+        $request['id'] = 1000000000;
 
-        if(empty($request['fotokelas'])){
-            $request['fotokelas'] = 'default.jpg';
+        $validatedData = $request->validate([
+            'foto_kelas' => 'max:1024',
+            'angkatan' => 'required',
+            'nama_kelas' => 'required|max:20',
+            'deskripsi' => '',
+            // 'id_kelas' => 'required',
+            'id' => 'required'
+        ]);
+
+        if(empty($request['foto_kelas'])){
+            $validatedData['foto_kelas'] = 'default.jpg';
         }
         else{
             $namafoto = $request->file('foto_kelas')->getClientOriginalName();
             $ekstensi = $request->file('foto_kelas')->getClientOriginalExtension();
-            $fotokelas = mt_rand(1000000000,9999999999) + $ekstensi;
-            $request->file('foto_kelas')->storeAs('/fotokelas', $namafoto);
+            $fotokelas = mt_rand(1000000000,9999999999) .'.'. $ekstensi;
+            $request->file('foto_kelas')->storeAs('/fotokelas', $fotokelas);
+            $validatedData['foto_kelas'] = $fotokelas;
         }
-
-        $validatedData = $request->validate([
-            'foto_kelas' => 'max:1024|mimes:jpg,jpeg,png,csv',
-            'angkatan' => 'required',
-            'nama_kelas' => 'required|max:20',
-            'deskripsi' => '',
-            'id_kelas' => 'required',
-            'id' => 'required'
-        ]);
 
         kelas::create($validatedData);
 

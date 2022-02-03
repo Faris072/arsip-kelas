@@ -20,12 +20,13 @@
                     </button>
                 </div>
                 <div class="modal-body" style="height:70vh; overflow-y:auto;">
-                    <form action="" method="post" id="form-tambah-kelas">
+                    <form action="" method="post" id="form-tambah-kelas" enctype="multipart/form-data">
                         @csrf
                         <center>
                             <br>
                             <label for="gantifoto" id="label-ubahfoto" class="btn btn-primary"><i
                                     class="fas fa-upload pr-2"></i> Pilih Foto</label>
+                            <br>
                             <input type="file" name="foto_kelas" id="gantifoto">
                             <br><br>
                         </center>
@@ -61,29 +62,29 @@
 </div>
 <br>
 
-@for ($j = 0; $j < 5; $j++)
+@foreach ($angkatan as $akt)
+<div class="data">
     <div class="kategori pb-2 mt-3 pr-3" data-toggle="collapse" data-target="#akt2020">
         <table width="100%">
             <tr>
                 <td valign="bottom" style="margin-bottom:0;">
-                    <h4><span>Agkatan 2020</h4>
+                    <h4><span>Agkatan {{ $akt->angkatan }}</span></h4>
                 </td>
                 <td><a href="#" class="btn btn-warning" style="float:right; color:white;">More >></a></td>
             </tr>
         </table>
     </div>
-    <?php $i = 10; ?>
     <div class="collapse angkatan" id="akt2020">
         <div class="row d-flex p-3" style="justify-content:space-between;">
-            @while ($i != 0)
-                <?php $i--; ?>
+            @foreach ($datas as $data)
+                @if($data->angkatan == $akt->angkatan)
                 <div class="col-md-4 col-6 p-0 pb-3">
                     {{-- card --}}
                     <div class="card m-0" style="width: 100%; height:100%;">
                         <img class="card-img-top" src="/storage/default/konten.jpg" alt="Card image cap">
                         <div class="card-body" style="padding:1vw;">
-                            <h5 class="card-title" style=""><b>X MIPA 5</b></h5>
-                            <p class="card-text"><span>2020</span></p>
+                            <h5 class="card-title" style=""><b>{{ $data->nama_kelas }}</b></h5>
+                            <p class="card-text"><span>{{ $data->angkatan }}</span></p>
                             <div class="btn-card d-flex" style="justify-content:space-between;">
                                 <a href="#" class="btn btn-primary p-1" style="font-size:100%; padding:0.2vw;"
                                     data-toggle="modal" data-target="#detail">DETAIL</a>
@@ -99,7 +100,8 @@
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel"><b>Modal title</b></h5>
+                                    <h5 class="modal-title" id="exampleModalLabel"><b>Detail Kelas
+                                            {{ $data->nama_kelas }}</b></h5>
                                     <button type="button" class="close" data-dismiss="modal"
                                         aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
@@ -169,10 +171,16 @@
                     </div>
                     {{-- endModal --}}
                 </div>
-            @endwhile
+                @else
+                {{ '' }}
+                @endif
+            @endforeach
         </div>
     </div>
-@endfor
+</div>
+@endforeach
+
+
 {{-- js --}}
 <script id="js" src="js/angkatan.js"></script>
 <script>

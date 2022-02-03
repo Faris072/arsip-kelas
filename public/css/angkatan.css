@@ -165,7 +165,7 @@
 }
 
 #gantifoto{
-    display:none;
+    opacity:0;
 }
 
 #label-ubahfoto{

@@ -56,20 +56,17 @@ $(document).ready(function() {
 
 });
 
-$('#btn-tambahkelas').on('click', function(e) {
+$('#form-tambah-kelas').on('submit', function(e) {
     e.preventDefault();
-    let formData = $('#form-tambah-kelas').serialize();//serialize untuk mengambil data apapun dari form
-    console.log(formData);
-    // //UNTUK CSRF. dan metanya di cdnbootstrap.blade.php
-    // $.ajaxSetup({
-    //     headers: {
-    //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    //     }
-    // });
+    // let formData = $('#form-tambah-kelas').serialize();//serialize untuk mengambil data apapun dari form tapi tidak untuk file
+    let formData = new FormData($(this)[0]);//untuk mengirim file kita mangguanakan formData($(form)[0])
     $.ajax({
         method: 'POST',
         url: '/angkatan',
+        enctype: 'multipart/form-data',
         data: formData,
+        processData: false,//untuk mengirim file dari formData()
+        contentType: false,//sama
         beforeSend: function(){
             $('#content').html('');
             $('.loading').css('display','block');
