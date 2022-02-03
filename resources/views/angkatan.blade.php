@@ -86,8 +86,8 @@
                             <h5 class="card-title" style=""><b>{{ $data->nama_kelas }}</b></h5>
                             <p class="card-text"><span>{{ $data->angkatan }}</span></p>
                             <div class="btn-card d-flex" style="justify-content:space-between;">
-                                <a href="#" class="btn btn-primary p-1" style="font-size:100%; padding:0.2vw;"
-                                    data-toggle="modal" data-target="#detail{{ $akt->angkatan }}">DETAIL</a>
+                                <a href="#" class="btn btn-primary p-1 detail-kelas" style="font-size:100%; padding:0.2vw;"
+                                    data-toggle="modal" data-target="#detail{{ $data->id_kelas }}">DETAIL</a>
                                 <a href="#" class="akt-ruangkelas btn btn-success p-1" data-url="/ruangkelas/{{ $data->id_kelas }}"
                                     style="font-size:100%; padding:0.2vw; right:0;">MASUK Kelas</a>
                             </div>
@@ -95,7 +95,7 @@
                     </div>
                     {{-- endCard --}}
                     <!-- Modal -->
-                    <div class="modal fade bd-example-modal-lg" id="detail{{ $akt->angkatan }}" tabindex="-1" role="dialog"
+                    <div class="modal fade bd-example-modal-lg modal-detail" id="detail{{ $data->id_kelas }}" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
@@ -108,62 +108,22 @@
                                     </button>
                                 </div>
                                 <div class="modal-body" style="height:70vh; overflow-y:auto;">
-                                    <div class="gambar">
-                                        <center>
-                                            <div id="carouselExampleIndicators" class="carousel slide"
-                                                data-ride="carousel">
-                                                <ol class="carousel-indicators">
-                                                    <li data-target="#carouselExampleIndicators" data-slide-to="0"
-                                                        class="active"></li>
-                                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                                </ol>
-                                                <div class="carousel-inner">
-                                                    <div class="carousel-item active">
-                                                        <img class="d-block" id="gambar0" style="width:70%;"
-                                                            src="/storage/default/konten.jpg" alt="First slide">
-                                                    </div>
-                                                    <div class="carousel-item">
-                                                        <img class="d-block" id="gambar0" style="width:70%;"
-                                                            src="/storage/default/konten.jpg" alt="Second slide">
-                                                    </div>
-                                                    <div class="carousel-item">
-                                                        <img class="d-block" id="gambar0" style="width:70%;"
-                                                            src="/storage/default/konten.jpg" alt="Third slide">
-                                                    </div>
-                                                </div>
-                                                <a class="carousel-control-prev" style="background-color:black;"
-                                                    href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                    <span class="sr-only">Previous</span>
-                                                </a>
-                                                <a class="carousel-control-next" style="background-color:black;"
-                                                    href="#carouselExampleIndicators" role="button" data-slide="next">
-                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                    <span class="sr-only">Next</span>
-                                                </a>
-                                            </div>
-                                        </center>
-                                    </div>
-                                    <div class="harga pt-2">
-                                        <h5><b>Harga:</b></h5>
-                                        <p>Rp100.000</p>
-                                    </div>
-                                    <div class="deskripsi">
-                                        <h5><b>Deskripsi:</b></h5>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum
-                                            architecto, odit eaque repellendus unde, odio saepe quidem optio cupiditate
-                                            numquam blanditiis non recusandae. Cumque a consequuntur excepturi eaque
-                                            dolorum!</p>
-                                    </div>
-                                    <div class="stok">
-                                        <h5><b>Stok:</b></h5>
-                                        <p>100</p>
-                                    </div>
+                                    <center><img src="/storage/fotokelas/{{ $data->foto_kelas }}"
+                                        style="background-image:url('storage/fotokelas/{{ $data->foto_kelas }}'); width:600px; height:400px;"></center>
+                                        <br>
+                                        <div class="isi">
+                                            <h5><b>Angkatan:</b></h5>
+                                            <p>{{ $data->angkatan }}</p>
+                                            <br>
+                                            <h5><b>Nama Kelas:</b></h5>
+                                            <p>{{ $data->nama_kelas }}</p>
+                                            <br>
+                                            <h5><b>Deskripsi:</b></h5>
+                                            <p class="detail-deskripsikelas"> {{ $data->deskripsi_kelas }}</p>
+                                            <br>
+                                        </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <a href="#" type="button" class="btn btn-info">Pesan Sekarang</a>
-                                    <a href="#" type="button" class="btn btn-success">Chat</a>
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
@@ -179,14 +139,13 @@
     </div>
 </div>
 @endforeach
-
 <br>
 <br>
 <br>
 <br>
 <br>
 {{-- js --}}
-<script id="js" src="js/angkatan.js"></script>
+<script id="js" src="js/angkatan.js"></s>
 <script>
     CKEDITOR.replace('deskripsi-tambahkelas');
-</script>
+</scrip>
