@@ -121,6 +121,8 @@
                                             <h5><b>Deskripsi:</b></h5>
                                             <p class="detail-deskripsikelas"> {{ $data->deskripsi_kelas }}</p>
                                             <br>
+                                            <h5><b>Tanggal dibuat: </b></h5>
+                                            <p>{{ $data->created_at }} GMT</p>
                                         </div>
                                 </div>
                                 <div class="modal-footer">
@@ -145,7 +147,7 @@
 <br>
 <br>
 {{-- js --}}
-<script id="js" src="js/angkatan.js"></s>
+<script id="js" src="js/angkatan.js">
 <script>
     CKEDITOR.replace('deskripsi-tambahkelas');
 </scrip>

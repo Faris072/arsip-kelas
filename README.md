@@ -5,4 +5,7 @@ bismillahirohmanirrohim
     1. Hapus Kelas
 
     #back end:
-    blass
+    1. auth
+    2. CRUD siswa
+    3. CRUD presensi
+    4. CRUD mapel

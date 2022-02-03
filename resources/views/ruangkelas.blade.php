@@ -223,7 +223,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p><b>Apakah anda yakin akan menghapus kelas X MIPA 5?</b> kelas yang anda hapus akan hilang beserta dengan mapel dan nilai yang anda buat di kelas ini.</p>
+                            <p><b>Apakah anda yakin akan menghapus kelas {{ $dataes->nama_kelas }}?</b> kelas yang anda hapus akan hilang beserta dengan mapel dan nilai yang anda buat di kelas ini.</p>
                         </div>
                         <div class="modal-footer">
                             @foreach($datas as $data)

@@ -25,9 +25,11 @@ class kelasController extends Controller
 
     public function index2($id_kelas){
         $datas = kelas::all()->where('id_kelas', $id_kelas);
+        $dataes = kelas::find($id_kelas);//kalau untuk mengambil data dari 1 baris tabel lebih baik menggunakan find()
         return view('ruangkelas', [
             'css' => 'css/ruangkelas.css',
-            'datas' => $datas
+            'datas' => $datas,
+            'dataes' => $dataes
         ]);
     }
 
