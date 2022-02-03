@@ -95,7 +95,7 @@
                     </div>
                     {{-- endCard --}}
                     <!-- Modal -->
-                    <div class="modal fade bd-example-modal-lg modal-detail" id="detail{{ $data->id_kelas }}" tabindex="-1" role="dialog"
+                    <div class="modal fade bd-example-modal-lg" id="detail{{ $data->id_kelas }}" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
@@ -107,7 +107,7 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body" style="height:70vh; overflow-y:auto;">
+                                <div class="modal-body modal-detail" style="height:70vh; overflow-y:auto;">
                                     <center><img src="/storage/fotokelas/{{ $data->foto_kelas }}"
                                         style="background-image:url('storage/fotokelas/{{ $data->foto_kelas }}'); width:600px; height:400px;"></center>
                                         <br>

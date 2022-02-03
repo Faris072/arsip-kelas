@@ -87,7 +87,8 @@ $('#form-tambah-kelas').on('submit', function (e) {
     });
 });
 
-$('.modal-detail').on('hover',function () {
+//untuk deskripsi supaya diconvert menjadi html
+$('.modal-detail').on('scroll',function () {
     let x = $('.detail-deskripsikelas',this).text();
     $('.detail-deskripsikelas',this).html(x);
 });
