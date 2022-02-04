@@ -30,7 +30,8 @@ class siswaController extends Controller
     public function create()
     {
         $id_kelas = session('id_kelas');
-        $absen = siswa::whereRaw('no_absen = (select max(`no_absen`) from siswa) AND id_kelas = '.$id_kelas)->get();//untuk where sql bisasa
+        $absen = siswa::whereRaw('no_absen = (select max(`no_absen`) from siswa) AND id_kelas = '.$id_kelas)->get()->first();//whereRow untuk where sql bisasa. dan first untuk mengambil 1 data yg di awal
+
         return view('ruangkelas/tambahsiswa',[
             'css' => '',
             'absen' => $absen
@@ -114,8 +115,10 @@ class siswaController extends Controller
      * @param  \App\Models\siswa  $siswa
      * @return \Illuminate\Http\Response
      */
-    public function destroy(siswa $siswa)
+    public function destroy($id_siswa)
     {
-        //
+        siswa::destroy($id_siswa);
+
+        return redirect('/setsiswa');
     }
 }

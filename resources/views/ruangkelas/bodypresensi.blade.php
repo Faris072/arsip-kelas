@@ -52,9 +52,7 @@
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">
                                     <b>Noname</b></h5>
-                                <button type="button" class="close"
-                                    data-dismiss="modal" data-target=".modal-presensi"
-                                    aria-label="Close">
+                                <button type="button" class="close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
@@ -65,7 +63,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button"
-                                    class="btn btn-success">Hadir</button>
+                                    class="btn btn-success" id="hadir">Hadir</button>
                                 <button type="button"
                                     class="btn btn-primary">Izin</button>
                                 <button type="button"

@@ -9,6 +9,7 @@ $('#close-tambahsiswa').on('click', function(){
             $('#modal-setsiswa').html(data.status + '<br>' + data1);
         },
         success: function (data) {
+            $('#tambah-siswa').css('display', 'block');
             $('#modal-setsiswa').html(data);
         }
     });
@@ -25,6 +26,7 @@ $('#form-tambah-siswa').on('submit', function(e){
             $('#modal-setsiswa').html(data.status + '<br>' + data1);
         },
         success: function (data) {
+            $('#tambah-siswa').css('display', 'block');
             $('#modal-setsiswa').html(data);
         }
     });

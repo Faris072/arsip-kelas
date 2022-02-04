@@ -112,6 +112,7 @@ $('#tambah-siswa').on('click', function(){
             $('#isi-setsiswa').html(data.status + '<br>' + data1);
         },
         success: function (data) {
+            $('#tambah-siswa').css('display', 'none');
             $('#isi-setsiswa').html(data);
         }
     });

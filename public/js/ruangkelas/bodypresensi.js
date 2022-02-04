@@ -14,3 +14,9 @@ $('#ubahpresensi').on('click', function(){
         },
     });
 });
+
+$('.close').on('click', function (){
+    $('.modal-presensi').modal('hide');
+});
+
+

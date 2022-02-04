@@ -6,9 +6,13 @@
     <form action="/setsiswa" method="post" id="form-tambah-siswa">
         @csrf
         <label for="absen"><b>No. Absen: </b><span style="color:red;">*</span></label>
-        @foreach ($absen as $a)
-        <input type="number" id="absen" name="no_absen" value="{{ $a->no_absen+1 }}"class="form-control">
-        @endforeach
+        {{-- @dd($absen->no_absen) --}}
+        @if(empty($absen->no_absen))
+            <input type="number" id="absen" name="no_absen" value="1" class="form-control">
+        @else
+            <input type="number" id="absen" name="no_absen" value="{{ $absen->no_absen+1 }}" class="form-control">
+        @endif
+
         <br>
         <label for="nama"><b>Nama Lengkap: </b><span style="color:red;">*</span></label>
         <input type="text" id="nama" name="nama_siswa" class="form-control">
