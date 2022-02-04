@@ -13,6 +13,8 @@ class siswa extends Model
 
     protected $primaryKey = 'id_siswa';
 
+    protected $guarded = ['id_siswa'];
+
     public function kelas(){
         return $this->belongsTo(kelas::class);
     }

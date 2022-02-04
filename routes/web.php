@@ -51,12 +51,6 @@ Route::get('/favorit', function(){
     ]);
 });
 
-Route::get('/editsiswa', function(){
-    return view('ruangkelas/editsiswa', [
-        'css' => '',
-    ]);
-});
-
 Route::get('/ruangkelaspresensi', function(){
     return view('ruangkelas/ruangkelaspresensi', [
         'css' => ''
@@ -81,17 +75,9 @@ Route::get('/tambahpresensi', function() {
     ]);
 });
 
-Route::get('/setsiswa', function(){
-    return view('ruangkelas/setsiswa',[
-        'css' => ''
-    ]);
-});
-
-Route::get('/tambahsiswa', function(){
-    return view('ruangkelas/tambahsiswa',[
-        'css' => ''
-    ]);
-});
+//siswa
+Route::resource('/setsiswa', 'App\Http\Controllers\siswaController');
+//endsiswa
 
 Route::get('/mapel', function(){
     return view('/mapel',[

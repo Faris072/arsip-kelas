@@ -14,7 +14,12 @@ class siswaController extends Controller
      */
     public function index()
     {
-        //
+        $id_kelas = session('id_kelas');
+        $data_siswa = siswa::all()->where('id_kelas', $id_kelas);
+        return view('ruangkelas/setsiswa',[
+            'css' => '',
+            'data_siswa' => $data_siswa
+        ]);
     }
 
     /**
@@ -24,7 +29,9 @@ class siswaController extends Controller
      */
     public function create()
     {
-        //
+        return view('ruangkelas/tambahsiswa',[
+            'css' => ''
+        ]);
     }
 
     /**
@@ -35,7 +42,19 @@ class siswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request['id_kelas'] = session('id_kelas');
+        $validatedData = $request->validate([
+            'id_kelas' => 'required',
+            'no_absen' => 'required',
+            'nama_siswa' => 'required|max:50',
+            'gender' => 'required',
+            'telp_siswa' => 'max:20',
+            'email_siswa' => 'max:244'
+        ]);
+
+        siswa::create($validatedData);
+
+        return redirect('/setsiswa');
     }
 
     /**
@@ -55,9 +74,11 @@ class siswaController extends Controller
      * @param  \App\Models\siswa  $siswa
      * @return \Illuminate\Http\Response
      */
-    public function edit(siswa $siswa)
+    public function edit($id_siswa)
     {
-        //
+        return view('ruangkelas/editsiswa', [
+            'css' => '',
+        ]);
     }
 
     /**

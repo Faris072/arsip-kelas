@@ -8,17 +8,17 @@
             <th><b>Email</b></th>
             <th colspan="2"><b>Aksi</b></th>
         </tr>
-        @for ($i= 0; $i<20; $i++)
+        @foreach ($data_siswa as $dtsiswa)
         <tr>
-            <td>{{ $i }}</td>
-            <td>Faris</td>
-            <td>Laki-Laki</td>
-            <td>085706389042</td>
-            <td>farisbos.mfs@gmail.com</td>
-            <td><a href="#" class="btn btn-warning edit-siswa">Edit</a></td>
+            <td>{{ $dtsiswa->id_siswa }}</td>
+            <td>{{ $dtsiswa->nama_siswa }}</td>
+            <td>{{ $dtsiswa->gender }}</td>
+            <td>{{ $dtsiswa->telp_siswa }}</td>
+            <td>{{ $dtsiswa->email_siswa }}</td>
+            <td><a href="#" class="btn btn-warning edit-siswa" data-url="/setsiswa/1/edit" id="edit-siswa">Edit</a></td>
             <td><a href="#" class="btn btn-danger">Hapus</a></td>
         </tr>
-        @endfor
+        @endforeach
     </table>
 </div>
 <script src="js/ruangkelas/setsiswa.js"></script>

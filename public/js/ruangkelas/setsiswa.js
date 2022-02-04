@@ -1,7 +1,8 @@
-$('.edit-siswa').on('click', function(){
+$('#edit-siswa').on('click', function(){
+    let url = $(this).attr('data-url');
     $.ajax({
         type: 'GET',
-        url: '/editsiswa',
+        url: url,
         beforesend: function(){
 
         },

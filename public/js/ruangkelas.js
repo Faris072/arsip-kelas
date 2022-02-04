@@ -104,7 +104,7 @@ $('#menu-setsiswa').on('click',function(){
 $('#tambah-siswa').on('click', function(){
     $.ajax({
         type: 'GET',
-        url: '/tambahsiswa',
+        url: '/setsiswa/create',
         beforesend: function(){
 
         },

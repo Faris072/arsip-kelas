@@ -3,21 +3,25 @@
         <button class="btn btn-default px-3 py-2 mb-3" id="close-tambahsiswa"><i class="fas fa-times"></i></button>
         <h5 class="pt-3 ml-2"><b>Tambah Siswa</b></h5>
     </div>
-    <form action="" method="post">
+    <form action="/setsiswa" method="post" id="form-tambah-siswa">
+        @csrf
         <label for="absen"><b>No. Absen: </b><span style="color:red;">*</span></label>
-        <input type="number" id="absen" name="absen" class="form-control">
+        <input type="number" id="absen" name="no_absen" class="form-control">
         <br>
         <label for="nama"><b>Nama Lengkap: </b><span style="color:red;">*</span></label>
-        <input type="text" id="nama" name="nama" class="form-control">
+        <input type="text" id="nama" name="nama_siswa" class="form-control">
         <br>
         <label for="gender"><b>Gender: </b><span style="color:red;">*</span></label>
-        <input type="text" id="gender" name="gender" class="form-control">
+        <select name="gender" id="gender" class="form-control">
+            <option value="Laki-Laki" selected>Laki-Laki</option>
+            <option value="Perempuan">Perempuan</option>
+        </select>
         <br>
         <label for="telp"><b>No. Telp: </b></label>
-        <input type="text" id="telp" name="telp" class="form-control">
+        <input type="text" id="telp" name="telp_siswa" class="form-control">
         <br>
         <label for="email"><b>Email: </b></label>
-        <input type="email" id="email" name="email" class="form-control">
+        <input type="email" id="email" name="email_siswa" class="form-control">
         <br>
         <input type="submit" class="form-control btn btn-success" value="Tambah Siswa">
     </form>
