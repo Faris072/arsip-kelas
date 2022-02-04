@@ -29,8 +29,11 @@ class siswaController extends Controller
      */
     public function create()
     {
+        $id_kelas = session('id_kelas');
+        $absen = siswa::whereRaw('no_absen = (select max(`no_absen`) from siswa) AND id_kelas = '.$id_kelas)->get();//untuk where sql bisasa
         return view('ruangkelas/tambahsiswa',[
-            'css' => ''
+            'css' => '',
+            'absen' => $absen
         ]);
     }
 
@@ -76,8 +79,10 @@ class siswaController extends Controller
      */
     public function edit($id_siswa)
     {
+        $data = siswa::find($id_siswa);
         return view('ruangkelas/editsiswa', [
             'css' => '',
+            'editsiswa' => $data
         ]);
     }
 
@@ -88,9 +93,19 @@ class siswaController extends Controller
      * @param  \App\Models\siswa  $siswa
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, siswa $siswa)
+    public function update(Request $request, $id_siswa)
     {
-        //
+        $validatedData = $request->validate([
+            'no_absen' => 'required',
+            'nama_siswa' => 'required|max:50',
+            'gender' => 'required',
+            'telp_siswa' => 'max:20',
+            'email_siswa' => 'max:244'
+        ]);
+
+        siswa::where('id_siswa', $id_siswa)->update($validatedData);
+
+        return redirect('/setsiswa');
     }
 
     /**

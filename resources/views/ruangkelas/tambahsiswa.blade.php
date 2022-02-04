@@ -6,7 +6,9 @@
     <form action="/setsiswa" method="post" id="form-tambah-siswa">
         @csrf
         <label for="absen"><b>No. Absen: </b><span style="color:red;">*</span></label>
-        <input type="number" id="absen" name="no_absen" class="form-control">
+        @foreach ($absen as $a)
+        <input type="number" id="absen" name="no_absen" value="{{ $a->no_absen+1 }}"class="form-control">
+        @endforeach
         <br>
         <label for="nama"><b>Nama Lengkap: </b><span style="color:red;">*</span></label>
         <input type="text" id="nama" name="nama_siswa" class="form-control">

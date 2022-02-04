@@ -77,6 +77,7 @@ Route::get('/tambahpresensi', function() {
 
 //siswa
 Route::resource('/setsiswa', 'App\Http\Controllers\siswaController');
+Route::post('/setsiswa/{id_siswa}/update','App\Http\Controllers\siswaController@update');
 //endsiswa
 
 Route::get('/mapel', function(){

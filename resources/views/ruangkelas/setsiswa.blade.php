@@ -10,12 +10,12 @@
         </tr>
         @foreach ($data_siswa as $dtsiswa)
         <tr>
-            <td>{{ $dtsiswa->id_siswa }}</td>
+            <td>{{ $dtsiswa->no_absen }}</td>
             <td>{{ $dtsiswa->nama_siswa }}</td>
             <td>{{ $dtsiswa->gender }}</td>
             <td>{{ $dtsiswa->telp_siswa }}</td>
             <td>{{ $dtsiswa->email_siswa }}</td>
-            <td><a href="#" class="btn btn-warning edit-siswa" data-url="/setsiswa/1/edit" id="edit-siswa">Edit</a></td>
+            <td><a href="#" class="btn btn-warning edit-siswa" data-url="/setsiswa/{{ $dtsiswa->id_siswa }}|/edit" id="edit-siswa">Edit</a></td>
             <td><a href="#" class="btn btn-danger">Hapus</a></td>
         </tr>
         @endforeach
