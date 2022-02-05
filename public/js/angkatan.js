@@ -82,6 +82,7 @@ $('#form-tambah-kelas').on('submit', function (e) {
             });
         },
         error: function (xhr, thrownError) {
+            swal("Terjadi Kesalahan", {icon: "warning",});
             $('#content').html(xhr.statur + '<br>' + thrownError);
         },
     });

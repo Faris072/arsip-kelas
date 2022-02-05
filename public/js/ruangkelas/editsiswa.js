@@ -35,6 +35,7 @@ $('#close-editsiswa').on('click', function(){
 
 $('#form-edit-siswa').on('submit',function(e){
     e.preventDefault();
+    swal("Sedang diproses...", {icon: "warning",});
     let url = $(this).attr('data-url');
     let data = $(this).serialize();
     $.ajax({
@@ -45,9 +46,11 @@ $('#form-edit-siswa').on('submit',function(e){
 
         },
         error: function (data, data1){
+            swal("Terjadi Kesalahan", {icon: "danger",});
             $('#modal-setsiswa').html(data.status + '<br>' + data1);
         },
         success: function (data) {
+            swal("Siswa berhasil diubah", {icon: "success",});
             $('#tambah-siswa').css('display', 'block');
             $('#modal-setsiswa').html(data);
         }

@@ -18,6 +18,7 @@ $('#close-ubahpresensi').on('click', function() {
 
 $('#form-ubah-presensi').on('submit', function(e){
     e.preventDefault();
+    swal("Sedang diproses...", {icon: "warning",});
     let url = $(this).attr('data-url');
     let data = $(this).serialize();
     $.ajax({
@@ -31,6 +32,7 @@ $('#form-ubah-presensi').on('submit', function(e){
             $('.set-presensi').html(data.status + '<br>' + data1);
         },
         success: function(data){
+            swal("Presensi Berhasil Diubah", {icon: "success",});
             $('#tambah-presensi').css('display', 'block');
             $('.set-presensi').html(data);
         }

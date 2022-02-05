@@ -18,6 +18,7 @@ $('#ubahpresensi').on('click', function(){
 
 $('#form-hapus-presensi').on('submit', function(e){
     e.preventDefault();
+    swal("Sedang diproses...", {icon: "warning",});
     let data = $(this).serialize();
     let url = $(this).attr('data-url');
     $.ajax({
@@ -28,9 +29,11 @@ $('#form-hapus-presensi').on('submit', function(e){
 
         },
         error: function (data, data1){
+            swal("Terjadi Kesalahan", {icon: "danger",});
             $('.set-presensi').html(data.status + '<br>' + data1);
         },
         success: function (data) {
+            swal("Presensi berhasil dihapus", {icon: "success",});
             $('#tambah-presensi').css('display', 'block');
             $('#ruangkelaspresensi').html(data);
         },

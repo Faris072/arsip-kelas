@@ -32,6 +32,7 @@ $('.edit-siswa').on('click', function(){
 
 $('.form-delete-siswa').on('submit', function(e){
     e.preventDefault();
+    swal("Sedang diproses...", {icon: "warning",});
     let x = confirm('Apakah anda yakin menghapus siswa ini?');
     if(x == true){
         //

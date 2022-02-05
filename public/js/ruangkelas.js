@@ -80,6 +80,7 @@ $('#form-setting-kelas').on('submit', function(e){
             });
         },
         error: function(xhr, thrownError){
+            swal("Terjadi Kesalahan", {icon: "danger",});
             $('#content').html(xhr.statur+'<br>'+thrownError);
         }
     });
@@ -141,6 +142,7 @@ $('.masuk-mapel').on('click', function(){
 
 $('#form-hapus-kelas').on('submit', function(e) {
     e.preventDefault();
+    swal("Sedang diproses...", {icon: "warning",});
     let data = $(this).serialize();
     let url = $(this).attr('data-url');
     $.ajax({
@@ -152,6 +154,7 @@ $('#form-hapus-kelas').on('submit', function(e) {
             $('.loading').css('display','block');
         },
         success: function (data) {
+            swal("Kelas Berhasil Dihapus", {icon: "success",});
             $('#content').html(data);
             $(document).ajaxComplete(function(){
                 let css = $('#linkCSS').text();
@@ -160,6 +163,7 @@ $('#form-hapus-kelas').on('submit', function(e) {
             });
         },
         error: function(xhr, thrownError){
+            swal("Terjadi kesalahan", {icon: "danger",});
             $('#content').html(xhr.statur+'<br>'+thrownError);
         },
     });
