@@ -13,6 +13,8 @@ class kehadiran extends Model
 
     protected $primaryKey = 'id_kehadiran';
 
+    protected $guarded = ['id_kehadiran'];
+
     public function presensi(){
         return $this->belongsTo(presensi::class);
     }

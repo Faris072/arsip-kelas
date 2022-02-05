@@ -8,7 +8,7 @@ function tampilKehadiran($id_presensi, $id_siswa){
     $sql = "SELECT * FROM kehadiran WHERE id_presensi = ".$id_presensi." AND id_siswa = ".$id_siswa;
     $query = mysqli_query(koneksi(),$sql);
     if($pecah = mysqli_fetch_array($query)){
-        $dt = $pecah['kehadiran'];
+        $dt = $pecah;
     }
     else{
         $dt = '';

@@ -58,6 +58,15 @@ Route::post('/presensi/{id_presensi}/update','App\http\Controllers\presensiContr
 Route::post('/presensi/{id_presensi}/delete','App\http\Controllers\presensiController@destroy');
 //endpresensi
 
+//kehadiran
+Route::post('/presensi/{id_siswa}/thadir','App\http\Controllers\kehadiranController@thadir');
+Route::post('/presensi/{id_siswa}/tizin','App\http\Controllers\kehadiranController@tizin');
+Route::post('/presensi/{id_siswa}/talpha','App\http\Controllers\kehadiranController@talpha');
+Route::post('/presensi/{id_siswa}/{id_kehadiran}/uhadir','App\http\Controllers\kehadiranController@uhadir');
+Route::post('/presensi/{id_siswa}/{id_kehadiran}/uizin','App\http\Controllers\kehadiranController@uizin');
+Route::post('/presensi/{id_siswa}/{id_kehadiran}/ualpha','App\http\Controllers\kehadiranController@ualpha');
+//endkehadiran
+
 //siswa
 Route::resource('/setsiswa', 'App\Http\Controllers\siswaController');
 Route::post('/setsiswa/{id_siswa}/update','App\Http\Controllers\siswaController@update');

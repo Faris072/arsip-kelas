@@ -42,43 +42,56 @@
                     <td>{{ $s->gender }}</td>
                     <?php $hdr = tampilKehadiran(session()->get('id_presensi'),$s->id_siswa) ?>
                     {{-- @dd($hdr) --}}
-                    <td>{{ $hdr }}</td>
                     @if ($hdr!='')
-                    <td><button class="btn btn-primary" data-toggle="modal" data-target="#ubah">Ubah</button></td>
-                    @else
-                    <td><button class="btn btn-primary" data-toggle="modal" data-target="#ubah">Tambah</button></td>
-                    @endif
-                </tr>
-                <!-- Modal -->
-                <div class="modal modal-presensi fade" id="ubah" tabindex="-1"
-                    role="dialog" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">
-                                    <b>Noname</b></h5>
-                                <button type="button" class="close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Silahkan pilih presensi untuk siswa <span
-                                        style="color:blue;">Noname</span> di bawah ini!
-                                </p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button"
-                                    class="btn btn-success" id="hadir">Hadir</button>
-                                <button type="button"
-                                    class="btn btn-primary">Izin</button>
-                                <button type="button"
-                                    class="btn btn-danger">Alpha</button>
+                    <td>{{ $hdr['kehadiran'] }}</td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ubah</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <form action="" class="form-kehadiran" data-url="/presensi/{{ $s->id_siswa }}/{{ $hdr['id_kehadiran'] }}/uhadir">
+                                    @csrf
+                                    <input type="hidden" name="kehadiran" value="Hadir">
+                                    <input type="submit" class="dropdown-item p-2" value="Hadir">
+                                </form>
+                                <form action="" class="form-kehadiran" data-url="/presensi/{{ $s->id_siswa }}/{{ $hdr['id_kehadiran'] }}/uizin">
+                                    @csrf
+                                    <input type="hidden" name="kehadiran" value="Izin">
+                                    <input type="submit" class="dropdown-item p-2" value="Izin">
+                                </form>
+                                <form action="" class="form-kehadiran" data-url="/presensi/{{ $s->id_siswa }}/{{ $hdr['id_kehadiran'] }}/ualpha">
+                                    @csrf
+                                    <input type="hidden" name="kehadiran" value="Alpha">
+                                    <input type="submit" class="dropdown-item p-2" value="Alpha">
+                                </form>
                             </div>
                         </div>
-                    </div>
-                </div>
-                {{-- endmodal --}}
+                    </td>
+                    @else
+                    <td> </td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tambah</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <form action="" class="form-kehadiran" data-url="/presensi/{{ $s->id_siswa }}/thadir">
+                                    @csrf
+                                    <input type="hidden" name="kehadiran" value="Hadir">
+                                    <input type="submit" class="dropdown-item p-2" value="Hadir">
+                                </form>
+                                <form action="" class="form-kehadiran" data-url="/presensi/{{ $s->id_siswa }}/tizin">
+                                    @csrf
+                                    <input type="hidden" name="kehadiran" value="Izin">
+                                    <input type="submit" class="dropdown-item p-2" value="Izin">
+                                </form>
+                                <form action="" class="form-kehadiran" data-url="/presensi/{{ $s->id_siswa }}/talpha">
+                                    @csrf
+                                    <input type="hidden" name="kehadiran" value="Alpha">
+                                    <input type="submit" class="dropdown-item p-2" value="Alpha">
+                                </form>
+                            </div>
+                        </div>
+                    </td>
+                    @endif
+                </tr>
             @endforeach
         </tbody>
     </table>
