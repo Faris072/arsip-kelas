@@ -18,6 +18,13 @@ $('#ubahpresensi').on('click', function(){
 
 $('#form-hapus-presensi').on('submit', function(e){
     e.preventDefault();
+    let konfirmasi = confirm('Apakah anda yakin akan menghapus presensi ini?');
+    if(konfirmasi == true){
+        //
+    }
+    else{
+        ajaxStop();
+    }
     swal("Sedang diproses...", {icon: "warning",});
     let data = $(this).serialize();
     let url = $(this).attr('data-url');
