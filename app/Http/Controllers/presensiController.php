@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\presensi;
+use App\Models\siswa;
+use App\Models\kehadiran;
 use Illuminate\Http\Request;
 
 class presensiController extends Controller
@@ -24,10 +26,14 @@ class presensiController extends Controller
 
     public function index2($id_presensi)
     {
+        $id_kelas = session('id_kelas');
+        session()->put('id_presensi',$id_presensi);
+        $datas = siswa::all()->where('id_kelas', $id_kelas);
         $data = presensi::find($id_presensi);
         return view('ruangkelas/bodypresensi', [
             'css' => '',
-            'data' => $data
+            'data' => $data,
+            'datas' => $datas
         ]);
     }
 
@@ -39,7 +45,7 @@ class presensiController extends Controller
     public function create()
     {
         return view('ruangkelas/tambahpresensi',[
-            'css' => ''
+            'css' => '',
         ]);
     }
 
@@ -80,9 +86,14 @@ class presensiController extends Controller
      * @param  \App\Models\presensi  $presensi
      * @return \Illuminate\Http\Response
      */
-    public function edit(presensi $presensi)
+    public function edit($id_presensi)
     {
-        //
+        $presensi = presensi::find($id_presensi);
+
+        return view('ruangkelas/ubahpresensi',[
+            'css' => '',
+            'presensi' => $presensi
+        ]);
     }
 
     /**
@@ -92,9 +103,16 @@ class presensiController extends Controller
      * @param  \App\Models\presensi  $presensi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, presensi $presensi)
+    public function update(Request $request, $id_presensi)
     {
-        //
+        $validatedData = $request->validate([
+            'tanggal_presensi' => 'required',
+            'nama_presensi' => 'required|max:20',
+        ]);
+
+        presensi::where('id_presensi', $id_presensi)->update($validatedData);
+
+        return redirect('/presensi/'.$id_presensi.'/body');
     }
 
     /**
@@ -103,8 +121,10 @@ class presensiController extends Controller
      * @param  \App\Models\presensi  $presensi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(presensi $presensi)
+    public function destroy($id_presensi)
     {
-        //
+        presensi::destroy($id_presensi);
+
+        return redirect('/presensi');
     }
 }

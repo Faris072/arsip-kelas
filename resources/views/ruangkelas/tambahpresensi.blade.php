@@ -1,5 +1,5 @@
 <div class="head d-flex">
-    <button class="btn btn-default px-3 py-2" id="close-tambahpresensi"><i class="fas fa-times"></i></button>
+    <button class="btn btn-default px-3 py-2" id="close-tambahpresensi" data-url="/presensi"><i class="fas fa-times"></i></button>
     <h5 class="mt-3 ml-3"><b>Tambah Presensi</b></h5>
 </div>
 <br>

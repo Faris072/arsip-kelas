@@ -1,7 +1,8 @@
 $('#close-tambahpresensi').on('click', function() {
+    let url = $(this).attr('data-url');
     $.ajax({
         type: "GET",
-        url: '/presensi',
+        url: url,
         beforesend: function(){
 
         },
@@ -9,7 +10,7 @@ $('#close-tambahpresensi').on('click', function() {
             $('.set-presensi').html(data.status + '<br>' + data1);
         },
         success: function(data){
-            $('.set-presensi').html(data);
+            $('.set-presensi').html('');
         }
     });
 });

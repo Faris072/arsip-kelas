@@ -6,7 +6,7 @@
         <tr>
             <td>Tanggal Presensi</td>
             <td> : </td>
-            <td> {{ $data->tanggal_presensi }}</td>
+            <td> {{ date('d-m-Y', strtotime($data->tanggal_presensi)) }}</td>
         </tr>
         <tr>
             <td>Nama Presensi</td>
@@ -15,8 +15,13 @@
         </tr>
     </table>
     <br>
-    <button class="btn btn-primary" id="ubahpresensi">Ubah Presensi</button>
-    <button class="btn btn-danger" id="ubahpresensi">Hapus Presensi</button>
+    <div class="aksi d-flex">
+    <button class="btn btn-primary mr-2" id="ubahpresensi" data-url="/presensi/{{ $data->id_presensi }}/edit">Ubah Presensi</button>
+        <form action="" method="POST" id="form-hapus-presensi" data-url="/presensi/{{ $data->id_presensi }}/delete">
+            @csrf
+            <button class="btn btn-danger" id="ubahpresensi">Hapus Presensi</button>
+        </form>
+    </div>
 </div>
 <div class="isipresensi">
     <table celpadding="0" class="table table-hover table-striped">
@@ -30,18 +35,22 @@
             </tr>
         </thead>
         <tbody class="table-hover">
-            @for ($i = 0; $i < 30; $i++)
+            @foreach ($datas as $s)
                 <tr>
-                    <td>{{ $i + 1 }}</td>
-                    <td>Noname</td>
-                    <td>L</td>
-                    <td>Hadir</td>
-                    <td><button class="btn btn-primary" data-toggle="modal"
-                            data-target="#ubah{{ $i }}">Ubah</button>
-                    </td>
+                    <td>{{ $s->no_absen }}</td>
+                    <td>{{ $s->nama_siswa }}</td>
+                    <td>{{ $s->gender }}</td>
+                    <?php $hdr = tampilKehadiran(session()->get('id_presensi'),$s->id_siswa) ?>
+                    {{-- @dd($hdr) --}}
+                    <td>{{ $hdr }}</td>
+                    @if ($hdr!='')
+                    <td><button class="btn btn-primary" data-toggle="modal" data-target="#ubah">Ubah</button></td>
+                    @else
+                    <td><button class="btn btn-primary" data-toggle="modal" data-target="#ubah">Tambah</button></td>
+                    @endif
                 </tr>
                 <!-- Modal -->
-                <div class="modal modal-presensi fade" id="ubah{{ $i }}" tabindex="-1"
+                <div class="modal modal-presensi fade" id="ubah" tabindex="-1"
                     role="dialog" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -70,7 +79,7 @@
                     </div>
                 </div>
                 {{-- endmodal --}}
-            @endfor
+            @endforeach
         </tbody>
     </table>
 </div>

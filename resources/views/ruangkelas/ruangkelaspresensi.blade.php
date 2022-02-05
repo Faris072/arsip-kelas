@@ -4,7 +4,7 @@
     </div>
     <div class="isitglpresensi">
         @foreach ($datas as $x)
-        <button class="tg-presensi btn btn-primary mb-1" data-url="/presensi/{{ $x->id_presensi }}/body">{{ $x->tanggal_presensi }}</button>
+        <button class="tg-presensi btn btn-primary mb-1" data-url="/presensi/{{ $x->id_presensi }}/body">{{ date('d-m-Y', strtotime($x->tanggal_presensi)) }}</button>
         @endforeach
     </div>
 </div>

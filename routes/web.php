@@ -54,14 +54,9 @@ Route::get('/favorit', function(){
 //presensi
 Route::resource('/presensi','App\http\Controllers\presensiController');
 Route::get('/presensi/{id_presensi}/body','App\http\Controllers\presensiController@index2');
+Route::post('/presensi/{id_presensi}/update','App\http\Controllers\presensiController@update');
+Route::post('/presensi/{id_presensi}/delete','App\http\Controllers\presensiController@destroy');
 //endpresensi
-
-
-Route::get('/ubahpresensi', function() {
-    return view('ruangkelas/ubahpresensi',[
-        'css' => ''
-    ]);
-});
 
 //siswa
 Route::resource('/setsiswa', 'App\Http\Controllers\siswaController');
