@@ -40,7 +40,7 @@ $('.headsetting').on('click', function(){
 $('#menu-setpresensi').on('click', function(){
     $.ajax({
         type: 'GET',
-        url: '/ruangkelaspresensi',
+        url: '/presensi',
         beforeSend: function(){
 
         },

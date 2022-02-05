@@ -1,9 +1,10 @@
 $('.tg-presensi').on('click', function(){
     $('.tg-presensi').removeClass('active');
     $(this).addClass('active');
+    let url = $(this).attr('data-url');
     $.ajax({
         type: 'GET',
-        url: '/bodypresensi',
+        url: url,
         beforesend: function(){
 
         },
@@ -19,7 +20,7 @@ $('.tg-presensi').on('click', function(){
 $('#tambah-presensi').on('click', function() {
     $.ajax({
         type: "GET",
-        url: '/tambahpresensi',
+        url: '/presensi/create',
         beforesend: function(){
 
         },

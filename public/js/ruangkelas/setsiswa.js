@@ -1,4 +1,4 @@
-$('#edit-siswa').on('click', function(){
+$('.edit-siswa').on('click', function(){
     let url = $(this).attr('data-url');
     $.ajax({
         type: 'GET',
@@ -39,6 +39,7 @@ $('.form-delete-siswa').on('submit', function(e){
     else{
         ajaxStop();
     }
+    swal("Sedang diproses...", {icon: "warning",});
     let url = $(this).attr('data-url');
     let data = $(this).serialize();
     console.log(data);

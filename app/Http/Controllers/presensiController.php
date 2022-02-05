@@ -14,7 +14,21 @@ class presensiController extends Controller
      */
     public function index()
     {
-        //
+        $id_kelas = session('id_kelas');
+        $datas = presensi::all()->where('id_kelas', $id_kelas);
+        return view('ruangkelas/ruangkelaspresensi', [
+            'css' => '',
+            'datas' => $datas
+        ]);
+    }
+
+    public function index2($id_presensi)
+    {
+        $data = presensi::find($id_presensi);
+        return view('ruangkelas/bodypresensi', [
+            'css' => '',
+            'data' => $data
+        ]);
     }
 
     /**
@@ -24,7 +38,9 @@ class presensiController extends Controller
      */
     public function create()
     {
-        //
+        return view('ruangkelas/tambahpresensi',[
+            'css' => ''
+        ]);
     }
 
     /**
@@ -35,7 +51,16 @@ class presensiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $id_kelas = session('id_kelas');
+        $request['id_kelas'] = $id_kelas;
+        $validatedData = $request->validate([
+            'id_kelas' => '',
+            'tanggal_presensi' => 'required',
+            'nama_presensi' => 'required|max:20',
+        ]);
+        presensi::create($validatedData);
+
+        return redirect('/presensi');
     }
 
     /**

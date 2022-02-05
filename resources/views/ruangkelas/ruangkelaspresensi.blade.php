@@ -3,9 +3,9 @@
         <h6><b>Tanggal Presensi</b></h6>
     </div>
     <div class="isitglpresensi">
-        <button class="tg-presensi btn btn-primary" data-tanggalpresensi="20-12-2022">20-12-2021</button>
-        <button class="tg-presensi btn btn-primary" data-tanggalpresensi="20-12-2022">21-12-2021</button>
-        <button class="tg-presensi btn btn-primary" data-tanggalpresensi="20-12-2022">22-12-2021</button>
+        @foreach ($datas as $x)
+        <button class="tg-presensi btn btn-primary mb-1" data-url="/presensi/{{ $x->id_presensi }}/body">{{ $x->tanggal_presensi }}</button>
+        @endforeach
     </div>
 </div>
 <hr>

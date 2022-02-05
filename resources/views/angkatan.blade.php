@@ -81,7 +81,7 @@
                 <div class="col-md-4 col-6 p-0 pb-3">
                     {{-- card --}}
                     <div class="card m-0" style="width: 100%; height:100%;">
-                        <img class="card-img-top" src="/storage/default/konten.jpg" alt="Card image cap">
+                        <img class="card-img-top" width="250px" height="200px" src="/storage/fotokelas/{{ $data->foto_kelas }}" alt="Card image cap">
                         <div class="card-body" style="padding:1vw;">
                             <h5 class="card-title" style=""><b>{{ $data->nama_kelas }}</b></h5>
                             <p class="card-text"><span>{{ $data->angkatan }}</span></p>
@@ -147,7 +147,7 @@
 <br>
 <br>
 {{-- js --}}
-<script id="js" src="js/angkatan.js">
+<script id="js" src="js/angkatan.js"></script>
 <script>
     CKEDITOR.replace('deskripsi-tambahkelas');
-</scrip>
+</script>

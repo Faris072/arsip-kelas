@@ -121,22 +121,17 @@ class kelasController extends Controller
         ]);
 
         if(empty($request['foto_kelas'])){
-            $request['foto_kelas'] = $fotodefault->foto_kelas;
+            $validatedData['foto_kelas'] = $fotodefault->foto_kelas;
         }
         else{
             $namafoto = $request->file('foto_kelas')->getClientOriginalName();
             $ekstensi = $request->file('foto_kelas')->getClientOriginalExtension();
             $fotokelas = mt_rand(1000000000,9999999999) .'.'. $ekstensi;
             $request->file('foto_kelas')->storeAs('/fotokelas', $fotokelas);
-            $request['foto_kelas'] = $fotokelas;
+            $validatedData['foto_kelas'] = $fotokelas;
         }
 
-        kelas::where('id_kelas', $id_kelas)->update([
-            'foto_kelas' => $request->foto_kelas,
-            'angkatan' => $request->angkatan,
-            'nama_kelas' => $request->nama_kelas,
-            'deskripsi_kelas' => $request->deskripsi_kelas
-        ]);
+        kelas::where('id_kelas', $id_kelas)->update($validatedData);
 
         return redirect('/ruangkelas/'.$id_kelas);
     }

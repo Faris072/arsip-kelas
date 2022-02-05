@@ -4,20 +4,18 @@
 </div>
 <br>
 <br>
-<div class="ubahpresensi">
-    <form action="" method="POST">
+<div class="tambahpresensi">
+    <form action="/presensi" method="POST" data-url="/presensi" id="form-tambah-presensi">
+        @csrf
         <label for="date"><b>Tanggal Presensi:</b> <span style="color:red;">*</span></label>
-        <input type="date" nema="date" id="date" class="form-control">
+        <input type="date" name="tanggal_presensi" id="date" class="form-control" value="<?php echo date('Y-m-d') ?>">
         <br>
         <label for="namapresensi"><b>Nama Presensi: </b> <span style="color:red;">*</span></label>
-        <input type="text" id="namapresensi" name="nama" class="form-control">
-        <br>
-        <label for="desc"><b>Deskripsi: </b></label>
-        <textarea name="desc" id="desc"></textarea>
+        <input type="text" id="namapresensi" name="nama_presensi" class="form-control">
         <br>
         <input type="submit" class="form-control btn btn-success" value="Tambah Presensi">
     </form>
 </div>
 <script src="//cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
-<script>CKEDITOR.replace( 'desc' );</script>
+<script>CKEDITOR.replace( 'deskripsi_presensi' );</script>
 <script src="js/ruangkelas/tambahpresensi.js"></script>

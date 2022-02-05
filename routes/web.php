@@ -51,26 +51,14 @@ Route::get('/favorit', function(){
     ]);
 });
 
-Route::get('/ruangkelaspresensi', function(){
-    return view('ruangkelas/ruangkelaspresensi', [
-        'css' => ''
-    ]);
-});
+//presensi
+Route::resource('/presensi','App\http\Controllers\presensiController');
+Route::get('/presensi/{id_presensi}/body','App\http\Controllers\presensiController@index2');
+//endpresensi
 
-Route::get('/bodypresensi', function(){
-    return view('ruangkelas/bodypresensi', [
-        'css' => ''
-    ]);
-});
 
 Route::get('/ubahpresensi', function() {
     return view('ruangkelas/ubahpresensi',[
-        'css' => ''
-    ]);
-});
-
-Route::get('/tambahpresensi', function() {
-    return view('ruangkelas/tambahpresensi',[
         'css' => ''
     ]);
 });

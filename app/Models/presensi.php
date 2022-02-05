@@ -13,6 +13,8 @@ class presensi extends Model
 
     protected $primaryKey = 'id_presensi';
 
+    protected $guarded = ['id_presensi'];
+
     public function kelas(){
         return $this->belongsTo(kelas::class);
     }

@@ -6,24 +6,21 @@
         <tr>
             <td>Tanggal Presensi</td>
             <td> : </td>
-            <td> 10-10-2022</td>
+            <td> {{ $data->tanggal_presensi }}</td>
         </tr>
         <tr>
             <td>Nama Presensi</td>
             <td> : </td>
-            <td> UAS</td>
-        </tr>
-        <tr>
-            <td>Deskripsi</td>
-            <td> : </td>
-            <td> Blablabla</td>
+            <td> {{ $data->nama_presensi }}</td>
         </tr>
     </table>
+    <br>
     <button class="btn btn-primary" id="ubahpresensi">Ubah Presensi</button>
+    <button class="btn btn-danger" id="ubahpresensi">Hapus Presensi</button>
 </div>
 <div class="isipresensi">
     <table celpadding="0" class="table table-hover table-striped">
-        <thead class="table-primary p-5">
+        <thead class="table-primary p-5 pt-0">
             <tr>
                 <th>No. Absen</th>
                 <th>Nama</th>
