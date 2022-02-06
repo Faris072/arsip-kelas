@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\mapel;
+use App\Models\kelas;
+use App\Models\nilai;
+use App\Models\siswa;
 use Illuminate\Http\Request;
 
 class mapelController extends Controller
@@ -12,9 +15,24 @@ class mapelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id_mapel)
     {
-        //
+        $id_kelas = session('id_kelas');
+
+        session()->put('id_mapel', $id_mapel);
+        $mapel = mapel::find($id_mapel);
+        return view('/mapel',[
+            'css' => 'css/mapel.css',
+            'm' => $mapel,
+        ]);
+    }
+
+    public function detailmapel($id_mapel){
+        $mp = mapel::find($id_mapel);
+        return view('/mapel/detailmapel',[
+            'css' => 'css/mapel.css',
+            'mp' => $mp
+        ]);
     }
 
     /**
@@ -24,7 +42,7 @@ class mapelController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,7 +53,23 @@ class mapelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $id_kelas = session('id_kelas');
+        $kelas = kelas::find($id_kelas);
+        $kelas_mapel = $kelas->nama_kelas;
+        $request['id_kelas'] = $id_kelas;
+        $request['kelas_mapel'] = $kelas_mapel;
+        $validatedData = $request->validate([
+            'id_kelas' => '',
+            'mapel' => 'required|max:20',
+            'kelas_mapel' => '',
+            'nama_nilai' => 'required|max:20',
+            'deskripsi_mapel' => '',
+            'tanggal_mapel' => 'required'
+        ]);
+
+        mapel::create($validatedData);
+
+        return redirect('/ruangkelas/'.$id_kelas);
     }
 
     /**
@@ -46,7 +80,7 @@ class mapelController extends Controller
      */
     public function show(mapel $mapel)
     {
-        //
+
     }
 
     /**
@@ -67,9 +101,20 @@ class mapelController extends Controller
      * @param  \App\Models\mapel  $mapel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, mapel $mapel)
+    public function update(Request $request)
     {
-        //
+        $id_kelas = session('id_kelas');
+        $id_mapel = session('id_mapel');
+        $validatedData = $request->validate([
+            'mapel' => 'required|max:20',
+            'nama_nilai' => 'required|max:20',
+            'tanggal_mapel' => 'required',
+            'deskripsi_mapel' => ''
+        ]);
+
+        mapel::where('id_mapel', $id_mapel)->update($validatedData);
+
+        return redirect('/mapel/'.$id_mapel.'/mapel');
     }
 
     /**
@@ -78,8 +123,12 @@ class mapelController extends Controller
      * @param  \App\Models\mapel  $mapel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(mapel $mapel)
+    public function destroy($id_mapel)
     {
-        //
+        $id_kelas = session('id_kelas');
+
+        mapel::destroy($id_mapel);
+
+        return redirect('/ruangkelas/'.$id_kelas);
     }
 }

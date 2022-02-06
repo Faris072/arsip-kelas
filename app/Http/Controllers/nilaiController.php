@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\nilai;
+use App\Models\siswa;
+use App\Models\mapel;
 use Illuminate\Http\Request;
 
 class nilaiController extends Controller
@@ -14,7 +16,15 @@ class nilaiController extends Controller
      */
     public function index()
     {
-        //
+        $id_kelas = session('id_kelas');
+        $siswa = siswa::all()->where('id_kelas', $id_kelas);
+        $id_mapel = session('id_mapel');
+        $mapel = mapel::find($id_mapel);
+        return view('/nilai', [
+            'css' => '',
+            'siswa' => $siswa,
+            'm' => $mapel
+        ]);
     }
 
     /**

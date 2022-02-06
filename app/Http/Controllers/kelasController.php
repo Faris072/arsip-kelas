@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\kelas;
+use App\Models\mapel;
 use Illuminate\Http\Request;
 
 class kelasController extends Controller
@@ -25,12 +26,14 @@ class kelasController extends Controller
 
     public function index2($id_kelas){
         $datas = kelas::all()->where('id_kelas', $id_kelas);
+        $mapel = mapel::all()->where('id_kelas', $id_kelas);
         $dataes = kelas::find($id_kelas);//kalau untuk mengambil data dari 1 baris tabel lebih baik menggunakan find()
         session()->put('id_kelas', $id_kelas);
         return view('ruangkelas', [
             'css' => 'css/ruangkelas.css',
             'datas' => $datas,
-            'dataes' => $dataes
+            'dataes' => $dataes,
+            'mapel' => $mapel
         ]);
     }
 

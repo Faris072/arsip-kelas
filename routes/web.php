@@ -73,17 +73,29 @@ Route::post('/setsiswa/{id_siswa}/update','App\Http\Controllers\siswaController@
 Route::post('/setsiswa/{id_siswa}/delete','App\Http\Controllers\siswaController@destroy');
 //endsiswa
 
-Route::get('/mapel', function(){
-    return view('/mapel',[
-        'css' => 'css/mapel.css'
-    ]);
-});
+//Mapel
+Route::resource('/mapel', 'App\Http\Controllers\mapelController');
+Route::get('/mapel/{id_mapel}/mapel', 'App\Http\Controllers\mapelController@index');
+Route::get('/mapel/{id_mapel}/detail', 'App\Http\Controllers\mapelController@detailmapel');
+Route::post('/mapel/{id_mapel}/update', 'App\Http\Controllers\mapelController@update');
+Route::post('/mapel/{id_mapel}/delete', 'App\Http\Controllers\mapelController@destroy');
+//endmapel
+
+//nilai
+Route::resource('/nilai', 'App\Http\Controllers\nilaiController');
+
+//endnilai
 
 Route::get('/detailmapel', function(){
     return view('/mapel/detailmapel',[
         'css' => ''
     ]);
 });
+
+
+
+
+
 
 
 

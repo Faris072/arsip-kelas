@@ -187,19 +187,20 @@
                         </div>
                         <div class="modal-body" style="height:70vh; overflow-y:auto;">
                             <div class="container">
-                                <form action="">
+                                <form action="/mapel" method="POST" id="form-tambah-mapel" data-url="/mapel">
+                                    @csrf
                                     <label for="nama-mapel"><b>Nama Mapel:</b></label>
-                                    <input type="text" name="nama_mapel" id="nama-mapel" class="form-control">
+                                    <input type="text" name="mapel" id="nama-mapel" class="form-control">
                                     <br>
                                     <label for="namanilai-mapel"><b>Nama Nilai Mapel:</b></label>
-                                    <input type="text" name="tanggal_mapel" id="tanggal-mapel" class="form-control">
+                                    <input type="text" name="nama_nilai" id="tanggal-mapel" class="form-control">
                                     <br>
                                     <label for="tanggal-mapel"><b>Tanggal Mapel:</b></label>
                                     <input type="date" name="tanggal_mapel" id="tanggal-mapel" class="form-control"
                                         value="{{ date('Y-m-d') }}">
                                     <br>
                                     <label for="deskripsi-mapel"><b>Deskripsi Mapel: </b></label>
-                                    <textarea name="deskripsi_mapel" id="deskripsi-mapel"></textarea>
+                                    <textarea id="deskripsi-mapel"></textarea>
                                     <br>
                                     <input type="submit" value="Tambah Mapel" class="btn btn-success form-control">
                                 </form>
@@ -244,57 +245,37 @@
     <div class="kelas">
         <div class="row d-flex p-3" style="justify-content:space-between;">
             <?php $i = 10; ?>
-            @while ($i != 0)
+            @foreach ($mapel as $m)
                 <?php $i--; ?>
                 <div class="col-md-4 col-6 p-0 pb-3">
                     {{-- card --}}
                     <div class="card m-0" style="width: 100%; height:100%;">
-                        <h5 class="card-header"><b>Matematika</b></h5>
+                        <h5 class="card-header"><b>{{ $m->mapel }}</b></h5>
                         <div class="card-body" style="padding:1vw;">
-                            <h5 class="card-title" style=""><b>UAS 1</b></h5>
-                            <p class="card-text text-muted">Date: <span>10/12/2022</span> | <span>X MIPA 5</span></p>
+                            <h5 class="card-title" style=""><b>{{ $m->nama_nilai }}</b></h5>
+                            <p class="card-text text-muted">Date: <span>{{ $m->tanggal_mapel }}</span> | <span>X MIPA 5</span></p>
                             <div class="btn-card d-flex" style="justify-content:space-between;">
                                 <a href="#" class="btn btn-primary p-1" style="font-size:100%; padding:0.2vw;"
-                                    data-toggle="modal" data-target="#detail">Deskripsi</a>
-                                <a href="#" class="btn btn-success p-1 masuk-mapel"
-                                    style="font-size:100%; padding:0.2vw; right:0;">Masuk Mapel</a>
+                                    data-toggle="modal" data-target="#detail{{ $m->id_mapel }}">Deskripsi</a>
+                                <a href="#" class="btn btn-success p-1 masuk-mapel" data-url="/mapel/{{ $m->id_mapel }}/mapel" style="font-size:100%; padding:0.2vw; right:0;">Masuk Mapel</a>
                             </div>
                         </div>
                     </div>
                     {{-- endCard --}}
                     <!-- Modal -->
-                    <div class="modal fade" id="detail" tabindex="-1" role="dialog"
+                    <div class="modal fade" id="detail{{ $m->id_mapel }}" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xl" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Deskripsi Mapel</h5>
                                     <button type="button" class="close" data-dismiss="modal"
                                         aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body" style="height:72vh; overflow:auto;">
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <br>
+                                    <p>{{ $m->deskripsi_mapel }}</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -305,7 +286,7 @@
                     </div>
                     {{-- endModal --}}
                 </div>
-            @endwhile
+            @endforeach
         </div>
     </div>
 </div>

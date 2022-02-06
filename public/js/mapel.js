@@ -1,13 +1,35 @@
-$.ajax({
-    type: 'GET',
-    url: '/detailmapel',
-    beforeSend: function(){
+$(window).ready(function(){
+    let link = $('#btn-detail-mapel').attr('data-url');
+    $.ajax({
+        type: 'GET',
+        url: link,
+        beforeSend: function(){
 
-    },
-    success: function (data) {
-        $('#detail-mapel').html(data);
-    },
+        },
+        success: function (data) {
+            $('#detail-mapel').html(data);
+            let desk = $('#desc-mapel').text();
+            $('#desc-mapel').html(desk);
+        },
+    });
+
+    let url = $('.nilai').attr('data-url');
+    console.log(url);
+    $.ajax({
+        type: 'GET',
+        url: url,
+        beforeSend: function(){
+
+        },
+        success: function (data) {
+            $('.nilai').html(data);
+        },
+        error: function (){
+            $('.nilai').html('error');
+        }
+    });
 });
+
 
 $('.path').on('click', function (){
     let url = $(this).attr('data-url');
@@ -48,3 +70,5 @@ $('#editmapel').on('click', function (){
         },
     });
 });
+
+

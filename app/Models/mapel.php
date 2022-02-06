@@ -13,6 +13,8 @@ class mapel extends Model
 
     protected $primaryKey = 'id_mapel';
 
+    protected $guarded = ['id_mapel'];
+
     public function kelas(){
         return $this->belongsTo(kelas::class);
     }
