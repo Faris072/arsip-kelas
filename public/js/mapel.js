@@ -14,7 +14,6 @@ $(window).ready(function(){
     });
 
     let url = $('.nilai').attr('data-url');
-    console.log(url);
     $.ajax({
         type: 'GET',
         url: url,

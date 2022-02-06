@@ -2,6 +2,9 @@
     <a href="#" class="path" data-url="/home">Home</a>
 </div>
 <br>
+@foreach ($datas as $data)
+<p>{{ $data->nama_kelas }}|{{ $data->nama_mapel }}</p>
+@endforeach
 <span style="display: none;" id="linkCSS"><?php echo $css; ?></span>
     <div class="kategori pb-2 pr-3">
         <table width="100%">

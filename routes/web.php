@@ -25,11 +25,7 @@ Route::get('/welcome', function () {
     ]);
 });
 
-Route::get('/home', function () {
-    return view('home',[
-        'css' => 'css/home.css'
-    ]);
-});
+Route::get('/home', 'App\Http\Controllers\homeController@index');
 
 
 // kelas
