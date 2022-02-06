@@ -43,9 +43,20 @@ class nilaiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id_siswa)
     {
-        //
+        $id_mapel = session('id_mapel');
+        $request['id_siswa'] = $id_siswa;
+        $request['id_mapel'] = $id_mapel;
+        $validatedData = $request->validate([
+            'id_mapel' => '',
+            'id_siswa' => '',
+            'nilai' => 'required|max:20'
+        ]);
+
+        nilai::create($validatedData);
+
+        return redirect('/nilai');
     }
 
     /**
@@ -56,7 +67,7 @@ class nilaiController extends Controller
      */
     public function show(nilai $nilai)
     {
-        //
+
     }
 
     /**
@@ -77,9 +88,15 @@ class nilaiController extends Controller
      * @param  \App\Models\nilai  $nilai
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, nilai $nilai)
+    public function update(Request $request, $id_nilai)
     {
-        //
+        $validatedData = $request->validate([
+            'nilai' => 'required|max:20'
+        ]);
+
+        nilai::where('id_nilai', $id_nilai)->update($validatedData);
+
+        return redirect('/nilai');
     }
 
     /**

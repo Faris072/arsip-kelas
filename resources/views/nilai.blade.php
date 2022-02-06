@@ -37,35 +37,35 @@
                         <?php $n = tampilNilai(session()->get('id_mapel'),$s->id_siswa); ?>
                 @if ($n != '')
                         <td>{{ $n['nilai'] }}</td>
-                        <td><a href="#" class="btn btn-outline-light" data-toggle="collapse" data-target="#ubahnilai{{ $s->id_siswa }}" id="btn-ubah-nilai" data-id="{{ $s->id_siswa}}">Edit Nilai <i class="fas fa-caret-down"></i></a></td>
+                        <td><a href="#" class="btn btn-outline-light" data-toggle="collapse" data-target="#ubahnilai{{ $s->id_siswa }}" id="btn-ubah-nilai" data-id="{{ $s->id_siswa}}">Edit <i class="fas fa-caret-down"></i></a></td>
                     </tr>
                     <tr id="ubahnilai{{ $s->id_siswa }}" class="collapse">
                         <td></td>
                         <td>Masukkan Nilai: </td>
                         <td colspan="4">
-                            <form action="" class="form-inline-fluid d-flex" style="justify-content:space-between;">
+                            <form action="" class="form-inline-fluid d-flex form-ubah-nilai" data-url="/nilai/{{ $n['id_nilai'] }}/update" style="justify-content:space-between;">
                                 @csrf
-                                <input type="text" class="form-control">
-                                <button class="btn btn-primary">Ubah</button>
+                                <input type="number" name="nilai" value="{{ $n['nilai'] }}" class="form-control">
+                                <button class="btn btn-primary ml-3">Ubah</button>
                             </form>
                             </td>
                         </tr>
                 @else
                         <td></td>
-                        <td><button href="#" class="btn btn-outline-light" data-toggle="collapse" data-target="#tambahnilai{{ $s->id_siswa }}">Tambah Nilai <i class="fas fa-caret-down"></i></button></td>
+                        <td><button href="#" class="btn btn-outline-light" data-toggle="collapse" data-target="#tambahnilai{{ $s->id_siswa }}">Tambah <i class="fas fa-caret-down"></i></button></td>
 
                     </tr>
                     <tr id="tambahnilai{{ $s->id_siswa }}" class="collapse">
                         <td></td>
                         <td>Masukkan Nilai: </td>
                         <td colspan="4">
-                            <form action="">
+                            <form action="" class="form-inline-fluid d-flex form-tambah-nilai" data-url="/nilai/{{ $s->id_siswa }}/tambah" style="justify-content:space-between;">
                                 @csrf
-                                <input type="text" class="form-control">
+                                <input type="number" name="nilai" class="form-control">
+                                <button class="btn btn-success ml-3">Tambah</button>
                             </form>
-                        </td>
-                        <td><button class="btn btn-success">Tambah Nilai</button></td>
-                    </tr>
+                            </td>
+                        </tr>
                 @endif
 
                 @endforeach

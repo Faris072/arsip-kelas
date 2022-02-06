@@ -83,7 +83,8 @@ Route::post('/mapel/{id_mapel}/delete', 'App\Http\Controllers\mapelController@de
 
 //nilai
 Route::resource('/nilai', 'App\Http\Controllers\nilaiController');
-
+Route::post('/nilai/{id_siswa}/tambah', 'App\Http\Controllers\nilaiController@store');
+Route::post('/nilai/{id_nilai}/update', 'App\Http\Controllers\nilaiController@update');
 //endnilai
 
 Route::get('/detailmapel', function(){
