@@ -46,7 +46,8 @@ $('#form-edit-siswa').on('submit',function(e){
 
         },
         error: function (data, data1){
-            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        },
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "error");
+        },
         success: function (data) {
             swal("Siswa berhasil diubah", {icon: "success",});
             $('#tambah-siswa').css('display', 'block');

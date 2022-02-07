@@ -11,6 +11,7 @@ $('#close-tambahpresensi').on('click', function() {
         },
         success: function(data){
             $('.set-presensi').html('');
+            $('#tambah-presensi').css('display', 'block');
         }
     });
 });
@@ -28,10 +29,12 @@ $('#form-tambah-presensi').on('submit', function(e){
 
         },
         error: function(data, data1) {
-            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        },
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "error");
+        },
         success: function(data){
             swal("Presensi Berhasil Ditambahkan", {icon: "success",});
             $('#ruangkelaspresensi').html(data);
         }
     });
 });
+

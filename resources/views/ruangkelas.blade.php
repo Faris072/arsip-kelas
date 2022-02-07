@@ -159,7 +159,7 @@
                                 <br>
                                 <br>
                                 <label for="namakelas"><b>Nama Kelas: <span style="color:red">*</span></b></label>
-                                <input type="text" name="nama_kelas" id="namakelas" class="form-control" value="{{ $data->nama_kelas}}">
+                                <input type="text" name="nama_kelas" id="namakelas" class="form-control" value="{{ $data->nama_kelas}}" required>
                                 <small class="text-muted">Nama kelas maksimal 20 karakter</small>
                                 <br>
                                 <br>
@@ -194,18 +194,18 @@
                                 <form action="/mapel" method="POST" id="form-tambah-mapel" data-url="/mapel">
                                     @csrf
                                     <label for="nama-mapel"><b>Nama Mapel:</b><span style="color:red">*</span></label>
-                                    <input type="text" name="mapel" id="nama-mapel" class="form-control" placeholder="Contoh: Matematika">
+                                    <input type="text" name="mapel" id="nama-mapel" class="form-control" placeholder="Contoh: Matematika" required>
                                     <small class="text-muted">Nama mapel maksimal 50 karakter</small>
                                     <br>
                                     <br>
                                     <label for="namanilai-mapel"><b>Nama Nilai Mapel:</b><span style="color:red">*</span></label>
-                                    <input type="text" name="nama_nilai" id="tanggal-mapel" class="form-control" placeholder="Contoh: Ujian Akhir Semester">
+                                    <input type="text" name="nama_nilai" id="tanggal-mapel" class="form-control" placeholder="Contoh: Ujian Akhir Semester" required>
                                     <small class="text-muted">Nama nilai mapel maksimal 50 karakter</small>
                                     <br>
                                     <br>
                                     <label for="tanggal-mapel"><b>Tanggal Mapel:</b><span style="color:red">*</span></label>
                                     <input type="date" name="tanggal_mapel" id="tanggal-mapel" class="form-control"
-                                        value="{{ date('Y-m-d') }}">
+                                        value="{{ date('Y-m-d') }}" required>
                                     <br>
                                     <label for="deskripsi-mapel"><b>Deskripsi Mapel: </b><small class="text-muted">(Optional)</small></label>
                                     <textarea id="deskripsi-mapel"></textarea>

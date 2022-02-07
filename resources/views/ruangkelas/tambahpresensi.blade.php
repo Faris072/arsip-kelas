@@ -8,10 +8,12 @@
     <form action="/presensi" method="POST" data-url="/presensi" id="form-tambah-presensi">
         @csrf
         <label for="date"><b>Tanggal Presensi:</b> <span style="color:red;">*</span></label>
-        <input type="date" name="tanggal_presensi" id="date" class="form-control" value="<?php echo date('Y-m-d') ?>">
+        <input type="date" name="tanggal_presensi" id="date" class="form-control" value="<?php echo date('Y-m-d') ?>" required>
         <br>
         <label for="namapresensi"><b>Nama Presensi: </b> <span style="color:red;">*</span></label>
-        <input type="text" id="namapresensi" name="nama_presensi" class="form-control">
+        <input type="text" id="namapresensi" name="nama_presensi" class="form-control" required>
+        <small class="text-muted">Nama presensi maksimal 20 karakter</small>
+        <br>
         <br>
         <input type="submit" class="form-control btn btn-success" value="Tambah Presensi">
     </form>

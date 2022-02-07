@@ -8,15 +8,15 @@
         <label for="absen"><b>No. Absen: </b><span style="color:red;">*</span></label>
         {{-- @dd($absen->no_absen) --}}
         @if(empty($absen->no_absen))
-            <input type="number" id="absen" name="no_absen" value="1" class="form-control">
+            <input type="number" id="absen" name="no_absen" value="1" class="form-control" required>
         @else
-            <input type="number" id="absen" name="no_absen" value="{{ $absen->no_absen+1 }}" class="form-control">
+            <input type="number" id="absen" name="no_absen" value="{{ $absen->no_absen+1 }}" class="form-control" required>
         @endif
         <small class="text-muted">Masukkan Nomor Absen Siswa</small>
         <br>
         <br>
         <label for="nama"><b>Nama Lengkap: </b><span style="color:red;">*</span></label>
-        <input type="text" id="nama" name="nama_siswa" class="form-control" placeholder="Contoh: Faris Arsip Kelas">
+        <input type="text" id="nama" name="nama_siswa" class="form-control" placeholder="Contoh: Faris Arsip Kelas" required>
         <small class="text-muted">Nama siswa maksimal 50 karakter</small>
         <br>
         <br>

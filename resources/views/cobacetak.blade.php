@@ -41,6 +41,33 @@
             <button id="cetak" class="btn btn-success form-control">Cetak</button>
         </div>
         <br>
+        <div class="">
+            <div class="ttd">
+                <ul>
+                    <form action="">
+                    <li>
+                        <input type="checkbox" id="ttd-kiri"> <label for="ttd-kiri"> Tanda Tangan Kiri</label>
+                        <br>
+                        <input type="text" id="fttd-kiri" style="display:none">
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ttd-kanan"> <label for="ttd-kanan"> Tanda Tangan Kanan</label>
+                        <br>
+                        <input type="text" id="fttd-kanan" style="display:none">
+                    </li>
+                    <li>
+                        <input type="checkbox" id="ttd-tengah"> <label for="ttd-tengah"> Tanda Tangan Tengah</label>
+                        <br>
+                        <input type="text" id="fttd-tengah" style="display:none">
+                    </li>
+                </form>
+                </ul>
+            </div>
+            <div class="td">
+
+            </div>
+        </div>
+        <br>
         <br>
         <br>
         <div class="header">
@@ -64,8 +91,16 @@
                     @endfor
             </table>
         </div>
+        <div class="tanda-tangan d-flex" style="justify-content:space-around;">
+            <div class="tanda-tangan-kiri">
+                <p>Faris</p>
+            </div>
+            <div class="tanda-tangan-kiri">
+                <p>Faris</p>
+            </div>
+        </div>
     </div>
-
+    <br>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -81,6 +116,18 @@
         $('#cetak').on('click',function(){
             $('.editheader').css('display', 'none');
             print();
+        });
+
+        $('#ttd-kiri').on('click',function(){
+            $('#fttd-kiri').toggle();
+        });
+
+        $('#ttd-kanan').on('click',function(){
+            $('#fttd-kanan').toggle();
+        });
+
+        $('#ttd-tengah').on('click',function(){
+            $('#fttd-tengah').toggle();
         });
     </script>
 </body>

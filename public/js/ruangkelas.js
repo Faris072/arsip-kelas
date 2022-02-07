@@ -67,7 +67,6 @@ $('#form-setting-kelas').on('submit', function(e){
         processData: false,//untuk mengirim file dari formData()
         contentType: false,//sama
         beforeSend: function(){
-            $('#content').html('');
             $('.loading').css('display','block');
         },
         success: function (data) {
@@ -79,7 +78,8 @@ $('#form-setting-kelas').on('submit', function(e){
             });
         },
         error: function(xhr, thrownError){
-            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        }
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "error");
+        }
     });
 });
 
@@ -107,7 +107,7 @@ $('#tambah-siswa').on('click', function(){
 
         },
         error: function (data, data1){
-            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        },
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "error");        },
         success: function (data) {
             $('#tambah-siswa').css('display', 'none');
             $('#isi-setsiswa').html(data);
@@ -147,7 +147,6 @@ $('#form-hapus-kelas').on('submit', function(e) {
         url: url,
         data: data,
         beforeSend: function(){
-            $('#content').html('');
             $('.loading').css('display','block');
         },
         success: function (data) {
@@ -179,7 +178,6 @@ $('#form-tambah-mapel').on('submit',function(e){
         url: url,
         data: data,
         beforeSend: function(){
-            $('#content').html('');
             $('.loading').css('display','block');
         },
         success: function (data) {
@@ -192,7 +190,8 @@ $('#form-tambah-mapel').on('submit',function(e){
             });
         },
         error: function(xhr, thrownError){
-            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        },
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "error");
+        },
     });
 });
 

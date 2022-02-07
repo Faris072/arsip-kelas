@@ -8,10 +8,12 @@
     <form action="" method="POST" id="form-ubah-presensi" data-url="/presensi/{{ $presensi->id_presensi }}/update">
         @csrf
         <label for="date"><b>Tanggal Presensi:</b> <span style="color:red;">*</span></label>
-        <input type="date" name="tanggal_presensi" id="date" class="form-control" value="{{ $presensi->tanggal_presensi }}">
+        <input type="date" name="tanggal_presensi" id="date" class="form-control" value="{{ $presensi->tanggal_presensi }}" required>
         <br>
         <label for="namapresensi"><b>Nama Presensi: </b> <span style="color:red;">*</span></label>
-        <input type="text" id="namapresensi" name="nama_presensi" class="form-control" value="{{ $presensi->nama_presensi }}">
+        <input type="text" id="namapresensi" name="nama_presensi" class="form-control" value="{{ $presensi->nama_presensi }}" required>
+        <small class="text-muted">Nama presensi maksimal 20 karakter</small>
+        <br>
         <br>
         <input type="submit" class="form-control btn btn-primary" value="Ubah Presensi">
     </form>

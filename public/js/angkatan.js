@@ -81,7 +81,8 @@ $('#form-tambah-kelas').on('submit', function (e) {
             });
         },
         error: function (xhr, thrownError) {
-            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        },
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "error");
+        },
     });
 });
 

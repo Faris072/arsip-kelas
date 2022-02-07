@@ -28,6 +28,7 @@ $('#tambah-presensi').on('click', function() {
             $('.set-presensi').html(data.status + '<br>' + data1);
         },
         success: function(data){
+            $('#tambah-presensi').css('display', 'none');
             $('.set-presensi').html(data);
         }
     });

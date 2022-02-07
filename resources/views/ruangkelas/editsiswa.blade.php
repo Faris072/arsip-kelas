@@ -7,12 +7,12 @@
         @csrf
         {{-- @method('PUT') --}}
         <label for="absen"><b>No. Absen: </b><span style="color:red;">*</span></label>
-        <input type="number" id="absen" name="no_absen" value="{{ $editsiswa->no_absen}}" class="form-control">
+        <input type="number" id="absen" name="no_absen" value="{{ $editsiswa->no_absen}}" class="form-control" required>
         <small class="text-muted">Masukkan nomor absen siswa</small>
         <br>
         <br>
         <label for="nama"><b>Nama Lengkap: </b><span style="color:red;">*</span></label>
-        <input type="text" id="nama" name="nama_siswa" value="{{ $editsiswa->nama_siswa}}" class="form-control">
+        <input type="text" id="nama" name="nama_siswa" value="{{ $editsiswa->nama_siswa}}" class="form-control" required>
         <small class="text-muted">Nama siswa maksimal 50 karakter</small>
         <br>
         <br>

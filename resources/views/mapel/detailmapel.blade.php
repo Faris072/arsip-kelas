@@ -27,13 +27,15 @@
                     <div class="container">
                         <form action="/mapel/{{ $mp->id_mapel }}/update" data-url="/mapel/{{ $mp->id_mapel }}/update" method="POST" id="form-edit-mapel">
                             @csrf
-                            <label for="nama-mapel"><b>Nama Mapel:</b></label>
+                            <label for="nama-mapel"><b>Nama Mapel:</b><span style="color:red">*</span></label>
                             <input type="text" name="mapel" id="nama-mapel" class="form-control" value="{{ $mp->mapel }}" required>
+                            <small class="text-muted">Nama mapel maksimal 50 karakter</small>
                             <br>
-                            <label for="namanilai-mapel"><b>Nama Nilai Mapel:</b></label>
-                            <input type="text" name="nama_nilai" id="tanggal-mapel" class="form-control" value="{{ $mp->nama_nilai }}" required>
+                            <label for="namanilai-mapel"><b>Nama Nilai Mapel:</b><span style="color:red;">*</span></label>
+                            <input type="text" name="nama_nilai" class="form-control" value="{{ $mp->nama_nilai }}" required>
+                            <small class="text-muted">Nama nilai mapel maksimal 50 karakter</small>
                             <br>
-                            <label for="tanggal-mapel"><b>Tanggal Mapel:</b></label>
+                            <label for="tanggal-mapel"><b>Tanggal Mapel:</b><span style="color:red">*</span></label>
                             <input type="date" name="tanggal_mapel" id="tanggal-mapel" class="form-control"
                                 value="{{ date('Y-m-d',strtotime($mp->tanggal_mapel)) }}" required>
                             <br>
