@@ -52,8 +52,7 @@ $('.form-delete-siswa').on('submit', function(e){
             swal("Sedang diproses...", {icon: "warning",});
         },
         error: function (data, data1){
-            $('#modal-setsiswa').html(data.status + '<br>' + data1);
-        },
+            swal("Terjadi Kesalahan", "", "danger");        },
         success: function (data) {
             swal("Siswa Berhasil Dihapus!", {icon: "success",});
             $('#tambah-siswa').css('display', 'block');

@@ -10,8 +10,7 @@ $('.form-ubah-nilai').on('submit', function(e){
             $('.nilai').html(data);
         },
         error: function(){
-
-        }
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        }
     });
 });
 
@@ -27,7 +26,6 @@ $('.form-tambah-nilai').on('submit', function(e){
             $('.nilai').html(data);
         },
         error: function(){
-
-        }
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        }
     });
 });

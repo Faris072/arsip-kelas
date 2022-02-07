@@ -70,7 +70,6 @@ $('#form-tambah-kelas').on('submit', function (e) {
         processData: false, //untuk mengirim file dari formData()
         contentType: false, //sama
         beforeSend: function () {
-            $('#content').html('');
             $('.loading').css('display', 'block');
         },
         success: function (data) {
@@ -82,9 +81,7 @@ $('#form-tambah-kelas').on('submit', function (e) {
             });
         },
         error: function (xhr, thrownError) {
-            swal("Terjadi Kesalahan", {icon: "warning",});
-            $('#content').html(xhr.statur + '<br>' + thrownError);
-        },
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        },
     });
 });
 

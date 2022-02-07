@@ -45,8 +45,7 @@ $('#menu-setpresensi').on('click', function(){
 
         },
         error: function (data, data1){
-            $('#ruangkelaspresensi').html(data.status + '<br>' + data1);
-        },
+            swal("Terjadi Kesalahan", {icon: "warning",});        },
         success: function (data) {
             $('#ruangkelaspresensi').html(data);
         }
@@ -80,9 +79,7 @@ $('#form-setting-kelas').on('submit', function(e){
             });
         },
         error: function(xhr, thrownError){
-            swal("Terjadi Kesalahan", {icon: "danger",});
-            $('#content').html(xhr.statur+'<br>'+thrownError);
-        }
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        }
     });
 });
 
@@ -94,7 +91,7 @@ $('#menu-setsiswa').on('click',function(){
 
         },
         error: function (data, data1){
-            $('#modal-setsiswa').html(data.status + '<br>' + data1);
+            swal("Terjadi Kesalahan", {icon: "danger",});
         },
         success: function (data) {
             $('#modal-setsiswa').html(data);
@@ -110,8 +107,7 @@ $('#tambah-siswa').on('click', function(){
 
         },
         error: function (data, data1){
-            $('#isi-setsiswa').html(data.status + '<br>' + data1);
-        },
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        },
         success: function (data) {
             $('#tambah-siswa').css('display', 'none');
             $('#isi-setsiswa').html(data);
@@ -128,7 +124,7 @@ $('.masuk-mapel').on('click', function(){
             $('.loading').css('display', 'block');
         },
         error: function (data, data1){
-            $('#content').html(data.status + '<br>' + data1);
+            swal("Terjadi Kesalahan", {icon: "danger",});
         },
         success: function (data) {
             $('#content').html(data);
@@ -165,7 +161,6 @@ $('#form-hapus-kelas').on('submit', function(e) {
         },
         error: function(xhr, thrownError){
             swal("Terjadi kesalahan", {icon: "danger",});
-            $('#content').html(xhr.statur+'<br>'+thrownError);
         },
     });
 });
@@ -197,8 +192,14 @@ $('#form-tambah-mapel').on('submit',function(e){
             });
         },
         error: function(xhr, thrownError){
-            swal("Terjadi kesalahan", {icon: "danger",});
-            $('#content').html(xhr.statur+'<br>'+thrownError);
-        },
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        },
     });
+});
+
+$('#close-siswa').on('click', function (){
+    $('#tambah-siswa').css('display', 'block');
+});
+
+$('#close-presensi').on('click', function (){
+    $('#tambah-presensi').css('display', 'block');
 });

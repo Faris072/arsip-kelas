@@ -79,7 +79,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel"><b>Siswa</b></h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" id="close-siswa" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -107,7 +107,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel"><b>Presensi</b></h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" id="close-presensi" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -140,11 +140,11 @@
                                         style="background-image:url('storage/fotokelas/{{ $data->foto_kelas }}'); width:240px; height:200px;">
                                     <br>
                                     <label for="gantifoto" id="label-ubahfoto" class="btn btn-primary"><i
-                                            class="fas fa-upload pr-2"></i> Pilih Foto</label>
+                                            class="fas fa-upload pr-2"></i>Pilih Foto (Optional)</label>
                                     <input type="file" name="foto_kelas" id="gantifoto">
                                     <br><br>
                                 </center>
-                                <label for="angkatan"><b>Angkatan: </b></label>
+                                <label for="angkatan"><b>Angkatan: <span style="color:red">*</span></b></label>
                                 <select name="angkatan" class="form-control" id="angkatan">
                                     @for ($i = 1980; $i <= date('Y'); $i++)
                                         @if ($i == $data->angkatan)
@@ -155,12 +155,16 @@
                                         @endif
                                     @endfor
                                 </select>
+                                <small class="text-muted">Pastikan mengisi tahun dengan benar</small>
                                 <br>
-                                <label for="namakelas"><b>Nama Kelas: </b></label>
-                                <input type="text" name="nama_kelas" id="namakelas" class="form-control" value="{{ $data->nama_kelas}}"
                                 <br>
-                                <label for="deskripsi_kelas"><b>Deskripsi:</b></label>
-                                <input type="text" name="deskripsi_kelas" id="deskripsi_kelas" value="{{ $data->deskripsi_kelas }}"
+                                <label for="namakelas"><b>Nama Kelas: <span style="color:red">*</span></b></label>
+                                <input type="text" name="nama_kelas" id="namakelas" class="form-control" value="{{ $data->nama_kelas}}">
+                                <small class="text-muted">Nama kelas maksimal 20 karakter</small>
+                                <br>
+                                <br>
+                                <label for="deskripsi_kelas"><b>Deskripsi: <small class="text-muted">(Optional)</small> </b></label>
+                                <input type="text" name="deskripsi_kelas" id="deskripsi_kelas" value="{{ $data->deskripsi_kelas }}">
                                 <br>
                                 <input type="submit" class="btn btn-primary form-control" id="send-settingkelas"
                                     value="Setting Kelas">
@@ -189,17 +193,21 @@
                             <div class="container">
                                 <form action="/mapel" method="POST" id="form-tambah-mapel" data-url="/mapel">
                                     @csrf
-                                    <label for="nama-mapel"><b>Nama Mapel:</b></label>
-                                    <input type="text" name="mapel" id="nama-mapel" class="form-control">
+                                    <label for="nama-mapel"><b>Nama Mapel:</b><span style="color:red">*</span></label>
+                                    <input type="text" name="mapel" id="nama-mapel" class="form-control" placeholder="Contoh: Matematika">
+                                    <small class="text-muted">Nama mapel maksimal 50 karakter</small>
                                     <br>
-                                    <label for="namanilai-mapel"><b>Nama Nilai Mapel:</b></label>
-                                    <input type="text" name="nama_nilai" id="tanggal-mapel" class="form-control">
                                     <br>
-                                    <label for="tanggal-mapel"><b>Tanggal Mapel:</b></label>
+                                    <label for="namanilai-mapel"><b>Nama Nilai Mapel:</b><span style="color:red">*</span></label>
+                                    <input type="text" name="nama_nilai" id="tanggal-mapel" class="form-control" placeholder="Contoh: Ujian Akhir Semester">
+                                    <small class="text-muted">Nama nilai mapel maksimal 50 karakter</small>
+                                    <br>
+                                    <br>
+                                    <label for="tanggal-mapel"><b>Tanggal Mapel:</b><span style="color:red">*</span></label>
                                     <input type="date" name="tanggal_mapel" id="tanggal-mapel" class="form-control"
                                         value="{{ date('Y-m-d') }}">
                                     <br>
-                                    <label for="deskripsi-mapel"><b>Deskripsi Mapel: </b></label>
+                                    <label for="deskripsi-mapel"><b>Deskripsi Mapel: </b><small class="text-muted">(Optional)</small></label>
                                     <textarea id="deskripsi-mapel"></textarea>
                                     <br>
                                     <input type="submit" value="Tambah Mapel" class="btn btn-success form-control">

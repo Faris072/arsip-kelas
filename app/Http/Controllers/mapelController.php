@@ -60,9 +60,9 @@ class mapelController extends Controller
         $request['kelas_mapel'] = $kelas_mapel;
         $validatedData = $request->validate([
             'id_kelas' => '',
-            'mapel' => 'required|max:20',
+            'mapel' => 'required|max:50',
             'kelas_mapel' => '',
-            'nama_nilai' => 'required|max:20',
+            'nama_nilai' => 'required|max:50',
             'deskripsi_mapel' => '',
             'tanggal_mapel' => 'required'
         ]);
@@ -106,8 +106,8 @@ class mapelController extends Controller
         $id_kelas = session('id_kelas');
         $id_mapel = session('id_mapel');
         $validatedData = $request->validate([
-            'mapel' => 'required|max:20',
-            'nama_nilai' => 'required|max:20',
+            'mapel' => 'required|max:50',
+            'nama_nilai' => 'required|max:50',
             'tanggal_mapel' => 'required',
             'deskripsi_mapel' => ''
         ]);

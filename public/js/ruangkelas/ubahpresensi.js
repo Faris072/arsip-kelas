@@ -29,8 +29,7 @@ $('#form-ubah-presensi').on('submit', function(e){
 
         },
         error: function(data, data1) {
-            $('.set-presensi').html(data.status + '<br>' + data1);
-        },
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        },
         success: function(data){
             swal("Presensi Berhasil Diubah", {icon: "success",});
             $('#tambah-presensi').css('display', 'block');

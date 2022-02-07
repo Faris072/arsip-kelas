@@ -25,13 +25,13 @@
                         <center>
                             <br>
                             <label for="gantifoto" id="label-ubahfoto" class="btn btn-primary"><i
-                                    class="fas fa-upload pr-2"></i> Pilih Foto</label>
+                                    class="fas fa-upload pr-2"></i>Pilih Foto (Optional)</label>
                             <br>
                             <input type="file" name="foto_kelas" id="gantifoto">
                             <br><br>
                         </center>
-                        <label for="angkatan"><b>Angkatan: </b></label>
-                        <select name="angkatan" class="form-control" id="angkatan">
+                        <label for="angkatan"><b>Angkatan: <span style="color:red">*</span></b></label>
+                        <select name="angkatan" class="form-control" id="angkatan" required>
                             @for ($i = 1980; $i <= date('Y'); $i++)
                                 @if ($i == date('Y'))
                                     <option value="{{ $i }}" selected="selected">{{ $i }}
@@ -41,11 +41,15 @@
                                 @endif
                             @endfor
                         </select>
+                        <small class="text-muted">Pastikan mengisi tahun yang benar</small>
                         <br>
-                        <label for="namakelas"><b>Nama Kelas: </b></label>
-                        <input type="text" name="nama_kelas" id="namakelas" class="form-control">
                         <br>
-                        <label for="deskripsi"><b>Deskripsi:</b></label>
+                        <label for="namakelas"><b>Nama Kelas: <span style="color:red">*</span></b></label>
+                        <input type="text" name="nama_kelas" id="namakelas" class="form-control" placeholder="Contoh: XII MIPA 5" required>
+                        <small class="text-muted">Nama kelas maksimal 20 karakter</small>
+                        <br>
+                        <br>
+                        <label for="deskripsi"><b>Deskripsi: <small class="text-muted">(Optional)</small></b></label>
                         <textarea name="deskripsi_kelas" id="deskripsi-tambahkelas"></textarea>
                         <br>
                         <input type="submit" class="btn btn-success form-control" id="btn-tambahkelas"

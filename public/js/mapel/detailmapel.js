@@ -24,9 +24,7 @@ $('#form-edit-mapel').on('submit', function(e){
             });
         },
         error: function(xhr, thrownError){
-            swal("Terjadi kesalahan", {icon: "danger",});
-            $('#content').html(xhr.statur+'<br>'+thrownError);
-        },
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        },
     });
 });
 
@@ -54,7 +52,6 @@ $('#form-hapus-mapel').on('submit', function(e){
         },
         error: function(xhr, thrownError){
             swal("Terjadi kesalahan", {icon: "danger",});
-            $('#content').html(xhr.statur+'<br>'+thrownError);
         },
     });
 });

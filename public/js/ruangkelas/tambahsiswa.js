@@ -27,8 +27,7 @@ $('#form-tambah-siswa').on('submit', function(e){
 
         },
         error: function (data, data1){
-            $('#modal-setsiswa').html(data.status + '<br>' + data1);
-        },
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        },
         success: function (data) {
             swal("Siswa Berhasil Ditambahkan!", {icon: "success",});
             $('#tambah-siswa').css('display', 'block');

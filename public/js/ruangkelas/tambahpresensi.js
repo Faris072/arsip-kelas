@@ -28,9 +28,7 @@ $('#form-tambah-presensi').on('submit', function(e){
 
         },
         error: function(data, data1) {
-            swal("Terjadi Kesalahan", {icon: "danger",});
-            $('.set-presensi').html(data.status + '<br>' + data1);
-        },
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "danger");        },
         success: function(data){
             swal("Presensi Berhasil Ditambahkan", {icon: "success",});
             $('#ruangkelaspresensi').html(data);
