@@ -16,10 +16,10 @@ class mapel extends Model
     protected $guarded = ['id_mapel'];
 
     public function kelas(){
-        return $this->belongsTo(kelas::class);
+        return $this->belongsTo(kelas::class,'id_kelas');
     }
 
     public function nilai(){
-        return $this->hasMany(nilai::class);
+        return $this->hasMany(nilai::class,'id_nilai');
     }
 }

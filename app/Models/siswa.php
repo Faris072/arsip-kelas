@@ -16,14 +16,14 @@ class siswa extends Model
     protected $guarded = ['id_siswa'];
 
     public function kelas(){
-        return $this->belongsTo(kelas::class);
+        return $this->belongsTo(kelas::class,'id_kelas');
     }
 
     public function nilai(){
-        return $this->hasMany(nilai::class);
+        return $this->hasMany(nilai::class,'id_nilai');
     }
 
     public function kehadiran(){
-        return $this->hasMany(kehadiran::class);
+        return $this->hasMany(kehadiran::class,'id_kehadiran');
     }
 }

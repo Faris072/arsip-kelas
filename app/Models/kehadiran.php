@@ -16,10 +16,10 @@ class kehadiran extends Model
     protected $guarded = ['id_kehadiran'];
 
     public function presensi(){
-        return $this->belongsTo(presensi::class);
+        return $this->belongsTo(presensi::class,'id_presensi');
     }
 
     public function siswa(){
-        return $this->belongsTo(siswa::class);
+        return $this->belongsTo(siswa::class,'id_siswa');
     }
 }

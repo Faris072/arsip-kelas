@@ -16,15 +16,15 @@ class kelas extends Model
     protected $guarded = ['id_kelas'];
 
     public function user(){
-        return $this->belongsTo(user::class);
+        return $this->belongsTo(user::class,'id');
     }
 
     public function presensi(){
-        return $this->hasMany(presensi::class);
+        return $this->hasMany(presensi::class,'id_presensi');
     }
 
     public function siswa(){
-        return $this->hasMany(siswa::class);
+        return $this->hasMany(siswa::class,'id_siswa');
     }
 
     public function mapel(){

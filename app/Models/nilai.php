@@ -16,10 +16,10 @@ class nilai extends Model
     protected $guarded = ['id_nilai'];
 
     public function siswa(){
-        return $this->belongsTo(siswa::class);
+        return $this->belongsTo(siswa::class,'id_siswa');//harus ada foreign key
     }
 
     public function mapel(){
-        return $this->belongsTo(mapel::class);
+        return $this->belongsTo(mapel::class,'id_mapel');
     }
 }

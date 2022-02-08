@@ -14,6 +14,6 @@ class user extends Model
     protected $primaryKey = 'id';
 
     public function kelas(){
-        return $this->hasMany(kelas::class);
+        return $this->hasMany(kelas::class,'id_kelas');
     }
 }
