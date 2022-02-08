@@ -1,3 +1,4 @@
+{{-- @dd($data) --}}
 <!doctype html>
 <html lang="id">
 <head>
@@ -87,15 +88,15 @@
                     <th width="30%"><b>Nilai</b></th>
                     <th class="tambah-kolom" id="kol" style="background-color:yellow"></th>
                 </tr>
-                    @for ($i= 0; $i < 20; $i++)
+                    @foreach ($data as $d)
                     <tr>
-                        <td>{{ $i }}</td>
-                        <td>Faris</td>
-                        <td>Laki-Laki</td>
-                        <td>100</td>
+                        {{-- <td>{{ $d->siswa }}</td> --}}
+                        {{-- <td>{{ $d->siswa }}</td> --}}
+                        <td>{{ $d->siswa }}</td>
+                        <td>{{ $d->nilai }}</td>
                         <td class="tambah-kolom" style=""></td>
                     </tr>
-                    @endfor
+                    @endforeach
             </table>
         </div>
         <br>

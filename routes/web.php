@@ -91,7 +91,7 @@ Route::get('/detailmapel', function(){
 
 
 
-
+Route::get('/cetaknilai','App\Http\Controllers\cetakController@cetaknilai');
 
 
 
