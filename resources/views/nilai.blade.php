@@ -8,7 +8,7 @@
                 <div class="btn_group">
                     <input type="text" class="form-control" placeholder="Search" spellcheck="false"
                         data-ms-editor="true">
-                    <button class="btn btn-default ml-3" title="Reload">Cetak</button>
+                    <a href="/cetaknilai" target="_blank" class="btn btn-default ml-3" title="Reload">Cetak</a>
                 </div>
             </div>
         </div>

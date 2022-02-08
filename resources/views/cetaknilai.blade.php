@@ -1,4 +1,4 @@
-
+{{-- @dd($data) --}}
 <!doctype html>
 <html lang="id">
 <head>
@@ -89,12 +89,19 @@
                     <th class="tambah-kolom" id="kol" style="background-color:yellow"></th>
                 </tr>
                     @foreach ($data as $d)
-                    {{-- @dd($d) --}}
+                    <?php $n = tampilNilai(session()->get('id_mapel'),$d->id_siswa); ?>
+                    {{-- @dd($d->nilai->nilai) --}}
+                    {{-- @dd($n['nilai']) --}}
                     <tr>
-                        <td>{{ $d->siswa->no_absen }}</td>
-                        <td>{{ $d->siswa->nama_siswa }}</td>
-                        <td>{{ $d->siswa->gender }}</td>
-                        <td>{{ $d->nilai }}</td>
+                        <td>{{ $d->no_absen }}</td>
+                        <td>{{ $d->nama_siswa }}</td>
+                        <td>{{ $d->gender }}</td>
+                    @isset( $n['nilai'] )
+                        <td>{{ $n['nilai'] }}</td>
+                    @endisset
+                    @empty( $n )
+                    <td></td>
+                    @endempty
                         <td class="tambah-kolom" style=""></td>
                     </tr>
                     @endforeach
@@ -184,7 +191,7 @@
                 $('.tambah-kolom').css('display', 'none');
             }
             else{
-                $('.tambah-kolom').css('display', 'block');
+                $('.tambah-kolom').css('display', 'none');
                 $('#kol').html(kol);
             }
         });
