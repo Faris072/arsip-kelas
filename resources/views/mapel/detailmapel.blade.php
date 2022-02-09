@@ -41,6 +41,7 @@
                             <br>
                             <label for="deskripsi-mapel"><b>Deskripsi Mapel: </b></label>
                             <textarea id="deskripsi-mapel"></textarea>
+                            <input type="hidden" id="desc_mapel" value="{{ $mp->deskripsi_mapel }}">
                             <br>
                             <input type="submit" value="Edit Mapel" class="btn btn-primary form-control">
                         </form>
@@ -81,5 +82,10 @@
 <script src="js/mapel/detailmapel.js"></script>
 <script>
     CKEDITOR.replace('deskripsi-mapel');
+</script>
+<script>
+    var deskrip = document.getElementById('desc_mapel').value;
+    // alert(deskrip);
+    CKEDITOR.instances['deskripsi-mapel'].setData(deskrip);
 </script>
 

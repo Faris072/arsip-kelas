@@ -12,15 +12,18 @@ class cetakController extends Controller
     public function cetaknilai(){
         $id_mapel = session('id_mapel');
         $id_kelas = session('id_kelas');
+        // @dd($id_kelas, $id_mapel);
         // $data = siswa::with('nilai')->where('id_kelas', $id_kelas)->get();//relasi tabel
         // $data = siswa::with(['nilai' => function($query){
         //     $id_mapel = session('id_mapel');
         //     $query->where('nilai.id_mapel', $id_mapel);
         // }])->where('id_kelas', $id_kelas)->get();//relasi tabel dengan where di with. $q atau $query adalah variable dari laravel
         $data = siswa::all()->where('id_kelas', $id_kelas);
-
+            // $data = nilai($id_kelas, $id_mapel);
         return view('/cetaknilai',[
             'data' => $data
         ]);
     }
 }
+
+

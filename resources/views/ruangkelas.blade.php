@@ -132,12 +132,11 @@
                             </button>
                         </div>
                         <div class="modal-body" style="height:70vh; overflow-y:auto;">
-                            @foreach($datas as $data)
-                            <form action="" data-url="/ruangkelas/{{ $data->id_kelas }}/update" method="POST" enctype="multipart/form-data" id="form-setting-kelas">
+                            <form action="" data-url="/ruangkelas/{{ $dataes->id_kelas }}/update" method="POST" enctype="multipart/form-data" id="form-setting-kelas">
                                 @csrf
                                 <center>
-                                    <img src="/storage/fotokelas/{{ $data->foto_kelas }}"
-                                        style="background-image:url('storage/fotokelas/{{ $data->foto_kelas }}'); width:240px; height:200px;">
+                                    <img src="/storage/fotokelas/{{ $dataes->foto_kelas }}"
+                                        style="background-image:url('storage/fotokelas/{{ $dataes->foto_kelas }}'); width:240px; height:200px;">
                                     <br>
                                     <label for="gantifoto" id="label-ubahfoto" class="btn btn-primary"><i
                                             class="fas fa-upload pr-2"></i>Pilih Foto (Optional)</label>
@@ -147,7 +146,7 @@
                                 <label for="angkatan"><b>Angkatan: <span style="color:red">*</span></b></label>
                                 <select name="angkatan" class="form-control" id="angkatan">
                                     @for ($i = 1980; $i <= date('Y'); $i++)
-                                        @if ($i == $data->angkatan)
+                                        @if ($i == $dataes->angkatan)
                                             <option value="{{ $i }}" selected="selected">{{ $i }}
                                             </option>
                                         @else
@@ -159,17 +158,17 @@
                                 <br>
                                 <br>
                                 <label for="namakelas"><b>Nama Kelas: <span style="color:red">*</span></b></label>
-                                <input type="text" name="nama_kelas" id="namakelas" class="form-control" value="{{ $data->nama_kelas}}" required>
+                                <input type="text" name="nama_kelas" id="namakelas" class="form-control" value="{{ $dataes->nama_kelas}}" required>
                                 <small class="text-muted">Nama kelas maksimal 20 karakter</small>
                                 <br>
                                 <br>
                                 <label for="deskripsi_kelas"><b>Deskripsi: <small class="text-muted">(Optional)</small> </b></label>
-                                <input type="text" name="deskripsi_kelas" id="deskripsi_kelas" value="{{ $data->deskripsi_kelas }}">
+                                <input type="text" name="deskripsi_kelas" id="deskripsi_kelas">
+                                <input type="hidden" id="desk_kelas" value="{{ $dataes->deskripsi_kelas }}">
                                 <br>
                                 <input type="submit" class="btn btn-primary form-control" id="send-settingkelas"
                                     value="Setting Kelas">
                             </form>
-                            @endforeach
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -307,4 +306,7 @@
 </script>
 <script>
     CKEDITOR.replace('deskripsi-mapel');
+    var deskrip = document.getElementById('desk_kelas').value;
+    // alert(deskrip);
+    CKEDITOR.instances['deskripsi_kelas'].setData(deskrip);
 </script>

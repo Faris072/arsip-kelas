@@ -202,3 +202,6 @@ $('#close-siswa').on('click', function (){
 $('#close-presensi').on('click', function (){
     $('#tambah-presensi').css('display', 'block');
 });
+
+
+
