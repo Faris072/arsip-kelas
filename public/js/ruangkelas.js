@@ -195,6 +195,12 @@ $('#form-tambah-mapel').on('submit',function(e){
     });
 });
 
+$(window).on('ready', function(){
+    alert(data);
+    let data = $('.desk-mapel',this).text();
+    $('.desk-mapel',this).html(data);
+});
+
 $('#close-siswa').on('click', function (){
     $('#tambah-siswa').css('display', 'block');
 });

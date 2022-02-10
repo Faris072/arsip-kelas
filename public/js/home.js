@@ -54,3 +54,33 @@ $('#masuk-kelas').on('click', function (){
         },
     });
 });
+
+
+$('.masuk-mapel').on('click', function(){
+    let url = $(this).attr('data-url');
+    $.ajax({
+        type: 'GET',
+        url: url,
+        beforeSend: function(){
+            $('#content').html('');
+            $('.loading').css('display', 'block');
+            $('.sidebar-menu').css('background-color', 'rgba(255,255,255,0)');
+            $('.sidebar-menu:eq(1)').css({
+                'background-color': 'rgba(255,255,255,0.5)',
+                'width': '90%;',
+                'margin': 'auto'
+            });
+        },
+        error: function (data, data1){
+            swal("Terjadi Kesalahan", {icon: "danger",});
+        },
+        success: function (data) {
+            $('#content').html(data);
+            $(document).ajaxComplete(function(){
+                let css = $('#linkCSS').text();
+                $('#css').attr('href', css);
+                $('.loading').css('display', 'none');
+            });
+        }
+    });
+});

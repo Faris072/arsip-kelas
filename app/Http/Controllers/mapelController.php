@@ -17,8 +17,10 @@ class mapelController extends Controller
      */
     public function index($id_mapel)
     {
-        $id_kelas = session('id_kelas');
-
+        $mpl = mapel::with('kelas')->where('id_mapel', $id_mapel)->get()->first();
+        // @dd($mpl);
+        $id_kelas = $mpl->kelas->id_kelas;
+        session()->put('id_kelas', $id_kelas);//untuk di home supaya dapat session
         session()->put('id_mapel', $id_mapel);
         $mapel = mapel::find($id_mapel);
         return view('/mapel',[

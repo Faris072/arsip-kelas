@@ -260,9 +260,9 @@
                         <h5 class="card-header"><b>{{ $m->mapel }}</b></h5>
                         <div class="card-body" style="padding:1vw;">
                             <h5 class="card-title" style=""><b>{{ $m->nama_nilai }}</b></h5>
-                            <p class="card-text text-muted">Date: <span>{{ $m->tanggal_mapel }}</span> | <span>X MIPA 5</span></p>
+                            <p class="card-text text-muted">Date: <span>{{ date('d-m-Y', strtotime($m->tanggal_mapel)) }}</span> | <span>{{ $m->kelas->nama_kelas }}</span></p>
                             <div class="btn-card d-flex" style="justify-content:space-between;">
-                                <a href="#" class="btn btn-primary p-1" style="font-size:100%; padding:0.2vw;"
+                                <a href="#" class="btn btn-primary p-1 btn-deskripsi-mapel" style="font-size:100%; padding:0.2vw;"
                                     data-toggle="modal" data-target="#detail{{ $m->id_mapel }}">Deskripsi</a>
                                 <a href="#" class="btn btn-success p-1 masuk-mapel" data-url="/mapel/{{ $m->id_mapel }}/mapel" style="font-size:100%; padding:0.2vw; right:0;">Masuk Mapel</a>
                             </div>
@@ -282,7 +282,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body" style="height:72vh; overflow:auto;">
-                                    <p>{{ $m->deskripsi_mapel }}</p>
+                                    <p class="desk-mapel">{{ $m->deskripsi_mapel }}</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -9,10 +9,12 @@ use Illuminate\Http\Request;
 class homeController extends Controller
 {
     public function index(){
-        $datas = mapel::with('kelas');//relasi tabel
+        // $nilai = mapel::with('nilai');//relasi tabel
+        $mapel = mapel::orderBy('updated_at', 'desc')->limit(6)->get();
         return view('home',[
             'css' => 'css/home.css',
-            'datas' => $datas
+            'datas' => '',
+            'mapel' => $mapel
         ]);
 
     }
