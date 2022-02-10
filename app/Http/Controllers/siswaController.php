@@ -30,8 +30,8 @@ class siswaController extends Controller
     public function create()
     {
         $id_kelas = session('id_kelas');
-        $absen = siswa::whereRaw('no_absen = (select max(`no_absen`) from siswa) AND id_kelas = '.$id_kelas)->get()->first();//whereRow untuk where sql bisasa. dan first untuk mengambil 1 data yg di awal
-
+        $absen = siswa::where('id_kelas',$id_kelas)->whereRaw('no_absen = (select max(no_absen) from siswa where id_kelas = '.$id_kelas.')')->get()->first();//->whereRaw('no_absen = (select max(no_absen) from siswa)')->get()->first();//whereRow untuk where sql bisasa. dan first untuk mengambil 1 data yg di awal
+        // @dd($id_kelas,$absen);
         return view('ruangkelas/tambahsiswa',[
             'css' => '',
             'absen' => $absen

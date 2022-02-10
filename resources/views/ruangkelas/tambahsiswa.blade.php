@@ -5,13 +5,15 @@
     </div>
     <form action="/setsiswa" method="post" id="form-tambah-siswa">
         @csrf
+        {{-- @dd($absen->no_absen) --}}
         <label for="absen"><b>No. Absen: </b><span style="color:red;">*</span></label>
         {{-- @dd($absen->no_absen) --}}
-        @if(empty($absen->no_absen))
+        @empty($absen->no_absen)
             <input type="number" id="absen" name="no_absen" value="1" class="form-control" required>
-        @else
-            <input type="number" id="absen" name="no_absen" value="{{ $absen->no_absen+1 }}" class="form-control" required>
-        @endif
+        @endempty
+        @isset($absen->no_absen)
+        <input type="number" id="absen" name="no_absen" value="{{ $absen->no_absen+1 }}" class="form-control" required>
+        @endisset
         <small class="text-muted">Masukkan Nomor Absen Siswa</small>
         <br>
         <br>
