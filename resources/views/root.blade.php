@@ -145,16 +145,40 @@
     </div>
     <br><br>
     <div class="container">
+        <center><h2><b>Selamat Datang di Arsip Kelas</b></h2></center>
+        <br>
+        <p style="text-indent:25px">
+            Arsip kelas adalah website yang menyediakan berbagai fitur untuk memudahkan seseorang terutama para guru untuk
+            mengarsipkan data-data mereka. Website ini menyediakan fitur kelas, daftar siswa, presensi, daftar nilai, dan masih banyak lagi.
+            Untuk memudahkan anda, kami juga membuat loading website ini seminimal mungkin supaya meningkatkan kecepatan website ini
+            dalam memuat berbagai data. Di sini, pengarsipan dapat dilakukan dimana saja dan kapan saja.
+        </p>
+        <p style="text-indent:25px;">
+            Dalam kehidupan sehari-hari seseorang pasti pernah mengalami kehilangan dan
+            lupa akan sesuatu, seperti misalnya lupa menaruh dokumen, lupa membawa dokumen ke kantor, kehilangan dokumen,
+            dan lain sebagainya. Tak itu saja, dalam kehidupan sehari-hari, seseorang pasti menginginkan sesuatu yang simpel,
+            mudah digunakan, dan bisa melakukan pekerjaan kapanpun dan dimanapun.
+        </p>
+        <p style="text-indent:25px;">
+            Oleh karena itu, di web ini anda dapat mengarsipkan dokumen anda tanpa khawatir kehilangan dokumen, lupa membawa dokumen,
+            melakukan pengarsipan anda secara mudah dan praktis. Disini anda tidak diminta data-data penting pribadi seperti nomor KTP,
+            NIP, NIS, NISN dan lain sebagainya sehingga anda tidak perlu khawatir akan data-data penting anda. Untuk password, anda tidak
+            harus mengisikan password asli dari email anda dan password anda akan di enskripsi sehingga tak seorangpun termasuk developer dan admin
+            mengetahui password anda.
+        </p>
+    </div>
+    <br><br><br>
+    <div class="container">
         <center>
-            <h2><b>Selamat Datang di Arsip Kelas</b></h2>
+            <h2><b>Kelebihan Arsip Kelas</b></h2>
         </center>
-        <br><br>
+        <br>
         <div class="row">
             <div class="col-md-2 d-flex">
                 <center style="margin:auto;"><i class="fab fa-html5 fa-7x" style="color:orange; margin:auto;"></i></center>
             </div>
             <div class="col-md-10">
-                <h5><b>HTML</b></h5>
+                <h5><b>Minim Loading</b></h5>
                 <p>Hypertext Markup Language (HTML) adalah bahasa markah standar untuk dokumen yang dirancang untuk ditampilkan di peramban internet. Ini dapat dibantu oleh teknologi seperti Cascading Style Sheets (CSS) dan bahasa scripting seperti JavaScript dan VBScript.</p>
                 <a href="pengenalanprograming.php" class="btn btn-primary">Pelajari Lebih Banyak</a>
             </div>
@@ -165,7 +189,7 @@
                 <center style="margin:auto;"><i class="fab fa-css3-alt fa-7x" style="color:blue; margin:auto;"></i></center>
             </div>
             <div class="col-md-10">
-                <h5><b>CSS</b></h5>
+                <h5><b>Mudah dan Simpel</b></h5>
                 <p>Cascading Style Sheet (CSS) merupakan aturan untuk mengatur beberapa komponen dalam sebuah web sehingga akan lebih terstruktur dan seragam. CSS bukan merupakan bahasa pemograman.</p>
                 <a href="pengenalanprograming.php" class="btn btn-primary">Pelajari Lebih Banyak</a>
             </div>
@@ -176,7 +200,7 @@
                 <center style="margin:auto;"><i class="fab fa-js-square fa-7x" style="color:gold; margin:auto;"></i></center>
             </div>
             <div class="col-md-10">
-                <h5><b>JavaScript</b></h5>
+                <h5><b>Aman</b></h5>
                 <p>JavaScript (disingkat JS) adalah bahasa pemrograman tingkat tinggi dan dinamis. JavaScript populer di internet dan dapat bekerja di sebagian besar penjelajah web populer seperti Google Chrome, Internet Explorer (IE), Mozilla Firefox, Netscape dan Opera. Kode JavaScript dapat disisipkan dalam halaman web menggunakan tag SCRIPT. JavaScript merupakan salah satu teknologi inti World Wide Web selain HTML dan CSS. JavaScript membantu membuat halaman web interaktif dan merupakan bagian aplikasi web yang esensial.</p>
                 <a href="pengenalanprograming.php" class="btn btn-primary">Pelajari Lebih Banyak</a>
             </div>
@@ -187,7 +211,7 @@
                 <center style="margin:auto;"><i class="fab fa-bootstrap fa-7x" style="color:rgb(188, 107, 255); margin:auto;"></i></center>
             </div>
             <div class="col-md-10">
-                <h5><b>Bootstrap 4</b></h5>
+                <h5><b>Banyak Fitur</b></h5>
                 <p>Bootstrap adalah kerangka kerja CSS yang sumber terbuka dan bebas untuk merancang situs web dan aplikasi web. Kerangka kerja ini berisi templat desain berbasis HTML dan CSS untuk tipografi, formulir, tombol, navigasi, dan komponen antarmuka lainnya, serta juga ekstensi opsional JavaScript. Tidak seperti kebanyakan kerangka kerja web lainnya, kerangka kerja ini hanya fokus pada pengembangan front-end saja.</p>
                 <a href="pengenalanprograming.php" class="btn btn-primary">Pelajari Lebih Banyak</a>
             </div>
@@ -198,7 +222,7 @@
                 <center style="margin:auto;"><i class="fab fa-php fa-7x" style="color:rgb(115, 17, 242); margin:auto;"></i></center>
             </div>
             <div class="col-md-10">
-                <h5><b>PHP</b></h5>
+                <h5><b>Dapat Diakses Dimana Saja dan Kapan Saja</b></h5>
                 <p>PHP: Hypertext Preprocessor (sebelumnya disebut Personal Home Pages) adalah bahasa skrip yang dapat ditanamkan atau disisipkan ke dalam HTML. PHP banyak dipakai untuk memprogram situs web dinamis. PHP dapat digunakan untuk membangun sebuah CMS.</p>
                 <a href="pengenalanprograming.php" class="btn btn-primary">Pelajari Lebih Banyak</a>
             </div>
@@ -209,7 +233,7 @@
                 <center style="margin:auto;"><i class="fab fa-cuttlefish fa-7x" style="color:orange; margin:auto;"></i></center>
             </div>
             <div class="col-md-10">
-                <h5><b>Pemrograman C</b></h5>
+                <h5><b>Dapat Digunakan Siapapun</b></h5>
                 <p>Bahasa pemrograman C merupakan salah satu bahasa pemrograman komputer. Dibuat pada tahun 1972 oleh Dennis Ritchie untuk Sistem Operasi Unix di Bell Telephone Laboratories.
                     Meskipun C dibuat untuk memprogram sistem dan jaringan komputer namun bahasa ini juga sering digunakan dalam mengembangkan software aplikasi. C juga banyak dipakai oleh berbagai jenis platform sistem operasi dan arsitektur komputer, bahkan terdapat beberepa compiler yang sangat populer telah tersedia. C secara luar biasa memengaruhi bahasa populer lainnya, terutama C++ yang merupakan extensi dari C.
                 </p>
