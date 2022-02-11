@@ -31,8 +31,11 @@
 </head>
 <body>
 
-    <div class="container d-flex" style="width: 100vw; height:100vh;">
-        <a href="/welcome" class="btn btn-warning m-auto">Develop</a>
+    <div class="container d-flex" style="width: 100vw; height:100vh; justify-content:center;">
+        <div class="container m-auto" style="width: 20%;">
+            <a href="/welcome" class="btn btn-warning" style="margin:auto;">Develop</a>
+            <a href="/auth/create" class="btn btn-success" style="margin:auto;">Register</a>
+        </div>
     </div>
 
     <!-- Optional JavaScript -->

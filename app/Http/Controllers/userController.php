@@ -14,7 +14,7 @@ class userController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -24,7 +24,9 @@ class userController extends Controller
      */
     public function create()
     {
-        //
+        return view('/register',[
+            'css' => ''
+        ]);
     }
 
     /**
@@ -35,7 +37,9 @@ class userController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+
+        ]);
     }
 
     /**

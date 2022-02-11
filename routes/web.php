@@ -19,11 +19,16 @@ Route::get('/', function () {
     ]);
 });
 
+
+Route::resource('/auth','App\Http\Controllers\userController');
+
+
 Route::get('/welcome', function () {
     return view('welcome',[
         'css' => 'css/home.css'
     ]);
 });
+
 
 Route::get('/home', 'App\Http\Controllers\homeController@index');
 
