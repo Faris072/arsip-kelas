@@ -24,6 +24,10 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        body{
+            overflow-x: hidden;
+        }
+
         .container center h1 {
             font-family: roboto;
         }
@@ -277,7 +281,7 @@
                     <div class="card m-auto" style="width: 20rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#ml">
                         <img class="card-img-top" src="beranda/ml.png" alt="Card image cap" style="height:200px;">
                         <div class="card-body">
-                            <h5 class="card-title">Mobile Legends</h5>
+                            <h5 class="card-title">Kelas</h5>
                             <p class="card-text">Mobile Legends: Bang Bang adalah sebuah permainan peranti bergerak (Mobile) berjenis MOBA yang dikembangkan dan diterbitkan oleh...</p>
                         </div>
                     </div>
@@ -286,7 +290,7 @@
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Mobile Legends</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Kelas</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -308,7 +312,7 @@
                     <div class="card m-auto" style="width: 20rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#pubg">
                         <img class="card-img-top" src="beranda/pubg.jpg" alt="Card image cap" style="height:200px;">
                         <div class="card-body">
-                            <h5 class="card-title">PUBG Mobile</h5>
+                            <h5 class="card-title">Siswa</h5>
                             <p class="card-text">PlayerUnknown's Battlegrounds (sering disingkat PUBG) adalah sebuah permainan video dengan genre battle royale, di mana 100 orang...</p>
                         </div>
                     </div>
@@ -317,7 +321,7 @@
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">PUBG Mobile</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Siswa</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -339,7 +343,7 @@
                     <div class="card m-auto" style="width: 20rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#honkai">
                         <img class="card-img-top" src="beranda/honkai.jpg" alt="Card image cap" style="height:200px;">
                         <div class="card-body">
-                            <h5 class="card-title">Honkai Impact 3</h5>
+                            <h5 class="card-title">Presensi</h5>
                             <p class="card-text">Honkai Impact 3 atau adalah game free-to-play aksi permainan peran 3D mobile game yang dikembangkan oleh miHoYo. Merupakan seri ketiga dari...</p>
                         </div>
                     </div>
@@ -348,7 +352,7 @@
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Honkai Impact 3</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Presensi</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -370,7 +374,7 @@
                     <div class="card m-auto" style="width: 20rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#warpath">
                         <img class="card-img-top" src="beranda/warpath.jpg" alt="Card image cap" style="height:200px;">
                         <div class="card-body">
-                            <h5 class="card-title">Warpath</h5>
+                            <h5 class="card-title">Mapel (Mata Pelajaran)</h5>
                             <p class="card-text">Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang...</p>
                         </div>
                     </div>
@@ -379,7 +383,69 @@
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Warpath</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Mapel (Mata Pelajaran)</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body p-5">
+                                    <img src="beranda/warpath.jpg" style="width:100%;">
+                                    <br><br>
+                                    <p>Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang musuh, upgrade dan masih banyak lagi. game ini dimainkan secara daring (online) sehingga pemain bisa merasakan serunya berperang dan bersekutu dengan player lain. di game ini juga ada envent yang menarik dan juga bisa bekerja sama dengan player lain.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close </button>
+                                    <a href="#" type="button" class="btn btn-primary"> Lihat Lebih Banyak</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 py-5">
+                    <div class="card m-auto" style="width: 20rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#warpath">
+                        <img class="card-img-top" src="beranda/warpath.jpg" alt="Card image cap" style="height:200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Nilai</h5>
+                            <p class="card-text">Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang...</p>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="warpath" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Nilai</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body p-5">
+                                    <img src="beranda/warpath.jpg" style="width:100%;">
+                                    <br><br>
+                                    <p>Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang musuh, upgrade dan masih banyak lagi. game ini dimainkan secara daring (online) sehingga pemain bisa merasakan serunya berperang dan bersekutu dengan player lain. di game ini juga ada envent yang menarik dan juga bisa bekerja sama dengan player lain.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close </button>
+                                    <a href="#" type="button" class="btn btn-primary"> Lihat Lebih Banyak</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 py-5">
+                    <div class="card m-auto" style="width: 20rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#warpath">
+                        <img class="card-img-top" src="beranda/warpath.jpg" alt="Card image cap" style="height:200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Cetak</h5>
+                            <p class="card-text">Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang...</p>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="warpath" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Cetak</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -563,16 +629,16 @@
     <div class="footer bg-dark py-5" style="margin-bottom:0; padding-bottom:0;">
         <div class="container py-2">
             <div class="row">
-                <div class="col-md-1 col-sm-1">
+                <div class="col-md-2 col-sm-2">
                     <center>
                         <h2><b>F-Info</b></h2>
                     </center>
                 </div>
                 <div class="col-md-10 col-sm-10 py-3">
                     <div class="list" style="color:white;">
-                        <ul id="listfooter">
-                            <li>
-                                <h6><b>Programing & Coding</b></h6>
+                        <ul id="listfooter" class="d-flex" style="flex-wrap:wrap; font-size:12px;">
+                            <li style="margin-bottom:10px;">
+                                <b>Programing & Coding</b>
                                 <ul>
                                     <li>Pengenalan Programing</li>
                                     <li>HTML</li>
@@ -580,8 +646,8 @@
                                     <li>JavaScript</li>
                                 </ul>
                             </li>
-                            <li>
-                                <h6><b>Programing & Coding</b></h6>
+                            <li style="margin-bottom:10px;">
+                                <b>Programing & Coding</b>
                                 <ul>
                                     <li>Pengenalan Programing</li>
                                     <li>HTML</li>
@@ -589,8 +655,8 @@
                                     <li>JavaScript</li>
                                 </ul>
                             </li>
-                            <li>
-                                <h6><b>Programing & Coding</b></h6>
+                            <li style="margin-bottom:10px;">
+                                <b>Programing & Coding</b>
                                 <ul>
                                     <li>Pengenalan Programing</li>
                                     <li>HTML</li>
@@ -598,8 +664,8 @@
                                     <li>JavaScript</li>
                                 </ul>
                             </li>
-                            <li>
-                                <h6><b>Programing & Coding</b></h6>
+                            <li style="margin-bottom:10px;">
+                                <b>Programing & Coding</b>
                                 <ul>
                                     <li>Pengenalan Programing</li>
                                     <li>HTML</li>
@@ -609,9 +675,6 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="col-md-1 col-sm-1">
-                    <center><a class="btn btn-primary" href="#">Login</a></center>
                 </div>
             </div>
         </div>
