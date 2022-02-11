@@ -47,7 +47,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:sticky; top:0; z-index:999;">
         <div class="container">
-            <a class="navbar-brand pr-5" href="#" style="font-family: 'Fredericka the Great', cursive;">F-Info</a>
+            <a class="navbar-brand pr-5" href="#" style="font-family: 'Fredericka the Great', cursive;">Arsip Kelas</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -145,7 +145,7 @@
     </div>
     <br><br>
     <div class="container">
-        <center><h2><b>Selamat Datang di Arsip Kelas</b></h2></center>
+        <center><h3><b>Selamat Datang di Arsip Kelas</b></h3></center>
         <br>
         <p style="text-indent:25px">
             Arsip kelas adalah website yang menyediakan berbagai fitur untuk memudahkan seseorang terutama para guru untuk
@@ -170,7 +170,7 @@
     <br><br><br>
     <div class="container">
         <center>
-            <h2><b>Kelebihan Arsip Kelas</b></h2>
+            <h3><b>Kelebihan Arsip Kelas</b></h3>
         </center>
         <br>
         <div class="row">
@@ -179,8 +179,12 @@
             </div>
             <div class="col-md-10">
                 <h5><b>Minim Loading</b></h5>
-                <p>Hypertext Markup Language (HTML) adalah bahasa markah standar untuk dokumen yang dirancang untuk ditampilkan di peramban internet. Ini dapat dibantu oleh teknologi seperti Cascading Style Sheets (CSS) dan bahasa scripting seperti JavaScript dan VBScript.</p>
-                <a href="pengenalanprograming.php" class="btn btn-primary">Pelajari Lebih Banyak</a>
+                <p>
+                    Website ini mengusahakan loading seminimal mungkin sehingga mempercepat anda dalam mengaksesn web ini. Karena
+                    pada dasarnya website akan memuat semua data ketika website tersebut berpindah halaman. Di sini, anda tidak
+                    perlu khawatir akan kecepatan website dalam meload data karena hanya data-data yang harus dimuat saja yang akan di load
+                    dari server dan data yang tidak perlu dimuat tidak akan dimuat sehingga ringan dalam mengambil data dari server.
+                </p>
             </div>
         </div>
         <br><br>
@@ -190,8 +194,12 @@
             </div>
             <div class="col-md-10">
                 <h5><b>Mudah dan Simpel</b></h5>
-                <p>Cascading Style Sheet (CSS) merupakan aturan untuk mengatur beberapa komponen dalam sebuah web sehingga akan lebih terstruktur dan seragam. CSS bukan merupakan bahasa pemograman.</p>
-                <a href="pengenalanprograming.php" class="btn btn-primary">Pelajari Lebih Banyak</a>
+                <p>
+                    Anda tidak perlu repot-repot lagi untuk mengambil bolpoint dan kertas untuk mengarsipkan data. Di zaman ini sudah saatnya
+                    kita beralih ke era digital dimana anda dapat melakukan pekerjaan anda dari manapun dan kapanpun melalui perangkat kecil. Ini juga berlaku
+                    untuk website ini. Selama anda terhubung dengan internet dan perangkat yang mendukung seperti smartphone atau PC, anda dapat
+                    melakukan pengarsipan secara digital dan daring.
+                </p>
             </div>
         </div>
         <br><br>
@@ -201,8 +209,13 @@
             </div>
             <div class="col-md-10">
                 <h5><b>Aman</b></h5>
-                <p>JavaScript (disingkat JS) adalah bahasa pemrograman tingkat tinggi dan dinamis. JavaScript populer di internet dan dapat bekerja di sebagian besar penjelajah web populer seperti Google Chrome, Internet Explorer (IE), Mozilla Firefox, Netscape dan Opera. Kode JavaScript dapat disisipkan dalam halaman web menggunakan tag SCRIPT. JavaScript merupakan salah satu teknologi inti World Wide Web selain HTML dan CSS. JavaScript membantu membuat halaman web interaktif dan merupakan bagian aplikasi web yang esensial.</p>
-                <a href="pengenalanprograming.php" class="btn btn-primary">Pelajari Lebih Banyak</a>
+                <p>
+                    Tak perlu lagi khawatir akan kehilangan dokumen penting anda. Karena disini data anda akan disimpan di server
+                    sehingga data anda tidak akan hilang selama anda menghapusnya. Untuk keamanan akun, password anda akan di enskripsi
+                    sehingga tidak ada seorangpun yang dapat mengetahui password anda termasuk admin dan developer. Website ini tidak pernah
+                    menanyakan data penting pribadi anda seperti NIK, nomor KTP, NIP, NIS, NISN dan lain sebagainya sehingga anda tidak perlu
+                    khawatir akan data pribadi anda.
+                </p>
             </div>
         </div>
         <br><br>
@@ -212,19 +225,14 @@
             </div>
             <div class="col-md-10">
                 <h5><b>Banyak Fitur</b></h5>
-                <p>Bootstrap adalah kerangka kerja CSS yang sumber terbuka dan bebas untuk merancang situs web dan aplikasi web. Kerangka kerja ini berisi templat desain berbasis HTML dan CSS untuk tipografi, formulir, tombol, navigasi, dan komponen antarmuka lainnya, serta juga ekstensi opsional JavaScript. Tidak seperti kebanyakan kerangka kerja web lainnya, kerangka kerja ini hanya fokus pada pengembangan front-end saja.</p>
-                <a href="pengenalanprograming.php" class="btn btn-primary">Pelajari Lebih Banyak</a>
-            </div>
-        </div>
-        <br><br>
-        <div class="row">
-            <div class="col-md-2 d-flex">
-                <center style="margin:auto;"><i class="fab fa-php fa-7x" style="color:rgb(115, 17, 242); margin:auto;"></i></center>
-            </div>
-            <div class="col-md-10">
-                <h5><b>Dapat Diakses Dimana Saja dan Kapan Saja</b></h5>
-                <p>PHP: Hypertext Preprocessor (sebelumnya disebut Personal Home Pages) adalah bahasa skrip yang dapat ditanamkan atau disisipkan ke dalam HTML. PHP banyak dipakai untuk memprogram situs web dinamis. PHP dapat digunakan untuk membangun sebuah CMS.</p>
-                <a href="pengenalanprograming.php" class="btn btn-primary">Pelajari Lebih Banyak</a>
+                <p>
+                    Disini ada berbagai fitur yang bisa anda nikmati. fitur-fitur tersebut antara lain yaitu
+                    kelas, daftar siswa, presensi, mata pelajaran dan daftar nilai. untuk kelas, anda dapat menambahkan kelas sesuka
+                    hati anda, mengubah kelas yang telah anda buat dan menghapusnya. Disini juga ada pembagian angkatan untuk memudahkan
+                    anda dalam memilih kelas. untuk daftar siswa, anda juga dapat menambahkan siswa siapa saja yang ada di kelas tersebut.
+                    untuk presensi, anda dapat menambahkan presensi sesuai siswa yang ada di kelas tersebut. Untuk nilai, anda dapat menambahkan
+                    nilai untuk siswa yang ada di kelas tersebut dan di mata pelajaran (mapel) tersebut.
+                </p>
             </div>
         </div>
         <br><br>
@@ -234,10 +242,23 @@
             </div>
             <div class="col-md-10">
                 <h5><b>Dapat Digunakan Siapapun</b></h5>
-                <p>Bahasa pemrograman C merupakan salah satu bahasa pemrograman komputer. Dibuat pada tahun 1972 oleh Dennis Ritchie untuk Sistem Operasi Unix di Bell Telephone Laboratories.
-                    Meskipun C dibuat untuk memprogram sistem dan jaringan komputer namun bahasa ini juga sering digunakan dalam mengembangkan software aplikasi. C juga banyak dipakai oleh berbagai jenis platform sistem operasi dan arsitektur komputer, bahkan terdapat beberepa compiler yang sangat populer telah tersedia. C secara luar biasa memengaruhi bahasa populer lainnya, terutama C++ yang merupakan extensi dari C.
+                <p>
+                    Website ini dapat digunakan oleh semua orang tanpa terkecuali. Semua orang dapat menggunakan website ini
+                    sesuai kebutuhan saja. Meskipun website ini diperuntukkan untuk guru atau tenaga pendidikan, tidak menutup
+                    kemungkinan bahwa selain guru dapat menggunakan website ini. Hanya saja, selain guru harus menyesuaikan
+                    sendiri. Misalkan manager kantor dapat bawahannya menggunakan fitur presensi, penjual dapat mencatat barang
+                    dagangannya melalui fitur nilai, dan lain sebagainya.
                 </p>
-                <a href="pengenalanprograming.php" class="btn btn-primary">Pelajari Lebih Banyak</a>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-2 d-flex">
+                <center style="margin:auto;"><i class="fab fa-php fa-7x" style="color:rgb(115, 17, 242); margin:auto;"></i></center>
+            </div>
+            <div class="col-md-10">
+                <h5><b>GRATIS</b></h5>
+                <p>Disini anda dapat menikmati layanan ini secara gratis.</p>
             </div>
         </div>
         <br><br>
@@ -247,7 +268,7 @@
     <div class="container-fluid" style="background-image: linear-gradient(to right,rgba(66, 116, 255,0.7),rgba(161, 10, 255,0.6)); border:4px solid; border-image: linear-gradient(to right,gold, lime) 30;">
         <br><br>
         <center>
-            <h2 style="color: white;"><b>Tips & Trick Game</b></h2>
+            <h3 style="color: white;"><b>Fitur</b></h3>
         </center>
         <br>
         <div class="container">
@@ -383,7 +404,7 @@
     <br><br>
     <div class="container">
         <center>
-            <h2><b>Trading & Investasi</b></h2>
+            <h3><b>Prtanyaan Umum</b></h3>
         </center>
         <br><br>
         <div class="accordion">
@@ -481,7 +502,7 @@
 
     <div class="container-fluid py-5" style="background-image: linear-gradient(to right,rgba(66, 116, 255,0.7),rgba(161, 10, 255,0.6)); border:4px solid; border-image: linear-gradient(to right,gold, lime) 30;">
         <center>
-            <h2 style="color:white;"><b>Artikel Sehari-hari</b></h2>
+            <h3 style="color:white;"><b>Artikel Sehari-hari</b></h3>
         </center>
         <div class="container py-5 m-auto">
             <center>

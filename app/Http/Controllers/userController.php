@@ -41,7 +41,7 @@ class userController extends Controller
             'id_kelas' => '',
             'username' => 'required|max:20|unique:user',
             'nama_lengkap' => 'required|max:70',
-            'telp' => 'required|max:18',
+            'telp' => 'required|max:18|unique:user',
             'email' => 'required|email:dns|unique:user',
             'password' => 'required_with:confirm_password|same:confirm_password|min:8'
         ]);
