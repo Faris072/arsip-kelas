@@ -38,8 +38,19 @@ class userController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-
+            'id_kelas' => '',
+            'username' => 'required|max:20|unique:user',
+            'nama_lengkap' => 'required|max:70',
+            'telp' => 'required|max:18',
+            'email' => 'required|email:dns|unique:user',
+            'password' => 'required_with:confirm_password|same:confirm_password|min:8'
         ]);
+
+        $validatedData['password'] = bcrypt($validatedData['password']);
+
+        user::create($validatedData);
+
+        return redirect('/');
     }
 
     /**

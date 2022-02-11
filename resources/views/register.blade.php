@@ -96,17 +96,23 @@
                 @csrf
                 <center><h5 style="color:white;">REGISTER</h5></center>
                 <br>
-                <input type="text" class="form-control" name="username" placeholder="Username" required>
+                <input type="text" class="form-control @error('username') is-invalid @enderror" name="username" placeholder="Username" value="{{ old('username') }}" required>
+                @error('username')<small style="color:red">{{ $message }}</small>@enderror
                 <br>
-                <input type="text" class="form-control" name="nama_lengkap" placeholder="Nama Lengkap" required>
+                <input type="text" class="form-control @error('nama_lengkap') is-invalid @enderror" name="nama_lengkap" placeholder="Nama Lengkap" value="{{ old('nama_lengkap') }}" required>
+                @error('nama_lengkap')<small style="color:red">{{ $message }}</small>@enderror
                 <br>
-                <input type="text" class="form-control" name="telp" placeholder="Nomor Telpon" required>
+                <input type="text" class="form-control @error('telp') is-invalid @enderror" name="telp" placeholder="Nomor Telpon" value="{{ old('telp') }}" required>
+                @error('telp')<small style="color:red">{{ $message }}</small>@enderror
                 <br>
-                <input type="email" class="form-control" name="email" placeholder="Email" required>
+                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required>
+                @error('email')<small style="color:red">{{ $message }}</small>@enderror
                 <br>
-                <input type="password" class="form-control" name="confirm_password" placeholder="Password" required>
+                <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" value="{{ old('password') }}" required>
+                @error('password')<small style="color:red">{{ $message }}</small>@enderror
                 <br>
-                <input type="password" class="form-control" name="password" placeholder="Confirm Password" required>
+                <input type="password" class="form-control @error('confirm_password') is-invalid @enderror" name="confirm_password" placeholder="Confirm Password" value="{{ old('confirm_password') }}" required>
+                @error('confirm_password')<small style="color:red">{{ $message }}</small>@enderror
                 <br>
                 <input type="submit" class="form-control btn btn-success" value="Register" required>
                 <br>

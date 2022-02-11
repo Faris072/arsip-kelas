@@ -1,0 +1,103 @@
+/*navbar*/
+.navdropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: white;
+}
+
+/*sidebar*/
+.sidebar {
+    /* pengaturan toggle content*/
+    background-color: blue;
+    width: 20%;
+    transition: 1s cubic-bezier(0.74, -0.55, 0.29, 1.53);
+    overflow: auto;
+    /* supaya saat tinggi melebihi layar maka muncul scrollbar */
+    position: fixed;
+    /* supaya saat yang di scroll di sidebar, content tidak ikut di scroll*/
+    height: 100vh;
+    /*pengaturan internal sidebar*/
+    background-color: black;
+    color: white;
+}
+/*content*/
+.content {
+    /* pengaturan toggle content*/
+    transition: 1s cubic-bezier(0.74, -0.55, 0.29, 1.53);
+    width: 80%;
+    right: 0;
+    position: fixed;
+    /* supaya saat yang di scroll di content, sidebar tidak ikut di scroll */
+    overflow: auto;
+    /* supaya saat tinggi melebihi layar maka muncul scrollbar */
+    height: 100vh;
+    /*pengaturan internal content*/
+}
+
+@media(max-width:990px) {
+    .sidebar {
+        width: 0%;
+    }
+
+    .content {
+        width: 100%;
+    }
+}
+
+.sidebar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    padding-left: 10px;
+    color: white;
+}
+
+.sidebar ul li a:hover {
+    background-color: goldenrod;
+}
+
+.sidebar ul li ul {
+    padding-left: 10px;
+}
+
+/*footer*/
+#listfooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-left: 0;
+}
+
+#listfooter li {
+    list-style: none;
+    padding-bottom: 35px;
+}
+
+#listfooter li ul {
+    padding: 0;
+    margin: 0;
+}
+
+#listfooter li ul li {
+    padding: 0;
+}
+
+.footer .container {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, lime, gold) 30;
+}

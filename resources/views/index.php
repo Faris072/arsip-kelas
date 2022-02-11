@@ -110,35 +110,50 @@
                         </div>
                     </li>
                 </ul>
-                <a class="nav-link btn btn-primary py-1 ml-0" href="/auth/create">Register</a>
+                <a class="nav-link btn btn-success py-1 ml-0" href="login.php">Login</a>
             </div>
         </div>
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 p-0">
-                <img src="/asets/illustrasi/5 SCENE.svg" width="100%" alt="">
+            <div class="col-md-7 p-0">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:100%">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="beranda/programer.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="beranda/trading.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="beranda/game.jpg" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="beranda/covid.jpg" alt="Fourth slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
-            <div class="col-md-4 d-flex">
-                <div class="container m-auto" style="font-family: 'Roboto', sans-serif;">
-                    <form action="/">
-                        @csrf
-                        <center><h4><b>Login Arsip Kelas</b></h4></center>
-                        <br>
-                        <input type="email" class="form-control" name="email" placeholder="email">
-                        <br>
-                        <input type="password" class="form-control" name="password" placeholder="password">
-                        <br>
-                        <input type="checkbox" id="remember"> <label for="remember"> Remember me</label>
-                        <br>
-                        <input type="submit" class="form-control btn btn-success" value="Login">
-                        <br>
-                        <br>
-                        <p>Lupa password? <a href="#">Ganti Password</a></p>
-                        <p>Belum punya akun? <a href="/auth/create">Register</a></p>
-                    </form>
-                    <br>
-                    <br>
+            <div class="col-md-5 d-flex" style="background-color:black; color:white; text-align:right">
+                <div class="container m-auto" style="width:85%; font-family: 'Roboto', sans-serif;">
+                    <br><br>
+                    <h4><b>Selamat Datang di F-Info</b></h4>
+                    <h5>Temukan beragam informasi menarik mulai dari tips dan trik sampai edukasi.</h5>
+                    <br><br>
                 </div>
             </div>
         </div>
@@ -146,7 +161,7 @@
     <br><br>
     <div class="container">
         <center>
-            <h2><b>Selamat Datang di Arsip Kelas</b></h2>
+            <h2><b>Programing & Coding</b></h2>
         </center>
         <br><br>
         <div class="row">
