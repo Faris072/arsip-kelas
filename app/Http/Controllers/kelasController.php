@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\kelas;
 use App\Models\mapel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;//untuk menghapus gambar saat update dan delete di storage
 
 class kelasController extends Controller
 {
@@ -124,6 +125,9 @@ class kelasController extends Controller
             $validatedData['foto_kelas'] = $fotodefault->foto_kelas;
         }
         else{
+            if($request->old_image){
+                Storage::delete('fotokelas/'.$request->old_image);
+            }
             $namafoto = $request->file('foto_kelas')->getClientOriginalName();
             $ekstensi = $request->file('foto_kelas')->getClientOriginalExtension();
             $fotokelas = mt_rand(1000000000,9999999999) .'.'. $ekstensi;
@@ -144,6 +148,10 @@ class kelasController extends Controller
      */
     public function destroy($id_kelas)
     {
+        $image = kelas::find($id_kelas);
+
+        Storage::delete('fotokelas/'.$image->foto_kelas);
+
         kelas::destroy($id_kelas);
 
         return redirect('/angkatan');

@@ -146,6 +146,7 @@
                                     <label for="gantifoto" id="label-ubahfoto" class="btn btn-primary"><i
                                             class="fas fa-upload pr-2"></i>Pilih Foto (Optional)</label>
                                     <input type="file" name="foto_kelas" id="gantifoto" onChange="previewImage()">
+                                    <input type="hidden" name="old_image" value="{{ $dataes->foto_kelas }}">
                                     <br><br>
                                 </center>
                                 <label for="angkatan"><b>Angkatan: <span style="color:red">*</span></b></label>
