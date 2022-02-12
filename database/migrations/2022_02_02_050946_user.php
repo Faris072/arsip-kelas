@@ -24,8 +24,10 @@ class User extends Migration
             $table->date('tanggal_lahir')->nullable();
             $table->string('jenis_kelamin')->nullable();
             $table->string('alamat',1000)->nullable();
+            $table->tinyInteger('admin');
             $table->timestamp('last_used_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();//untuk soft delete
         });
     }
 

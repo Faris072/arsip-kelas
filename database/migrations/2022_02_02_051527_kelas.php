@@ -23,6 +23,7 @@ class Kelas extends Migration
             $table->string('foto_kelas')->nullable();
             $table->timestamp('last_used_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

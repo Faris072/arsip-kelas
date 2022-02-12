@@ -31,7 +31,7 @@
                 <h5 class="card-title" style=""><b>{{ $n->mapel->nama_nilai }}</b></h5>
                 <p class="card-text text-muted">Date:
                     <span>{{ date('d-m-Y', strtotime($n->mapel->tanggal_mapel)) }}</span> |
-                    <span>{{ $n->mapel->kelas->nama_kelas }}</span>
+                    <span>{{ $n->mapel->kelas_mapel }}</span>
                 </p>
                 <div class="btn-card d-flex" style="justify-content:space-between;">
                     <a href="#" class="btn btn-primary p-1" style="font-size:100%; padding:0.2vw;"
@@ -96,7 +96,7 @@
                     <h5 class="card-title" style=""><b>{{ $m->nama_nilai }}</b></h5>
                     <p class="card-text text-muted">Date:
                         <span>{{ date('d-m-Y', strtotime($m->tanggal_mapel)) }}</span> |
-                        <span>{{ $m->kelas->nama_kelas }}</span>
+                        <span>{{ $m->kelas_mapel }}</span>
                     </p>
                     <div class="btn-card d-flex" style="justify-content:space-between;">
                         <a href="#" class="btn btn-primary p-1" style="font-size:100%; padding:0.2vw;"
@@ -151,8 +151,13 @@
         <div class="col-md-4 col-6 p-0 pb-3 card-kelas">
             {{-- card --}}
             <div class="card m-0" style="width: 100%; height:100%;">
-                <img class="card-img-top" width="250px" height="200px"
-                    src="/storage/fotokelas/{{ $data->foto_kelas }}" alt="Card image cap">
+            @if ($data->foto_kelas)
+            <img class="card-img-top" width="250px" height="200px"
+                src="/storage/fotokelas/{{ $data->foto_kelas }}" alt="Card image cap">
+            @else
+            <img class="card-img-top" width="250px" height="200px"
+                src="/storage/fotokelas/default.jpg" alt="Card image cap">
+            @endif
                 <div class="card-body" style="padding:1vw;">
                     <h5 class="card-title" style=""><b>{{ $data->nama_kelas }}</b></h5>
                     <p class="card-text"><span>{{ $data->angkatan }}</span></p>
@@ -179,9 +184,15 @@
                             </button>
                         </div>
                         <div class="modal-body modal-detail" style="height:70vh; overflow-y:auto;">
+                            @if ($data->foto_kelas)
                             <center><img src="/storage/fotokelas/{{ $data->foto_kelas }}"
                                     style="background-image:url('storage/fotokelas/{{ $data->foto_kelas }}'); width:600px; height:400px;">
                             </center>
+                            @else
+                            <center><img src="/storage/fotokelas/default.jpg"
+                                    style="background-image:url('storage/fotokelas/default.jpg'); width:600px; height:400px;">
+                            </center>
+                            @endif
                             <br>
                             <div class="isi">
                                 <h5><b>Angkatan:</b></h5>

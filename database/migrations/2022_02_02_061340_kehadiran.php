@@ -22,6 +22,7 @@ class Kehadiran extends Migration
             $table->string('kehadiran');
             $table->timestamp('last_used_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

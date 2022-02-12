@@ -211,4 +211,13 @@ $('#close-presensi').on('click', function (){
 });
 
 
+function previewImage() {
+    let images = document.querySelector('#gantifoto');
+    let previews = document.querySelector('.img-preview');
+    let oFReader = new FileReader();
+    oFReader.readAsDataURL(images.files[0]);
+    oFReader.onload = function (oFREvent) {
+        previews.src = oFREvent.target.result;
+    }
+}
 

@@ -24,10 +24,12 @@
                         @csrf
                         <center>
                             <br>
+                            <img class="img-preview" width="240px" alt="">
+                            <br>
                             <label for="gantifoto" id="label-ubahfoto" class="btn btn-primary"><i
                                     class="fas fa-upload pr-2"></i>Pilih Foto (Optional)</label>
                             <br>
-                            <input type="file" name="foto_kelas" id="gantifoto">
+                            <input type="file" name="foto_kelas" id="gantifoto" onChange="previewImage()">
                             <br><br>
                         </center>
                         <label for="angkatan"><b>Angkatan: <span style="color:red">*</span></b></label>
@@ -85,15 +87,19 @@
                 <div class="col-md-4 col-6 p-0 pb-3">
                     {{-- card --}}
                     <div class="card m-0" style="width: 100%; height:100%;">
+                        @if($data->foto_kelas)
                         <img class="card-img-top" width="250px" height="200px" src="/storage/fotokelas/{{ $data->foto_kelas }}" alt="Card image cap">
+                        @else
+                        <img class="card-img-top" width="250px" height="200px" src="/storage/fotokelas/default.jpg" alt="Card image cap">
+                        @endif
                         <div class="card-body" style="padding:1vw;">
                             <h5 class="card-title" style=""><b>{{ $data->nama_kelas }}</b></h5>
                             <p class="card-text"><span>{{ $data->angkatan }}</span></p>
                             <div class="btn-card d-flex" style="justify-content:space-between;">
                                 <a href="#" class="btn btn-primary p-1 detail-kelas" style="font-size:100%; padding:0.2vw;"
-                                    data-toggle="modal" data-target="#detail{{ $data->id_kelas }}">DETAIL</a>
+                                    data-toggle="modal" data-target="#detail{{ $data->id_kelas }}">Detail</a>
                                 <a href="#" class="akt-ruangkelas btn btn-success p-1" data-url="/ruangkelas/{{ $data->id_kelas }}"
-                                    style="font-size:100%; padding:0.2vw; right:0;">MASUK Kelas</a>
+                                    style="font-size:100%; padding:0.2vw; right:0;">Masuk</a>
                             </div>
                         </div>
                     </div>
@@ -112,8 +118,13 @@
                                     </button>
                                 </div>
                                 <div class="modal-body modal-detail" style="height:70vh; overflow-y:auto;">
+                                    @if ($data->foto_kelas)
                                     <center><img src="/storage/fotokelas/{{ $data->foto_kelas }}"
                                         style="background-image:url('storage/fotokelas/{{ $data->foto_kelas }}'); width:600px; height:400px;"></center>
+                                    @else
+                                    <center><img src="/storage/fotokelas/default.jpg"
+                                        style="background-image:url('storage/fotokelas/default.jpg'); width:600px; height:400px;"></center>
+                                    @endif
                                         <br>
                                         <div class="isi">
                                             <h5><b>Angkatan:</b></h5>

@@ -22,6 +22,7 @@ class Presensi extends Migration
             $table->text('deskripsi_presensi')->nullable();
             $table->timestamp('last_used_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -50,72 +50,72 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:sticky; top:0; z-index:999;">
-        <div class="container">
-            <a class="navbar-brand pr-5" href="#" style="font-family: 'Fredericka the Great', cursive;">Arsip Kelas</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <a class="navbar-brand pr-5" href="#" style="font-family: 'Fredericka the Great', cursive;">Arsip Kelas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse pl-5" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item active p-1">
-                        <a class="nav-link" href="index.php">Beranda<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item p-1 dropdown navdropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Programing & Coding
-                        </a>
-                        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item disabled" href="#">UX</a>
-                            <a class="dropdown-item" href="#">HTML</a>
-                            <a class="dropdown-item" href="#">CSS</a>
-                            <a class="dropdown-item" href="#">JavaScript</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item disabled" href="#">UI</a>
-                            <a class="dropdown-item" href="#">PHP</a>
-                            <a class="dropdown-item" href="#">LARAVEL</a>
-                        </div>
-                    </li>
-                    <li class="nav-item p-1 dropdown navdropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Trik Game Android
-                        </a>
-                        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item disabled" href="#">Game Populer</a>
-                            <a class="dropdown-item" href="#">Mobile Legends</a>
-                            <a class="dropdown-item" href="#">PUBG Mobile</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item disabled" href="#">Game Lainnya</a>
-                            <a class="dropdown-item" href="#">Free Fire</a>
-                            <a class="dropdown-item" href="#">POU</a>
-                        </div>
-                    </li>
-                    <li class="nav-item p-1 dropdown navdropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Trading & Investasi
-                        </a>
-                        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Analisis Fundamental</a>
-                            <a class="dropdown-item" href="#">Analisis Tekhnical</a>
-                        </div>
-                    </li>
-                    <li class="nav-item p-1 dropdown navdropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Artikel Sehari-hari
-                        </a>
-                        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item disabled" href="#">Kesehatan</a>
-                            <a class="dropdown-item" href="#">Covid-19</a>
-                            <a class="dropdown-item" href="#">Comming soon</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item disabled" href="#">Lainnya</a>
-                            <a class="dropdown-item" href="#">Flu</a>
-                            <a class="dropdown-item" href="#">Batuk</a>
-                        </div>
-                    </li>
-                </ul>
-                <a class="nav-link btn btn-primary py-1 ml-0" href="/auth/create">Register</a>
-            </div>
+        <div class="collapse navbar-collapse pl-5" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item active p-1">
+                    <a class="nav-link" href="index.php">Beranda<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item p-1 dropdown navdropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Programing & Coding
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item disabled" href="#">UX</a>
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item disabled" href="#">UI</a>
+                        <a class="dropdown-item" href="#">PHP</a>
+                        <a class="dropdown-item" href="#">LARAVEL</a>
+                    </div>
+                </li>
+                <li class="nav-item p-1 dropdown navdropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Trik Game Android
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item disabled" href="#">Game Populer</a>
+                        <a class="dropdown-item" href="#">Mobile Legends</a>
+                        <a class="dropdown-item" href="#">PUBG Mobile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item disabled" href="#">Game Lainnya</a>
+                        <a class="dropdown-item" href="#">Free Fire</a>
+                        <a class="dropdown-item" href="#">POU</a>
+                    </div>
+                </li>
+                <li class="nav-item p-1 dropdown navdropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Trading & Investasi
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Analisis Fundamental</a>
+                        <a class="dropdown-item" href="#">Analisis Tekhnical</a>
+                    </div>
+                </li>
+                <li class="nav-item p-1 dropdown navdropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Artikel Sehari-hari
+                    </a>
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item disabled" href="#">Kesehatan</a>
+                        <a class="dropdown-item" href="#">Covid-19</a>
+                        <a class="dropdown-item" href="#">Comming soon</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item disabled" href="#">Lainnya</a>
+                        <a class="dropdown-item" href="#">Flu</a>
+                        <a class="dropdown-item" href="#">Batuk</a>
+                    </div>
+                </li>
+            </ul>
+            <a class="nav-link btn btn-primary py-1 ml-0" href="/auth/create">Register</a>
+            <a class="nav-link btn btn-primary py-1 ml-0" id="btn-login">Login</a>
+
         </div>
     </nav>
     <div class="container-fluid">
@@ -179,7 +179,7 @@
         <br>
         <div class="row">
             <div class="col-md-2 d-flex">
-                <center style="margin:auto;"><i class="fab fa-html5 fa-7x" style="color:orange; margin:auto;"></i></center>
+                <center style="margin:auto;"><i class="fas fa-spinner fa-7x" style="color:rgb(8, 46, 214); margin:auto;"></i></center>
             </div>
             <div class="col-md-10">
                 <h5><b>Minim Loading</b></h5>
@@ -194,7 +194,7 @@
         <br><br>
         <div class="row">
             <div class="col-md-2 d-flex">
-                <center style="margin:auto;"><i class="fab fa-css3-alt fa-7x" style="color:blue; margin:auto;"></i></center>
+                <center style="margin:auto;"><i class="fas fa-mobile-alt fa-7x" style="color:rgb(0, 0, 0); margin:auto;"></i></center>
             </div>
             <div class="col-md-10">
                 <h5><b>Mudah dan Simpel</b></h5>
@@ -209,7 +209,7 @@
         <br><br>
         <div class="row">
             <div class="col-md-2 d-flex">
-                <center style="margin:auto;"><i class="fab fa-js-square fa-7x" style="color:gold; margin:auto;"></i></center>
+                <center style="margin:auto;"><i class="fas fa-lock fa-7x" style="margin:auto; color:gold;"></i></center>
             </div>
             <div class="col-md-10">
                 <h5><b>Aman</b></h5>
@@ -225,7 +225,7 @@
         <br><br>
         <div class="row">
             <div class="col-md-2 d-flex">
-                <center style="margin:auto;"><i class="fab fa-bootstrap fa-7x" style="color:rgb(188, 107, 255); margin:auto;"></i></center>
+                <center style="margin:auto;"><i class="fab fa-elementor fa-7x" style="color:rgb(188, 107, 255); margin:auto;"></i></center>
             </div>
             <div class="col-md-10">
                 <h5><b>Banyak Fitur</b></h5>
@@ -242,7 +242,7 @@
         <br><br>
         <div class="row">
             <div class="col-md-2 d-flex">
-                <center style="margin:auto;"><i class="fab fa-cuttlefish fa-7x" style="color:orange; margin:auto;"></i></center>
+                <center style="margin:auto;"><i class="fas fa-users fa-7x" style="color:rgb(0, 255, 21); margin:auto;"></i></center>
             </div>
             <div class="col-md-10">
                 <h5><b>Dapat Digunakan Siapapun</b></h5>
@@ -258,7 +258,7 @@
         <br><br>
         <div class="row">
             <div class="col-md-2 d-flex">
-                <center style="margin:auto;"><i class="fab fa-php fa-7x" style="color:rgb(115, 17, 242); margin:auto;"></i></center>
+                <center style="margin:auto;"><i class="fas fa-money-bill-wave fa-7x" style="color:rgb(235, 52, 52); margin:auto;"></i></center>
             </div>
             <div class="col-md-10">
                 <h5><b>GRATIS</b></h5>
@@ -629,44 +629,44 @@
     <div class="footer bg-dark py-5" style="margin-bottom:0; padding-bottom:0;">
         <div class="container py-2">
             <div class="row">
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-3 col-sm-3">
                     <center>
-                        <h2><b>F-Info</b></h2>
+                        <h2 style="color:white;"><b>Arsip Kelas</b></h2>
                     </center>
                 </div>
-                <div class="col-md-10 col-sm-10 py-3">
+                <div class="col-md-9 col-sm-9 py-3">
                     <div class="list" style="color:white;">
                         <ul id="listfooter" class="d-flex" style="flex-wrap:wrap; font-size:12px;">
-                            <li style="margin-bottom:10px;">
+                            <li style="margin-bottom:10px; padding:15px; list-style:none;">
                                 <b>Programing & Coding</b>
-                                <ul>
+                                <ul style="padding-left:14px;">
                                     <li>Pengenalan Programing</li>
                                     <li>HTML</li>
                                     <li>CSS</li>
                                     <li>JavaScript</li>
                                 </ul>
                             </li>
-                            <li style="margin-bottom:10px;">
+                            <li style="margin-bottom:10px; padding:15px; list-style:none;">
                                 <b>Programing & Coding</b>
-                                <ul>
+                                <ul style="padding-left:14px;">
                                     <li>Pengenalan Programing</li>
                                     <li>HTML</li>
                                     <li>CSS</li>
                                     <li>JavaScript</li>
                                 </ul>
                             </li>
-                            <li style="margin-bottom:10px;">
+                            <li style="margin-bottom:10px; padding:15px; list-style:none;">
                                 <b>Programing & Coding</b>
-                                <ul>
+                                <ul style="padding-left:14px;">
                                     <li>Pengenalan Programing</li>
                                     <li>HTML</li>
                                     <li>CSS</li>
                                     <li>JavaScript</li>
                                 </ul>
                             </li>
-                            <li style="margin-bottom:10px;">
+                            <li style="margin-bottom:10px; padding:15px; list-style:none;">
                                 <b>Programing & Coding</b>
-                                <ul>
+                                <ul style="padding-left:14px;">
                                     <li>Pengenalan Programing</li>
                                     <li>HTML</li>
                                     <li>CSS</li>
@@ -690,9 +690,10 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/root.js"></script>
 </body>
 
 </html>

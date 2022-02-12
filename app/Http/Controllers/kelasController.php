@@ -56,10 +56,10 @@ class kelasController extends Controller
     public function store(Request $request)
     {
         // $request['id_kelas'] = 1000000000;
-        $request['id'] = 1000000000;
+        $request['id'] = 1000000;
 
         $validatedData = $request->validate([
-            'foto_kelas' => 'max:1024',
+            'foto_kelas' => 'image|file|max:1024',
             'angkatan' => 'required',
             'nama_kelas' => 'required|max:20',
             'deskripsi_kelas' => '',
@@ -67,10 +67,7 @@ class kelasController extends Controller
             'id' => 'required'
         ]);
 
-        if(empty($request['foto_kelas'])){
-            $validatedData['foto_kelas'] = 'default.jpg';
-        }
-        else{
+        if(isset($request['foto_kelas'])){
             $namafoto = $request->file('foto_kelas')->getClientOriginalName();
             $ekstensi = $request->file('foto_kelas')->getClientOriginalExtension();
             $fotokelas = mt_rand(1000000000,9999999999) .'.'. $ekstensi;
@@ -117,7 +114,7 @@ class kelasController extends Controller
         $fotodefault = kelas::find($id_kelas);
 
         $validatedData = $request->validate([
-            'foto_kelas' => 'max:1024',
+            'foto_kelas' => 'image|file|max:1024',
             'angkatan' => 'required',
             'nama_kelas' => 'required|max:20',
             'deskripsi_kelas' => ''

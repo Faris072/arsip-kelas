@@ -22,6 +22,7 @@ class Nilai extends Migration
             $table->string('nilai');
             $table->timestamp('last_used_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

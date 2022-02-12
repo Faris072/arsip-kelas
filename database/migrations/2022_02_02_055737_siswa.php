@@ -24,6 +24,7 @@ class Siswa extends Migration
             $table->string('email_siswa')->nullable();
             $table->timestamp('last_used_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -24,6 +24,7 @@ class Mapel extends Migration
             $table->date('tanggal_mapel');
             $table->timestamp('last_used_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

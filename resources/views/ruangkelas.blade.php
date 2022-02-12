@@ -135,12 +135,17 @@
                             <form action="" data-url="/ruangkelas/{{ $dataes->id_kelas }}/update" method="POST" enctype="multipart/form-data" id="form-setting-kelas">
                                 @csrf
                                 <center>
+                                    @if ($dataes->foto_kelas)
                                     <img src="/storage/fotokelas/{{ $dataes->foto_kelas }}"
-                                        style="background-image:url('storage/fotokelas/{{ $dataes->foto_kelas }}'); width:240px; height:200px;">
+                                    class="img-preview" style="background-image:url('storage/fotokelas/{{ $dataes->foto_kelas }}'); width:240px; height:200px;">
+                                    @else
+                                    <img src="/storage/fotokelas/default.jpg"
+                                    class="img-preview" style="background-image:url('storage/fotokelas/{{ $dataes->foto_kelas }}'); width:240px; height:200px;">
+                                    @endif
                                     <br>
                                     <label for="gantifoto" id="label-ubahfoto" class="btn btn-primary"><i
                                             class="fas fa-upload pr-2"></i>Pilih Foto (Optional)</label>
-                                    <input type="file" name="foto_kelas" id="gantifoto">
+                                    <input type="file" name="foto_kelas" id="gantifoto" onChange="previewImage()">
                                     <br><br>
                                 </center>
                                 <label for="angkatan"><b>Angkatan: <span style="color:red">*</span></b></label>

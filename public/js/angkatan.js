@@ -91,3 +91,14 @@ $('.modal-detail').on('scroll',function () {
     let x = $('.detail-deskripsikelas',this).text();
     $('.detail-deskripsikelas',this).html(x);
 });
+
+
+function previewImage() {
+    let image = document.querySelector('#gantifoto');
+    let preview = document.querySelector('.img-preview');
+    let oFReader = new FileReader();
+    oFReader.readAsDataURL(image.files[0]);
+    oFReader.onload = function (oFREvent) {
+        preview.src = oFREvent.target.result;
+    }
+}
