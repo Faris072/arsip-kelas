@@ -156,5 +156,4 @@ class kelasController extends Controller
 
         return redirect('/angkatan');
     }
-
 }

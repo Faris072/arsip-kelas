@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 
 Route::resource('/auth','App\Http\Controllers\userController');
-
+Route::post('/auth/login','App\Http\Controllers\userController@login');
 
 Route::get('/welcome', function () {
     return view('welcome',[
