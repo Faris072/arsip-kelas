@@ -6,6 +6,7 @@ use App\Models\kelas;
 use App\Models\mapel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;//untuk menghapus gambar saat update dan delete di storage
+use Illuminate\Support\Facades\Auth;
 
 class kelasController extends Controller
 {
@@ -16,8 +17,8 @@ class kelasController extends Controller
      */
     public function index()
     {
-        $data = kelas::all()->sortByDesc('created_at');
-        $angkatans = kelas::distinct()->get('angkatan')->sortByDesc('angkatan');// untuk desc gunakan sortByDesc() untuk asc gunakan sortBy(). menggunakan get karena jika menggunakan all data tidak bisa dibaca
+        $data = kelas::all()->where('id', Auth::user()->id)->sortByDesc('created_at');
+        $angkatans = kelas::distinct()->where('id', Auth::user()->id)->get('angkatan')->sortByDesc('angkatan');// untuk desc gunakan sortByDesc() untuk asc gunakan sortBy(). menggunakan get karena jika menggunakan all data tidak bisa dibaca
         return view('angkatan', [
             'css' => 'css/angkatan.css',
             'datas' => $data,
@@ -57,7 +58,7 @@ class kelasController extends Controller
     public function store(Request $request)
     {
         // $request['id_kelas'] = 1000000000;
-        $request['id'] = 1000000;
+        $request['id'] = Auth::user()->id;
 
         $validatedData = $request->validate([
             'foto_kelas' => 'image|file|max:1024',

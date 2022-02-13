@@ -137,6 +137,6 @@ class userController extends Controller
      */
     public function destroy(user $user)
     {
-        //
+
     }
 }

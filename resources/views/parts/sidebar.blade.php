@@ -2,8 +2,8 @@
     <div class="profil">
         <center>
             <img src="" alt="">
-            <h5>nama</h5>
-            <h6>Guru Matematika</h6>
+            <h5>{{ Auth::user()->username }}</h5>
+            <h6>{{ Auth::user()->nama_lengkap }}</h6>
         </center>
         <hr>
     </div>
@@ -14,7 +14,10 @@
             <li><a href="#" class="sidebar-menu" data-url="favorit" ><i class="fas fa-star"></i> Favorit</a></li>
             {{-- <li><a href="#" class="sidebar-menu" data-url="angkatan" ><i class="fas fa-user-cog"></i> Setting Kelas</a></li> --}}
             <li><a href="#" class="sidebar-menu" data-url="profil"><i class="fas fa-user-circle"></i> Profil</a></li>
-            <li><a href="#" class="sidebar-menu"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            <form action="/auth/logout" method="post">
+                @csrf
+                <li><button id="x" class="sidebar-menu"><i class='fas fa-sign-out-alt'></i> Logout</button></li>
+            </form>
         </ul>
     </div>
     <br>

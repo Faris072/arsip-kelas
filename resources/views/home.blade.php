@@ -88,27 +88,28 @@
     <?php $i = 10; ?>
     @foreach ($mapel as $m)
         <?php $i--; ?>
+        @dd($m)
         <div class="col-md-4 col-6 p-0 pb-3 card-mapel">
             {{-- card --}}
             <div class="card m-0" style="width: 100%; height:100%;">
-                <h5 class="card-header"><b>{{ $m->mapel }}</b></h5>
+                <h5 class="card-header"><b>{{ $m->mapel->mapel }}</b></h5>
                 <div class="card-body" style="padding:1vw;">
-                    <h5 class="card-title" style=""><b>{{ $m->nama_nilai }}</b></h5>
+                    <h5 class="card-title" style=""><b>{{ $m->mapel->nama_nilai }}</b></h5>
                     <p class="card-text text-muted">Date:
-                        <span>{{ date('d-m-Y', strtotime($m->tanggal_mapel)) }}</span> |
-                        <span>{{ $m->kelas_mapel }}</span>
+                        <span>{{ date('d-m-Y', strtotime($m->mapel->tanggal_mapel)) }}</span> |
+                        <span>{{ $m->mapel->kelas_mapel }}</span>
                     </p>
                     <div class="btn-card d-flex" style="justify-content:space-between;">
                         <a href="#" class="btn btn-primary p-1" style="font-size:100%; padding:0.2vw;"
-                            data-toggle="modal" data-target="#detail{{ $m->id_mapel }}">Deskripsi</a>
-                        <a href="#" class="btn btn-success p-1 masuk-mapel" data-url="/mapel/{{ $m->id_mapel }}/mapel"
+                            data-toggle="modal" data-target="#detail{{ $m->mapel->id_mapel }}">Deskripsi</a>
+                        <a href="#" class="btn btn-success p-1 masuk-mapel" data-url="/mapel/{{ $m->mapel->id_mapel }}/mapel"
                             style="font-size:100%; padding:0.2vw; right:0;">Masuk Mapel</a>
                     </div>
                 </div>
             </div>
             {{-- endCard --}}
             <!-- Modal -->
-            <div class="modal fade" id="detail{{ $m->id_mapel }}" tabindex="-1" role="dialog"
+            <div class="modal fade" id="detail{{ $m->mapel->id_mapel }}" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
@@ -119,7 +120,7 @@
                             </button>
                         </div>
                         <div class="modal-body" style="height:72vh; overflow:auto;">
-                            <p class="desk-mapel">{{ $m->deskripsi_mapel }}</p>
+                            <p class="desk-mapel">{{ $m->mapel->deskripsi_mapel }}</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -18,7 +18,7 @@ class kelas extends Model
     protected $guarded = ['id_kelas'];
 
     public function user(){
-        return $this->belongsTo(user::class,'id');
+        return $this->belongsTo(User::class,'id');
     }
 
     public function presensi(){
@@ -30,7 +30,7 @@ class kelas extends Model
     }
 
     public function mapel(){
-        return $this->hasMany(mapel::class);
+        return $this->hasMany(mapel::class, 'id_mapel');
     }
 
 }
