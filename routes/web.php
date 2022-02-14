@@ -52,12 +52,6 @@ Route::get('/profil', function(){
     ]);
 })->middleware('auth');
 
-Route::get('/favorit', function(){
-    return view('angkatan', [
-        'css' => 'css/favorit.css',
-    ]);
-})->middleware('auth');
-
 //presensi
 Route::resource('/presensi','App\http\Controllers\presensiController')->middleware('auth');
 Route::get('/presensi/{id_presensi}/body','App\http\Controllers\presensiController@index2')->middleware('auth');
@@ -100,11 +94,12 @@ Route::get('/detailmapel', function(){
     ]);
 })->middleware('auth');
 
-
-
 Route::get('/cetaknilai','App\Http\Controllers\cetakController@cetaknilai')->middleware('auth');
 
-
+//jadwal
+Route::resource('/jadwal','App\Http\Controllers\jadwalController')->middleware('auth');
+Route::post('/jadwal/{id_jadwal}/delete','App\Http\Controllers\jadwalController@destroy')->middleware('auth');
+//endjadwal
 
 
 

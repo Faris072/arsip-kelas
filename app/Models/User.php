@@ -33,4 +33,8 @@ class user extends Authenticatable //supaya bisa login dikasih extends auth
     public function kelas(){
         return $this->hasMany(kelas::class,'id_kelas');
     }
+
+    public function jadwal(){
+        return $this->hasMany(jadwal::class,'id_jadwal');
+    }
 }

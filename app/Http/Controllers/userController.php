@@ -92,6 +92,8 @@ class userController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
+        session_start();
+        session_destroy();
         return redirect('/');
     }
 

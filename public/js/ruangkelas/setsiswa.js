@@ -43,7 +43,6 @@ $('.form-delete-siswa').on('submit', function(e){
     swal("Sedang diproses...", {icon: "warning",});
     let url = $(this).attr('data-url');
     let data = $(this).serialize();
-    console.log(data);
     $.ajax({
         method:'post',
         url: url,
