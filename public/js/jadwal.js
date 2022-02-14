@@ -47,6 +47,22 @@ $('#form-tambah-jadwal').on('submit', function(e){
     });
 });
 
+
+$('.editjadwal').on('click',function(e){
+    e.preventDefault;
+    let url = $(this).attr('data-url');
+    $.ajax({
+        method: 'get',
+        url: url,
+        beforeSend: function(){},
+        error: function (){},
+        success: function (data) {
+            $('#content').html(data);
+        }
+    });
+});
+
+
 $('.form-hapus-jadwal').on('submit', function(e){
     e.preventDefault();
     let konf = confirm('Yakin ingin menghapus jadwal ini?');

@@ -15,13 +15,13 @@ class jadwalController extends Controller
      */
     public function index()
     {
-        $senin = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', 'Senin');
-        $selasa = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', 'Selasa');
-        $rabu = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', 'Rabu');
-        $kamis = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', 'Kamis');
-        $jumat = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', "Jum'at");
-        $sabtu = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', 'Sabtu');
-        $minggu = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', 'Minggu');
+        $senin = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', 'Senin')->sortBy('mulai_jadwal');
+        $selasa = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', 'Selasa')->sortBy('mulai_jadwal');
+        $rabu = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', 'Rabu')->sortBy('mulai_jadwal');
+        $kamis = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', 'Kamis')->sortBy('mulai_jadwal');
+        $jumat = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', "Jum'at")->sortBy('mulai_jadwal');
+        $sabtu = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', 'Sabtu')->sortBy('mulai_jadwal');
+        $minggu = jadwal::all()->where('id', Auth::user()->id)->where('hari_jadwal', 'Minggu')->sortBy('mulai_jadwal');
         return view('jadwal', [
             'css' => 'css/jadwal.css',
             'senin' => $senin,
@@ -29,7 +29,7 @@ class jadwalController extends Controller
             'rabu' => $rabu,
             'kamis' => $kamis,
             'jumat' => $jumat,
-            'sabut' => $sabtu,
+            'sabtu' => $sabtu,
             'minggu' => $minggu
         ]);
     }
@@ -84,9 +84,13 @@ class jadwalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id_jadwal)
     {
-        //
+        $data= jadwal::find($id_jadwal);
+        return view('editjadwal',[
+            'css' => 'css/editjadwal.css',
+            'data' => $data
+        ]);
     }
 
     /**
@@ -96,9 +100,19 @@ class jadwalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_jadwal)
     {
-        //
+        $validatedData = $request->validate([
+            'hari_jadwal' => 'required',
+            'mapel_jadwal' => 'required|max:20',
+            'kelas_jadwal' => 'required|max:50',
+            'mulai_jadwal' => '',
+            'selesai_jadwal' => ''
+        ]);
+
+        jadwal::where('id_jadwal', $id_jadwal)->update($validatedData);
+
+        return redirect('/jadwal');
     }
 
     /**

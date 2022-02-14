@@ -99,6 +99,7 @@ Route::get('/cetaknilai','App\Http\Controllers\cetakController@cetaknilai')->mid
 //jadwal
 Route::resource('/jadwal','App\Http\Controllers\jadwalController')->middleware('auth');
 Route::post('/jadwal/{id_jadwal}/delete','App\Http\Controllers\jadwalController@destroy')->middleware('auth');
+Route::post('/jadwal/{id_jadwal}/update','App\Http\Controllers\jadwalController@update')->middleware('auth');
 //endjadwal
 
 
