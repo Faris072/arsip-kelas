@@ -26,3 +26,19 @@ $('.path').on('click', function (){
         },
     });
 });
+
+$('#settingprofil').on('click', function(e){
+    e.preventDefault();
+    let url = $(this).attr('data-url');
+    // alert(url);
+    $.ajax({
+        type: 'GET',
+        url: url,
+        beforeSend: function(){},
+        error: function (){},
+        success: function (data) {
+            $('#content').html(data);
+        }
+    });
+});
+

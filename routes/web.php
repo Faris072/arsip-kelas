@@ -46,11 +46,10 @@ Route::post('/ruangkelas/{id_kelas}/update','App\http\Controllers\kelasControlle
 Route::post('/ruangkelas/{id_kelas}/delete','App\http\Controllers\kelasController@destroy')->middleware('auth');
 //end kelas
 
-Route::get('/profil', function(){
-    return view('profil', [
-        'css' => '',
-    ]);
-})->middleware('auth');
+//profil
+Route::get('/profil/edit','App\Http\Controllers\userController@edit')->middleware('auth');
+Route::resource('/profil', 'App\Http\Controllers\profilController')->middleware('auth');
+//endprofil
 
 //presensi
 Route::resource('/presensi','App\http\Controllers\presensiController')->middleware('auth');

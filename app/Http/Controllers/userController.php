@@ -114,9 +114,15 @@ class userController extends Controller
      * @param  \App\Models\user  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(user $user)
+    public function edit()
     {
-        //
+        return view('editprofil',[
+            'css' => 'css/editprofil.css'
+        ]);
+    }
+
+    public function editprofil(){
+
     }
 
     /**

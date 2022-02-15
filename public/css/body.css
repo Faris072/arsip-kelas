@@ -2,6 +2,7 @@
 /* css bisa merefresh otomatis di sumbernya dengan hanya mengganti alamat src saja melalui js */
 * {
     font-family: 'Mulish', sans-serif;
+    /* font-size:16px; */
 }
 
 /* bug fixed modal bootstrap */
@@ -153,7 +154,7 @@ body {
 .sidebar {
     position: absolute;
     left: 0;
-    background-color: rgb(0, 62, 155);
+    background-color: #0077b6;
     width: 20%;
     transition: 1s cubic-bezier(0.74, -0.29, 0.29, 1.31);
     height: 100vh;

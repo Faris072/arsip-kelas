@@ -1,0 +1,9 @@
+#close-editprofil{
+    border:0.5px solid lightgray;
+    border-radius:5px;
+}
+
+#close-editprofil:hover{
+    background-color:red;
+    color:white;
+}
