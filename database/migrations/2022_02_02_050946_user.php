@@ -26,6 +26,7 @@ class User extends Migration
             $table->string('alamat',1000)->nullable();
             $table->tinyInteger('admin');
             $table->rememberToken();
+            $table->timestamp('email_verified_at')->nullable();
             $table->timestamp('last_used_at')->nullable();
             $table->timestamps();
             $table->softDeletes();//untuk soft delete

@@ -37,7 +37,7 @@
                     <label for="mapeljadwal"><b>Mapel: <span style="color:red">*</span></b></label>
                     <input type="text" name="mapel_jadwal" id="mapeljadwal" class="form-control" max="50"
                         placeholder="Contoh: Matematika" required>
-                    <small class="text-muted">Nama mapel maksimal 50 karakter</small>
+                    <small class="text-muted">Nama mapel maksimal 30 karakter</small>
                     <br>
                     <br>
                     <label for="kelas"><b>Kelas: <span style="color:red">*</span></b></label>

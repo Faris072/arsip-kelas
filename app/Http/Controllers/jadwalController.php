@@ -56,8 +56,8 @@ class jadwalController extends Controller
         $validatedData = $request->validate([
             'id' => '',
             'hari_jadwal' => 'required',
-            'mapel_jadwal' => 'required|max:20',
-            'kelas_jadwal' => 'required|max:50',
+            'mapel_jadwal' => 'required|max:50',
+            'kelas_jadwal' => 'required|max:20',
             'mulai_jadwal' => '',
             'selesai_jadwal' => ''
         ]);
@@ -104,8 +104,8 @@ class jadwalController extends Controller
     {
         $validatedData = $request->validate([
             'hari_jadwal' => 'required',
-            'mapel_jadwal' => 'required|max:20',
-            'kelas_jadwal' => 'required|max:50',
+            'mapel_jadwal' => 'required|max:50',
+            'kelas_jadwal' => 'required|max:20',
             'mulai_jadwal' => '',
             'selesai_jadwal' => ''
         ]);

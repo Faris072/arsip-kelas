@@ -127,12 +127,12 @@ class kelasController extends Controller
         }
         else{
             if($request->old_image){
-                Storage::delete('fotokelas/'.$request->old_image);
+                Storage::delete('/public/fotokelas/'.$request->old_image);
             }
             $namafoto = $request->file('foto_kelas')->getClientOriginalName();
             $ekstensi = $request->file('foto_kelas')->getClientOriginalExtension();
             $fotokelas = mt_rand(1000000000,9999999999) .'.'. $ekstensi;
-            $request->file('foto_kelas')->storeAs('/fotokelas', $fotokelas);
+            $request->file('foto_kelas')->storeAs('/public/fotokelas', $fotokelas);
             $validatedData['foto_kelas'] = $fotokelas;
         }
 
