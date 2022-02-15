@@ -2,7 +2,8 @@ bismillahirohmanirrohim
 
 #fitur kurang:
     #front end:
-    1. Hapus Kelas
+    1. profil
 
     #back end:
-    1. auth
+    1. Mail Verify
+    2.profil
