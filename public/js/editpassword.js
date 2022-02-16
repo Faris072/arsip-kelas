@@ -11,15 +11,13 @@ $('#close-editprofil').on('click', function(e) {
     });
 });
 
-$('#form-update-profil').on('submit', function(e) {
+$('#form-edit-password').on('submit', function(e){
     e.preventDefault();
     let data = $(this).serialize();
-    let url = $(this).attr('data-url');
-    // alert(url);
     $.ajax({
         method: 'POST',
-        url : url,
-        data : data,
+        url: '/profil/formupdate/password',
+        data: data,
         beforeSend: function(){},
         error: function (){},
         success: function(data){
@@ -28,15 +26,3 @@ $('#form-update-profil').on('submit', function(e) {
     });
 });
 
-
-$('#ubahpassword').on('click', function(e){
-    $.ajax({
-        method: 'GET',
-        url: '/profil/edit/password',
-        beforeSend: function(){},
-        error: function (){},
-        success: function(data){
-            $('#content').html(data);
-        }
-    });
-});

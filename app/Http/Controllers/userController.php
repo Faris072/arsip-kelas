@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\user;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class userController extends Controller
 {
@@ -121,8 +122,23 @@ class userController extends Controller
         ]);
     }
 
-    public function editprofil(){
+    public function editpassword(){
+        return view('editpassword',[
+            'css' => 'css/editprofil.css',
+        ]);
+    }
 
+    public function formupdatepassword(Request $request){
+
+        if(hash::check($request->password, Auth::user()->password)){
+            session()->flash('ubah_password',true);
+            return view('updatepassword',[
+                'css' => 'css/editprofil.css',
+            ]);
+        }
+        else{
+            return redirect('/profil/edit/password')->with('masuk_editpassword','Password salah');
+        }
     }
 
     /**
@@ -135,12 +151,13 @@ class userController extends Controller
     public function update(Request $request)
     {
         $validatedData = $request->validate([
-            'username' => 'required|max:20|unique:user',
+            'username' => 'required|max:20|unique:user,username,'.Auth::user()->id,//validasi untuk unique update
             'nama_lengkap' => 'required|max:70',
-            'telp' => 'required|max:18|unique:user',
+            'telp' => 'required|max:18|unique:user,telp,'.Auth::user()->id,
             'tempat_lahir' => '',
             'tanggal_lahir' => '',
-            'jenis_kelamin' => ''
+            'jenis_kelamin' => '',
+            'alamat' => ''
         ]);
 
         user::where('id', Auth::user()->id)->update($validatedData);

@@ -30,7 +30,7 @@
         <br>
         <br>
         <label for="tanggallahir"><b>Tanggal Lahir:</b><small class="text-muted">(Optional)</small></label>
-        <input type="date" name="tanggal_lahir" class="form-control" id="tanggallahir"  @if(Auth::user()->tanggal_lahir) value="{{ date('Y-m-d', strtotime(Auth::user()->tanggal_lahir)) }} @else @endif">
+        <input type="date" name="tanggal_lahir" class="form-control" id="tanggallahir"  @if(Auth::user()->tanggal_lahir) value="{{ date('Y-m-d', strtotime(Auth::user()->tanggal_lahir)) }}" @else value="not set" @endif">
         <small class="text-muted">Masukkan Tanggal lahir anda</small>
         <br>
         <br>
@@ -42,8 +42,16 @@
         <small class="text-muted">Pilih Jenis Kelamin</small>
         <br>
         <br>
+        <label for="Alamat"><b>Alamat:</b><small class="text-muted">(Optional)</small></label>
+        <textarea name="alamat" id="Alamat" class="form-control">{{ Auth::user()->alamat }}</textarea>
+        <small class="text-muted">Isikan alamat anda</small>
+        <br>
+        <br>
         <input type="submit" class="form-control btn btn-primary" value="Ubah Profil">
     </form>
+    <br>
+    <br>
+    <button class="btn btn-warning" id="ubahpassword">Ubah Password</button>
 </div>
 <br>
 <br>

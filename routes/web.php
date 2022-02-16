@@ -49,6 +49,9 @@ Route::post('/ruangkelas/{id_kelas}/delete','App\http\Controllers\kelasControlle
 //profil
 Route::get('/profil/edit','App\Http\Controllers\userController@edit')->middleware('auth');
 Route::post('/profil/update','App\Http\Controllers\userController@update')->middleware('auth');
+Route::get('/profil/edit/password','App\Http\Controllers\userController@editpassword')->middleware('auth');
+Route::post('/profil/formupdate/password','App\Http\Controllers\userController@formupdatepassword')->middleware('auth');
+Route::post('/profil/update/password','App\Http\Controllers\userController@updatepassword')->middleware('auth');
 Route::resource('/profil', 'App\Http\Controllers\profilController')->middleware('auth');
 //endprofil
 
