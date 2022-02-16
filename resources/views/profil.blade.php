@@ -4,7 +4,7 @@
 <span style="display: none;" id="linkCSS"><?php echo $css ?></span>
 <div class="container">
     <div class="aksi mt-4">
-        <a href="#" class="btn btn-success" data-url="/profil/edit" id="settingprofil">Setting Profil</a>
+        <a href="#" class="btn btn-primary" data-url="/profil/edit" id="settingprofil">Setting Profil</a>
         <hr>
     </div>
     <div class="profil">

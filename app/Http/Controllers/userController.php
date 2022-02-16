@@ -132,9 +132,20 @@ class userController extends Controller
      * @param  \App\Models\user  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, user $user)
+    public function update(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'username' => 'required|max:20|unique:user',
+            'nama_lengkap' => 'required|max:70',
+            'telp' => 'required|max:18|unique:user',
+            'tempat_lahir' => '',
+            'tanggal_lahir' => '',
+            'jenis_kelamin' => ''
+        ]);
+
+        user::where('id', Auth::user()->id)->update($validatedData);
+
+        return redirect('/profil');
     }
 
     /**

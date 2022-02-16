@@ -7,9 +7,42 @@
 <br>
 <br>
 <div class="container">
-    <form action="" id="form-update-profil">
-        <label for="username"><b>Username:</b></label>
-        <input type="text" name="username" class="form-control" id="username" required placeholder="Username">
+    <form action="" id="form-update-profil" data-url="/profil/update">
+        @csrf
+        <label for="username"><b>Username:</b><span style="color:red;">*</span></label>
+        <input type="text" name="username" class="form-control" id="username" value="{{ Auth::user()->username }}" required placeholder="Username">
+        <small class="text-muted">Username tidak boleh sama dengan user lain dan maksimal 20 karakter</small>
+        <br>
+        <br>
+        <label for="namalengkap"><b>Nama Lengkap:</b><span style="color:red;">*</span></label>
+        <input type="text" name="nama_lengkap" class="form-control" id="namalengkap" value="{{ Auth::user()->nama_lengkap }}" required placeholder="Nama_Lengkap">
+        <small class="text-muted">Nama lengkap maksimal 70 karakter</small>
+        <br>
+        <br>
+        <label for="telp"><b>No. Telp:</b><span style="color:red;">*</span></label>
+        <input type="text" name="telp" class="form-control" id="telp" value="{{ Auth::user()->telp }}" required placeholder="Nomor Telp">
+        <small class="text-muted">Nomor telp maksimal 18 digit</small>
+        <br>
+        <br>
+        <label for="tempatlahir"><b>Tempat Lahir:</b><small class="text-muted">(Optional)</small></label>
+        <input type="text" name="tempat_lahir" class="form-control" id="tempatlahir" value="{{ Auth::user()->tempat_lahir }}" placeholder="Tempat Lahir">
+        <small class="text-muted">Isikan tempat lahir anda</small>
+        <br>
+        <br>
+        <label for="tanggallahir"><b>Tanggal Lahir:</b><small class="text-muted">(Optional)</small></label>
+        <input type="date" name="tanggal_lahir" class="form-control" id="tanggallahir"  @if(Auth::user()->tanggal_lahir) value="{{ date('Y-m-d', strtotime(Auth::user()->tanggal_lahir)) }} @else @endif">
+        <small class="text-muted">Masukkan Tanggal lahir anda</small>
+        <br>
+        <br>
+        <label for="jeniskelamin"><b>Jenis Kelamin:</b><small class="text-muted">(Optional)</small></label>
+        <select name="jenis_kelamin" class="form-control" id="jeniskelamin">
+            <option value="Laki-Laki" @if(Auth::user()->jenis_kelamin == 'Laki-Laki') selected="selected" @endif>Laki-Laki</option>
+            <option value="Perempuan" @if(Auth::user()->jenis_kelamin == 'Perempuan') selected="selected" @endif>Perempuan</option>
+        </select>
+        <small class="text-muted">Pilih Jenis Kelamin</small>
+        <br>
+        <br>
+        <input type="submit" class="form-control btn btn-primary" value="Ubah Profil">
     </form>
 </div>
 <br>
@@ -18,3 +51,4 @@
 <br>
 <br>
 <script src="js/editprofil.js"></script>
+<br>
