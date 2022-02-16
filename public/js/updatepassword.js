@@ -11,6 +11,17 @@ $('#close-editprofil').on('click', function(e) {
     });
 });
 
-$('form-edit-password').on('submit', function(e) {
+$('#form-edit-password').on('submit', function(e) {
     e.preventDefault();
+    let data = $(this).serialize();
+    $.ajax({
+        method: 'POST',
+        url: '/profil/update/password',
+        data: data,
+        beforeSend: function(){},
+        error: function (){},
+        success: function(data){
+            $('#content').html(data);
+        }
+    });
 });

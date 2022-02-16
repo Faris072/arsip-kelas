@@ -141,6 +141,18 @@ class userController extends Controller
         }
     }
 
+    public function updatepassword(Request $request){
+        $validatedData = $request->validate([
+            'password' => 'required_with:password2|same:password2|min:8'
+        ]);
+
+        $validatedData['password'] = bcrypt($validatedData['password']);
+
+        user::where('id', Auth::user()->id)->update($validatedData);
+
+        return redirect('/profil');
+    }
+
     /**
      * Update the specified resource in storage.
      *
