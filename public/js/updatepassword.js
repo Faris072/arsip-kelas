@@ -3,10 +3,13 @@ $('#close-editprofil').on('click', function(e) {
     $.ajax({
         method: 'GET',
         url: url,
-        beforeSend: function(){},
+        beforeSend: function(){
+            $('.loading').css('display','block');
+        },
         error: function (){},
         success: function(data){
             $('#content').html(data);
+            $('.loading').css('display', 'none');
         }
     });
 });
@@ -18,10 +21,16 @@ $('#form-edit-password').on('submit', function(e) {
         method: 'POST',
         url: '/profil/update/password',
         data: data,
-        beforeSend: function(){},
-        error: function (){},
+        beforeSend: function(){
+            $('.loading').css('display','block');
+        },
+        error: function (){
+            swal("Terjadi Kesalahan", "Pastikan mengisi data dengan benar sesuai validasi", "error");
+        },
         success: function(data){
+            swal("Berhasil!", "Password berhasil diubah", "success");
             $('#content').html(data);
+            $('.loading').css('display', 'none');
         }
     });
 });

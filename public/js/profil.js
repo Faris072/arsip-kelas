@@ -34,10 +34,14 @@ $('#settingprofil').on('click', function(e){
     $.ajax({
         type: 'GET',
         url: url,
-        beforeSend: function(){},
+        beforeSend: function(){
+            $('#content').html('');
+            $('.loading').css('display','block');
+        },
         error: function (){},
         success: function (data) {
             $('#content').html(data);
+            $('.loading').css('display', 'none');
         }
     });
 });

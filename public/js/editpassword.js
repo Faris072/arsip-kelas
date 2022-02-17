@@ -3,10 +3,13 @@ $('#close-editprofil').on('click', function(e) {
     $.ajax({
         method: 'GET',
         url: url,
-        beforeSend: function(){},
+        beforeSend: function(){
+            $('.loading').css('display','block');
+        },
         error: function (){},
         success: function(data){
             $('#content').html(data);
+            $('.loading').css('display', 'none');
         }
     });
 });
@@ -18,10 +21,13 @@ $('#form-edit-password').on('submit', function(e){
         method: 'POST',
         url: '/profil/formupdate/password',
         data: data,
-        beforeSend: function(){},
+        beforeSend: function(){
+            $('.loading').css('display','block');
+        },
         error: function (){},
         success: function(data){
             $('#content').html(data);
+            $('.loading').css('display', 'none');
         }
     });
 });

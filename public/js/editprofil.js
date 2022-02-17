@@ -3,10 +3,13 @@ $('#close-editprofil').on('click', function(e) {
     $.ajax({
         method: 'GET',
         url: url,
-        beforeSend: function(){},
+        beforeSend: function(){
+            $('.loading').css('display','block');
+        },
         error: function (){},
         success: function(data){
             $('#content').html(data);
+            $('.loading').css('display', 'none');
         }
     });
 });
@@ -24,10 +27,15 @@ $('#form-update-profil').on('submit', function(e) {
         processData: false,//untuk mengirim file dari formData()
         contentType: false,//sama
         beforeSend: function(){
-            $('.loading').css('display','block');
+            // $('#content').html('');
+            // $('.loading').css('display','block');//yang ini harus menggunakan html('') itu sebabnya jika error halaman akan blank putih
+            swal("Tunggu!", "Sedang diproses...", "info");
         },
-        error: function (){},
+        error: function (){
+            swal("Gagal!", "Pastikan megisi data sesuai validasi", "error");
+        },
         success: function(data){
+            swal("Berhasil!", "Profil berhasil diubah", "success");
             $('#content').html(data);
             $('.loading').css('display', 'none');
         }
@@ -39,10 +47,14 @@ $('#ubahpassword').on('click', function(e){
     $.ajax({
         method: 'GET',
         url: '/profil/edit/password',
-        beforeSend: function(){},
+        beforeSend: function(){
+            $('#content').html('');
+            $('.loading').css('display','block');
+        },
         error: function (){},
         success: function(data){
             $('#content').html(data);
+            $('.loading').css('display', 'none');
         }
     });
 });
