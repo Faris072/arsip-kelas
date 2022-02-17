@@ -1,7 +1,12 @@
 <div class="sidebar">
     <div class="profil">
+        <br>
         <center>
-            <img src="" alt="">
+            @if(Auth::user()->foto_profil)
+            <img src="/storage/profil/{{ Auth::user()->foto_profil }}" style="width:100px; height:100px; border-radius:100%; object-fit:cover; object-position: center;" alt="">
+            @else
+            <img src="/storage/profil/user.png" style="width:100px; height:100px; border-radius:100%; object-fit:cover; object-position: center;" alt="">
+            @endif            <br>
             <h5>{{ Auth::user()->username }}</h5>
             <h6>{{ Auth::user()->nama_lengkap }}</h6>
         </center>

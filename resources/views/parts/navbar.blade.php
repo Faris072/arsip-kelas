@@ -14,25 +14,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#dropdown-menu1" data-toggle="collapse" id="navbarDropdown" role="button" aria-expanded="false">
-                    Kategori
-                </a>
-                <div class="collapse dropdown-biasa" id="dropdown-menu1">
-                    <a class="dropdown-item disabled" href="#">Kaos</a>
-                    <a class="dropdown-item" href="#">Distro</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0 mr-5">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        </form>
-        <a href="#" class="btn btn-success mr-3">Login</a>
-        <a href="#" class="btn btn-warning mr-5">Register</a>
     </div>
 </nav>

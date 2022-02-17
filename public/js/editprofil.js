@@ -13,17 +13,23 @@ $('#close-editprofil').on('click', function(e) {
 
 $('#form-update-profil').on('submit', function(e) {
     e.preventDefault();
-    let data = $(this).serialize();
+    let data = new FormData($(this)[0]);
     let url = $(this).attr('data-url');
     // alert(url);
     $.ajax({
         method: 'POST',
+        enctype: 'multipart/form-data',
         url : url,
         data : data,
-        beforeSend: function(){},
+        processData: false,//untuk mengirim file dari formData()
+        contentType: false,//sama
+        beforeSend: function(){
+            $('.loading').css('display','block');
+        },
         error: function (){},
         success: function(data){
             $('#content').html(data);
+            $('.loading').css('display', 'none');
         }
     });
 });
@@ -40,3 +46,15 @@ $('#ubahpassword').on('click', function(e){
         }
     });
 });
+
+$('#fotoprofil').on('change', function(){
+    let images = document.querySelector('#fotoprofil');
+    let previews = document.querySelector('.foto-profil');
+    let oFReader = new FileReader();
+    oFReader.readAsDataURL(images.files[0]);
+    oFReader.onload = function (oFREvent) {
+        previews.src = oFREvent.target.result;
+    }
+});
+
+

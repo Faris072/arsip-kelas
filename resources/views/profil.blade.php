@@ -8,6 +8,18 @@
         <hr>
     </div>
     <div class="profil">
+        <br>
+        <center>
+            <div class="fotoprofil">
+                @if(Auth::user()->foto_profil)
+                <img src="/storage/profil/{{ Auth::user()->foto_profil }}" style="width:200px; height:200px; border-radius:100%; object-fit:cover; object-position: center;" alt="">
+                @else
+                <img src="/storage/profil/user.png" style="width:200px; height:200px; border-radius:100%; object-fit:cover; object-position: center;" alt="">
+                @endif
+            </div>
+        </center>
+        <br>
+        <br>
         <table>
             <tr style="padding-bottom:10px;">
                 <th class="pb-3"><b>Username</b></th>
@@ -53,5 +65,10 @@
         </table>
     </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
 {{-- js --}}
 <script id="js" src="js/profil.js"></script>

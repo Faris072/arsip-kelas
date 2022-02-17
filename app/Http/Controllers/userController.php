@@ -6,6 +6,8 @@ use App\Models\user;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;//untuk menghapus gambar saat update dan delete di storage
+
 
 class userController extends Controller
 {
@@ -169,8 +171,23 @@ class userController extends Controller
             'tempat_lahir' => '',
             'tanggal_lahir' => '',
             'jenis_kelamin' => '',
-            'alamat' => ''
+            'alamat' => '',
+            'foto_profil' => 'image|file|max:1024',
         ]);
+
+        if(empty($request['foto_profil'])){
+            $validatedData['foto_profil'] = Auth::user()->foto_profil;
+        }
+        else{
+            if($request->old_image){
+                Storage::delete('/public/profil/'.$request->old_image);
+            }
+            $namafoto = $request->file('foto_profil')->getClientOriginalName();
+            $ekstensi = $request->file('foto_profil')->getClientOriginalExtension();
+            $fotokelas = mt_rand(1000000000,9999999999) .'.'. $ekstensi;
+            $request->file('foto_profil')->storeAs('/public/profil', $fotokelas);
+            $validatedData['foto_profil'] = $fotokelas;
+        }
 
         user::where('id', Auth::user()->id)->update($validatedData);
 

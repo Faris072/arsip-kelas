@@ -24,6 +24,7 @@ class User extends Migration
             $table->date('tanggal_lahir')->nullable();
             $table->string('jenis_kelamin')->nullable();
             $table->string('alamat',1000)->nullable();
+            $table->string('foto_profil')->nullable();
             $table->tinyInteger('admin');
             $table->rememberToken();
             $table->timestamp('email_verified_at')->nullable();

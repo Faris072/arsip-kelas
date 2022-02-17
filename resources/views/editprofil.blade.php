@@ -9,6 +9,22 @@
 <div class="container">
     <form action="" id="form-update-profil" data-url="/profil/update">
         @csrf
+        <center>
+            <div class="fotoprofil">
+                @if(Auth::user()->foto_profil)
+                <img src="/storage/profil/{{ Auth::user()->foto_profil }}" class="foto-profil" style="width:200px; height:200px; border-radius:100%; object-fit:cover; object-position: center;" alt="">
+                @else
+                <img src="/storage/profil/user.png" class="foto-profil" style="width:200px; height:200px; border-radius:100%; object-fit:cover; object-position: center;" alt="">
+                @endif
+                <br>
+                <br>
+                <label for="fotoprofil" class="btn btn-primary px-5"><i class="fas fa-upload pr-2"></i> Ganti Foto</label>
+                <br>
+                <input type="file" style="display:none;" name="foto_profil" id="fotoprofil">
+                <input type="hidden" name="old_image" value="{{ Auth::user()->foto_profil }}"
+            </div>
+        </center>
+        <br>
         <label for="username"><b>Username:</b><span style="color:red;">*</span></label>
         <input type="text" name="username" class="form-control" id="username" value="{{ Auth::user()->username }}" required placeholder="Username">
         <small class="text-muted">Username tidak boleh sama dengan user lain dan maksimal 20 karakter</small>
