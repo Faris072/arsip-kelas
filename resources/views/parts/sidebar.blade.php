@@ -1,6 +1,5 @@
 <div class="sidebar">
-    <div class="profil">
-        <br>
+    <div class="profil mt-2">
         <center>
             @if(Auth::user()->foto_profil)
             <img src="/storage/profil/{{ Auth::user()->foto_profil }}" style="width:100px; height:100px; border-radius:100%; object-fit:cover; object-position: center;" alt="">
