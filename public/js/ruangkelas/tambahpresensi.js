@@ -34,6 +34,7 @@ $('#form-tambah-presensi').on('submit', function(e){
         success: function(data){
             swal("Presensi Berhasil Ditambahkan", {icon: "success",});
             $('#ruangkelaspresensi').html(data);
+            $('#tambah-presensi').css('display', 'block');
         }
     });
 });
