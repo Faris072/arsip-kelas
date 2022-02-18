@@ -403,6 +403,36 @@
                                     <p>
                                         Di dalam fitur ini, anda dapat memanagement siswa yang ada di kelas yang anda pilih. Fitur siswa disini sangat penting
                                         dimana daftar siswa di kelas yang anda pilih merupakan acuan untuk presensi dan menambahkan nilai.
+                                        <br>
+                                        Oke langsung saja kita ke panduan fitur siswa:
+                                    </p>
+                                    <br>
+                                    <h5><b>Panduan Fitur Siswa</b></h5>
+                                    <br>
+                                    <p>
+                                        <b>1. Tambah Siswa</b>
+                                        <br>
+                                        Untuk menambahkan siswa, klik <span style="background-color:lightgrey">Setting Kelas</span> sampai muncul menu card.
+                                        Selanjutnya klik <span style="background-color:lightgrey">Siswa</span> pada menu card Setting Kelas seperti gambar dibawah ini:
+                                        <img src="/asets/fitur/siswa/siswa1.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Selanjutnya, anda klik tombol hijau di bagian bawah yang bertuliskan <span style="background-color:lightgrey">Tambah siswa</span>.
+                                        Maka akan muncul form seperti gambar ini:
+                                        <img src="/asets/fitur/siswa/siswa2.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Untuk membatalkan tambah siswa bisa klik tombol X di samping judul Tambah Siswa.
+                                        jika anda ingin menambahkan siswa, maka isikan form dan ingat kembali bahwa tanda <span style="color:red;">*</span> berarti
+                                        itu adalah kolom yang wajib di isi sedangkan <span class="text-muted">(Optional)</span> adalah kolom yang boleh dikosongkan.
+                                        Dan perlu memperhatikan untuk mengisi sesuai dengan validasi yang telah tertuli di bawah kolom seperti gambar di bawah:
+                                        <img src="/asets/fitur/siswa/siswa3.png" alt="" style="max-width:100%;" loading="lazy">
+                                        <img src="/asets/fitur/siswa/siswa4.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Setelah kolom di isi maka klik tambah siswa dan tunggu sampai proses berhasil.
+                                    </p>
+                                    <p>
+                                        <b>2. Edit dan Hapus Siswa</b>
+                                        <br>
+                                        Setelah berhasil menambahkan siswa, maka akan tampil gambar seperti di bawah ini:
+                                        <img src="/asets/fitur/siswa/siswa5.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Untuk mengedit data per siswa, anda klik tombol kuning edit dan untuk menghapus siswa anda perlu
+                                        klik hapus permanen.
                                     </p>
                                 </div>
                                 <div class="modal-footer">
