@@ -36,7 +36,7 @@ Route::get('/welcome', function () {
 })->middleware('auth');
 
 
-Route::get('/home', 'App\Http\Controllers\homeController@index')->middleware('auth');
+Route::get('/beranda', 'App\Http\Controllers\berandaController@index')->middleware('auth');
 
 
 // kelas

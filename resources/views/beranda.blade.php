@@ -1,5 +1,5 @@
 <div class="paths p-3 bg-light">
-    <a href="#" class="path" data-url="/home">Home</a>
+    <a href="#" class="path" data-url="/beranda">Beranda</a>
 </div>
 <br>
 <span style="display: none;" id="linkCSS"><?php echo $css; ?></span>
@@ -227,4 +227,4 @@
 <br>
 <br>
 {{-- js --}}
-<script src="js/home.js"></script>
+<script src="js/beranda.js"></script>

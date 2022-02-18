@@ -13,7 +13,7 @@
     </div>
     <div class="menu-sidebar">
         <ul>
-            <li><a href="#" class="sidebar-menu" data-url="home" style="background-color: rgba(255,255,255,0.5); width:90%; margin:auto;"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#" class="sidebar-menu" data-url="beranda" style="background-color: rgba(255,255,255,0.5); width:90%; margin:auto;"><i class="fas fa-home"></i> Beranda</a></li>
         <li><a href="#" class="sidebar-menu" id="sidebar-angkatan" data-url="angkatan" ><i class="fas fa-user-graduate"></i> Angkatan</a></li>
             <li><a href="#" class="sidebar-menu" data-url="jadwal" ><i class="far fa-calendar-alt"></i> Jadwal Saya</a></li>
             {{-- <li><a href="#" class="sidebar-menu" data-url="angkatan" ><i class="fas fa-user-cog"></i> Setting Kelas</a></li> --}}

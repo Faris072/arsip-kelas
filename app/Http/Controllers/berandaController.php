@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 
-class homeController extends Controller
+class berandaController extends Controller
 {
     public function index(){
         // $nilai = nilai::with('mapel')->orderBy('updated_at', 'desc')->get();
@@ -18,7 +18,7 @@ class homeController extends Controller
         $mapel = DB::select('select * from kelas k,mapel m where m.id_kelas = k.id_kelas and k.id = '.Auth::user()->id.' order by m.updated_at desc limit 6');//menulis sql manual
         // @dd($mapel);
         $kelas = kelas::orderBy('updated_at', 'desc')->where('id', Auth::user()->id)->limit(6)->get();
-        return view('home',[
+        return view('beranda',[
             'css' => 'css/home.css',
             'nilai' => $nilai,
             'mapel' => $mapel,

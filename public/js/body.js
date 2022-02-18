@@ -53,7 +53,7 @@ $('#btn-sidebar').on('click', function () {
 
     $.ajax({
         type: 'GET',
-        url: '/home',
+        url: '/beranda',
         success: function(data){
             $('#content').html(data);
             $('.loading').css('display', 'none');

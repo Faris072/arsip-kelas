@@ -1,5 +1,5 @@
 <div class="paths p-3 bg-light">
-    <a href="#" class="path" data-url="/home" onclick="klikhome();">Home</a> / <a href="#"
+    <a href="#" class="path" data-url="/beranda" onclick="klikhome();">Beranda</a> / <a href="#"
         class="path" data-url="/angkatan">Angkatan</a> / <a href="#" class="path"
         data-url="/ruangkelas/{{ session()->get('id_kelas'); }}">Ruang Kelas</a> / <a href="#" class="path" data-url="/mapel/{{ $m->id_mapel }}/mapel">Mapel</a>
     </div>
