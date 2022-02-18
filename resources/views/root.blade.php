@@ -270,22 +270,25 @@
     <div class="container-fluid" style="background-image: linear-gradient(to right,rgba(66, 116, 255,0.7),rgba(161, 10, 255,0.6)); border:4px solid; border-image: linear-gradient(to right,gold, lime) 30;">
         <br><br>
         <center>
-            <h3 style="color: white;"><b>Fitur</b></h3>
+            <h3 style="color: white;"><b>Panduan & Fitur</b></h3>
         </center>
         <br>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 py-5">
-                    <div class="card m-auto" style="width: 20rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#ml">
-                        <img class="card-img-top" src="beranda/ml.png" alt="Card image cap" style="height:200px;">
+                    <div class="card m-auto" style="max-width: 25rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#kelas">
+                        <img class="card-img-top" src="/asets/fitur/kelas/kelas.png" alt="Card image cap" style="height:200px;">
                         <div class="card-body">
                             <h5 class="card-title">Kelas</h5>
-                            <p class="card-text">Mobile Legends: Bang Bang adalah sebuah permainan peranti bergerak (Mobile) berjenis MOBA yang dikembangkan dan diterbitkan oleh...</p>
+                            <p class="card-text">
+                                Fitur kelas memungkinkan anda membuat kelas sendiri. Di dalam kelas tersebut terdapat berbagai
+                                macam fitur untuk memanagement kelas anda. Selengkapnya bisa anda kllik card ini...
+                            </p>
                         </div>
                     </div>
                     <!-- Modal -->
-                    <div class="modal fade" id="ml" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal fade" id="kelas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Kelas</h5>
@@ -293,30 +296,100 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body p-5">
-                                    <img src="beranda/ml.png" style="width:100%;">
+                                <div class="modal-body p-5" style="height:72vh; overflow:auto;">
+                                    <center><img src="/asets/fitur/kelas/kelas.png" style="width:50vw;" loading="lazy"></center>
                                     <br><br>
-                                    <p>Mobile Legends: Bang Bang adalah sebuah permainan peranti bergerak (Mobile) berjenis MOBA yang dikembangkan dan diterbitkan oleh Moonton, anak usaha dari ByteDance.</p>
+                                    <p>
+                                        Fitur kelas memungkinkan anda membuat kelas sendiri. Di dalam kelas tersebut terdapat berbagai
+                                        macam fitur untuk memanagement kelas anda. Fitur tersebut misalnya anda dapat membuat kelas, lalu anda
+                                        juga bisa mengubah informasi kelas tersebut, dan menghapus kelas tersebut. Jika anda membuat kelas, anda akan
+                                        diwajibkan untuk mengisi angkatan dan angkatan inilah yang nantinya mempermudah pengelompokan kelas supaya lebih
+                                        terstruktur kelas anda. Jadi anda tidak perlu akan bingung suatu kelas tersebut berasal dari angkatan berapa.
+                                        <br>
+                                        Untuk lebih jelas penggambarannya langsung saja kita ke panduan fitur kelas:
+                                    </p>
+                                    <br>
+                                    <h5><b>Panduan Fitur Kelas</b></h5>
+                                    <br>
+                                    <p>
+                                        <b>1. View Kelas</b>
+                                        <br>
+                                        Untuk pergi ke fitur kelas, anda dapat memilih menu sidebar <span style="background-color:lightgrey">Angkatan</span>. Selanjutnya, jika anda
+                                        belum mempunyai kelas, maka tampilannya seperti berikut:
+                                        <img src="/asets/fitur/kelas/kelas1.png" alt="" style="max-width:100%;" loading="lazy">
+                                    </p>
+                                    <p>
+                                        <b>2. Tambah Kelas</b>
+                                        <br>
+                                        Setelah anda ke angkatan, selanjutnya anda bisa menambahkan kelas anda dengan cara klik tombil hijau <span style="background-color:lightgrey">Tambah Kelas</span>.
+                                        Setelah anda klik maka akan muncul form seperti ini:
+                                        <img src="/asets/fitur/kelas/kelas2.png" alt="" style="max-width:100%;" loading="lazy">
+                                        <img src="/asets/fitur/kelas/kelas3.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Isikan form tersebut dan perlu di ingat, tanda <span style="color:red">*</span> yang ada di judul kolom menandakan
+                                        kolom tersebut wajib di isi dan untuk <span class="text-muted">(Optional)</span> yang ada di judul kolom menandakan
+                                        kolom tersebut boleh dikosongkan. Anda juga harus mengisi form tersebut sesuai validasi yang telah dituliskan di bawah
+                                        kolom tersebut. Jika terjadi error, pastikan anda cek kembali isian formulir anda apakah sudah sesuai validasi atau tidak.
+                                        Setelah anda mengisikan form, selanjutnya klik tombol <span style="background-color:lightgrey">Tambah Kelas</span> di bagian
+                                        bawah form.
+                                        Jika berhasil maka akan tampil angkatan sesuai kelas yang anda buat. Untuk melihat kelas anda klik tombol <span style="background-color:lightgrey">More</span>
+                                        di kanan label angkatan seperti gambar di bawah ini:
+                                        <img src="/asets/fitur/kelas/kelas4.png" alt="" style="max-width:100%;" loading="lazy">
+                                    </p>
+                                    <p>
+                                        <b>3. Detail Kelas</b>
+                                        <br>
+                                        Untuk melihat informasi kelas yang telah anda buat, maka klik tombol <span style="background-color:lightgrey">Detail</span> di
+                                        kelas yang anda pilih.
+                                        Maka akan tampil seperti gambar ini:
+                                        <img src="/asets/fitur/kelas/kelas5.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Lalu masuk kelas, anda cukup klik tombol <span style="background-color:lightgrey">Masuk</span> pada kelas yang anda pilih.
+                                        Setelah anda masuk, maka akan tampil seperti ini:
+                                        <img src="/asets/fitur/kelas/kelas6.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Kemudian anda klik tombol biru <span style="background-color:lightgrey">Setting Kelas</span> maka akan muncul fitur untuk
+                                        memanagement kelas anda seperti gambar ini:
+                                        <img src="/asets/fitur/kelas/kelas7.png" alt="" style="max-width:100%;" loading="lazy">
+                                    </p>
+                                    <p>
+                                        <b>4. Edit Informasi Kelas</b>
+                                        <br>
+                                        Anda dapat mengubah informasi kelas dengan cara klik menu card <span style="background-color:lightgrey">Detail Kelas</span>
+                                        yang terdapat di Setting Kelas. Selanjutnya isikan form untuk mengubah informasi kelas anda seperti gambar dibawah ini:
+                                        <img src="/asets/fitur/kelas/kelas8.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Perlu di ingat kembali bahwa pastikan mengisi sesuai dengan validasi yang telah tertulis dan perhatikan kolom apa saja yang wajib
+                                        di isi (tidak boleh kosong).
+                                    </p>
+                                    <p>
+                                        <b>5. Hapus Kelas</b>
+                                        <br>
+                                        Untuk menghapus kelas, anda pilih menu card <span style="background-color:lightgrey">Hapus Kelas</span> yang ada di Settings Kelas
+                                        seperti gambar dibawah ini:
+                                        <img src="/asets/fitur/kelas/kelas9.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Harap diperhatikan bahwa menghapus kelas dapat menghapus <i>semua</i> data yang ada di dalam kelas tersebut termasuk daftar siswa,
+                                        presensi, mapel(Mata Pelajaran), dan nilai siswa yang ada di kelas tersebut.
+                                    </p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close </button>
-                                    <a href="#" type="button" class="btn btn-primary"> Lihat Lebih Banyak</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 py-5">
-                    <div class="card m-auto" style="width: 20rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#pubg">
-                        <img class="card-img-top" src="beranda/pubg.jpg" alt="Card image cap" style="height:200px;">
+                    <div class="card m-auto" style="max-width: 25rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#pubg">
+                        <img class="card-img-top" src="/asets/fitur/siswa/siswa.png" alt="Card image cap" style="height:200px;" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Siswa</h5>
-                            <p class="card-text">PlayerUnknown's Battlegrounds (sering disingkat PUBG) adalah sebuah permainan video dengan genre battle royale, di mana 100 orang...</p>
+                            <p class="card-text">
+                                Di dalam fitur ini, anda dapat memanagement siswa yang ada di kelas yang anda pilih. Fitur siswa disini sangat penting
+                                dimana daftar siswa di kelas yang anda pilih merupakan acuan untuk presensi dan menambahkan nilai. Selengkapnya bisa anda
+                                klik card ini...
+                            </p>
                         </div>
                     </div>
                     <!-- Modal -->
                     <div class="modal fade" id="pubg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-dialog modal-xl" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Siswa</h5>
@@ -324,22 +397,24 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body p-5">
-                                    <img src="beranda/pubg.jpg" style="width:100%;">
+                                <div class="modal-body p-5" style="height:72vh; overflow:auto;">
+                                    <center><img src="/asets/fitur/siswa/siswa.png" style="width:50vw;" loading="lazy"></center>
                                     <br><br>
-                                    <p>PlayerUnknown's Battlegrounds (sering disingkat PUBG) adalah sebuah permainan video dengan genre battle royale, di mana 100 orang sekaligus dapat bermain secara daring. Di dalam permainan ini pemain bisa bermain solo, tim 2 orang, dan tim 4 orang, serta bisa mengundang teman untuk bergabung ke dalam permainan sebagai tim.</p>
+                                    <p>
+                                        Di dalam fitur ini, anda dapat memanagement siswa yang ada di kelas yang anda pilih. Fitur siswa disini sangat penting
+                                        dimana daftar siswa di kelas yang anda pilih merupakan acuan untuk presensi dan menambahkan nilai.
+                                    </p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close </button>
-                                    <a href="#" type="button" class="btn btn-primary"> Lihat Lebih Banyak</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 py-5">
-                    <div class="card m-auto" style="width: 20rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#honkai">
-                        <img class="card-img-top" src="beranda/honkai.jpg" alt="Card image cap" style="height:200px;">
+                    <div class="card m-auto" style="max-width: 25rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#honkai">
+                        <img class="card-img-top" src="/asets/fitur/presensi/presensi.png" alt="Card image cap" style="height:200px;" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Presensi</h5>
                             <p class="card-text">Honkai Impact 3 atau adalah game free-to-play aksi permainan peran 3D mobile game yang dikembangkan oleh miHoYo. Merupakan seri ketiga dari...</p>
@@ -347,7 +422,7 @@
                     </div>
                     <!-- Modal -->
                     <div class="modal fade" id="honkai" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-dialog modal-xl" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Presensi</h5>
@@ -355,22 +430,21 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body p-5">
-                                    <img src="beranda/honkai.jpg" style="width:100%;">
+                                <div class="modal-body p-5" style="height:72vh; overflow:auto;">
+                                    <img src="beranda/honkai.jpg" style="width:100%;" loading="lazy">
                                     <br><br>
                                     <p>Honkai Impact 3 atau adalah game free-to-play aksi permainan peran 3D mobile game yang dikembangkan oleh miHoYo. Merupakan seri ketiga dari Seri Honkai dan kelanjutan dari Houkai Gakuen, menggunakan banyak karakter yang sama dari judul sebelumnya, dengan cerita baru yang terpisah. Game ini dikenal menggabungkan elemen-elemen dari berbagai genre, dari hack-and-slash, stimulasi sosial, bullet hell, platforming, shoot ‘em up, dan dungeon crawling, yang terdapat di dalam mode single player dan multiplayer.</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close </button>
-                                    <a href="#" type="button" class="btn btn-primary"> Lihat Lebih Banyak</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 py-5">
-                    <div class="card m-auto" style="width: 20rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#warpath">
-                        <img class="card-img-top" src="beranda/warpath.jpg" alt="Card image cap" style="height:200px;">
+                    <div class="card m-auto" style="max-width: 25rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#warpath">
+                        <img class="card-img-top" src="/asets/fitur/mapel/mapel.png" alt="Card image cap" style="height:200px;" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Mapel (Mata Pelajaran)</h5>
                             <p class="card-text">Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang...</p>
@@ -378,7 +452,7 @@
                     </div>
                     <!-- Modal -->
                     <div class="modal fade" id="warpath" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-dialog modal-xl" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Mapel (Mata Pelajaran)</h5>
@@ -386,22 +460,21 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body p-5">
-                                    <img src="beranda/warpath.jpg" style="width:100%;">
+                                <div class="modal-body p-5" style="height:72vh; overflow:auto;">
+                                    <img src="beranda/warpath.jpg" style="width:100%;" loading="lazy">
                                     <br><br>
                                     <p>Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang musuh, upgrade dan masih banyak lagi. game ini dimainkan secara daring (online) sehingga pemain bisa merasakan serunya berperang dan bersekutu dengan player lain. di game ini juga ada envent yang menarik dan juga bisa bekerja sama dengan player lain.</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close </button>
-                                    <a href="#" type="button" class="btn btn-primary"> Lihat Lebih Banyak</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 py-5">
-                    <div class="card m-auto" style="width: 20rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#warpath">
-                        <img class="card-img-top" src="beranda/warpath.jpg" alt="Card image cap" style="height:200px;">
+                    <div class="card m-auto" style="max-width: 25rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#warpath">
+                        <img class="card-img-top" src="/asets/fitur/nilai/nilai.png" alt="Card image cap" style="height:200px;" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Nilai</h5>
                             <p class="card-text">Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang...</p>
@@ -409,7 +482,7 @@
                     </div>
                     <!-- Modal -->
                     <div class="modal fade" id="warpath" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-dialog modal-xl" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Nilai</h5>
@@ -417,22 +490,21 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body p-5">
+                                <div class="modal-body p-5" style="height:72vh; overflow:auto;">
                                     <img src="beranda/warpath.jpg" style="width:100%;">
                                     <br><br>
                                     <p>Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang musuh, upgrade dan masih banyak lagi. game ini dimainkan secara daring (online) sehingga pemain bisa merasakan serunya berperang dan bersekutu dengan player lain. di game ini juga ada envent yang menarik dan juga bisa bekerja sama dengan player lain.</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close </button>
-                                    <a href="#" type="button" class="btn btn-primary"> Lihat Lebih Banyak</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 py-5">
-                    <div class="card m-auto" style="width: 20rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#warpath">
-                        <img class="card-img-top" src="beranda/warpath.jpg" alt="Card image cap" style="height:200px;">
+                    <div class="card m-auto" style="max-width: 25rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#warpath">
+                        <img class="card-img-top" src="/asets/fitur/cetak/cetak.png" alt="Card image cap" style="height:200px;" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Cetak</h5>
                             <p class="card-text">Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang...</p>
@@ -440,7 +512,7 @@
                     </div>
                     <!-- Modal -->
                     <div class="modal fade" id="warpath" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-dialog modal-xl" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Cetak</h5>
@@ -448,14 +520,13 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body p-5">
+                                <div class="modal-body p-5" style="height:72vh; overflow:auto;">
                                     <img src="beranda/warpath.jpg" style="width:100%;">
                                     <br><br>
                                     <p>Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang musuh, upgrade dan masih banyak lagi. game ini dimainkan secara daring (online) sehingga pemain bisa merasakan serunya berperang dan bersekutu dengan player lain. di game ini juga ada envent yang menarik dan juga bisa bekerja sama dengan player lain.</p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close </button>
-                                    <a href="#" type="button" class="btn btn-primary"> Lihat Lebih Banyak</a>
                                 </div>
                             </div>
                         </div>
