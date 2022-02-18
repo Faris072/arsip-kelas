@@ -408,7 +408,6 @@
                                     </p>
                                     <br>
                                     <h5><b>Panduan Fitur Siswa</b></h5>
-                                    <br>
                                     <p>
                                         <b>1. Tambah Siswa</b>
                                         <br>
@@ -447,7 +446,10 @@
                         <img class="card-img-top" src="/asets/fitur/presensi/presensi.png" alt="Card image cap" style="height:200px;" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Presensi</h5>
-                            <p class="card-text">Honkai Impact 3 atau adalah game free-to-play aksi permainan peran 3D mobile game yang dikembangkan oleh miHoYo. Merupakan seri ketiga dari...</p>
+                            <p class="card-text">
+                                Fitur Presensi memungkinkan anda untuk membuat suatu presensi dimana siswa yang akan anda presensi
+                                sesuai dengan daftar siswa yang sudah ada di fitur siswa. Presensi disini sangat mudah. Selengkapnya dapat anda klik card ini...
+                            </p>
                         </div>
                     </div>
                     <!-- Modal -->
@@ -461,9 +463,51 @@
                                     </button>
                                 </div>
                                 <div class="modal-body p-5" style="height:72vh; overflow:auto;">
-                                    <img src="beranda/honkai.jpg" style="width:100%;" loading="lazy">
+                                    <center><img src="/asets/fitur/presensi/presensi.png" style="width:50vw;" loading="lazy"></center>
                                     <br><br>
-                                    <p>Honkai Impact 3 atau adalah game free-to-play aksi permainan peran 3D mobile game yang dikembangkan oleh miHoYo. Merupakan seri ketiga dari Seri Honkai dan kelanjutan dari Houkai Gakuen, menggunakan banyak karakter yang sama dari judul sebelumnya, dengan cerita baru yang terpisah. Game ini dikenal menggabungkan elemen-elemen dari berbagai genre, dari hack-and-slash, stimulasi sosial, bullet hell, platforming, shoot ‘em up, dan dungeon crawling, yang terdapat di dalam mode single player dan multiplayer.</p>
+                                    <p>
+                                        Fitur Presensi memungkinkan anda untuk membuat suatu presensi dimana siswa yang akan anda presensi
+                                        sesuai dengan daftar siswa yang sudah ada di fitur siswa. Presensi disini sangat mudah. anda tinggal
+                                        membuat presensi dengan tanggal dan nama presensi yang dibutuhkan lalu anda hanya tinggal pilih kehadiran
+                                        siswa dengan mengklik pilihan kehadiran.
+                                        <br>
+                                        Untuk lebih jelasnya langsung saja kita ke Panduan Fitur Presensi:
+                                    </p>
+                                    <br>
+                                    <h5><b>Panduan Fitur Presensi</b></h5>
+                                    <p>
+                                        <b>1. Tambah Presensi</b>
+                                        <br>
+                                        Untuk tambah presensi, anda klik tombol <span style="background-color:lightgrey">Setting Kelas</span> sampai
+                                        muncul menu card. Selanutnya klik tombol hijau <span style="background-color:lightgrey">Tambah Presensi</span>
+                                        seperti gambah dibawah:
+                                        <img src="/asets/fitur/presensi/presensi1.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Lalu anda isikan form dan perlu di perhatikan kolom mana yang wajib di isi serta perhatikan pula aturan validasi yang
+                                        tertulis di bawah kolom seperti gambar ini:
+                                        <img src="/asets/fitur/presensi/presensi2.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Jika sudah maka klik tombol <span style="background-color:lightgrey">Tambah Presensi</span> yang ada di bawah form.
+                                    </p>
+                                    <p>
+                                        <b>2. Ubah Detail Presensi</b>
+                                        <br>
+                                        Untuk mengubah detail presensi, anda pilih presensi yang akan anda ubah di tombol bagian <span style="background-color:lightgrey">Tanggal Presensi</span>
+                                        <img src="/asets/fitur/presensi/presensi3.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Lalu klik tombol <span style="background-color:lightgrey">Ubah Presensi</span> dan isi form tersebut.
+                                    </p>
+                                    <p>
+                                        <b>3. Mengisi Kehadiran Siswa</b>
+                                        <br>
+                                        Untuk mengisi kehadiran siswa anda hanya perlu klik tombol <span style="background-color:lightgrey">Tambah</span> di kolom aksi per siswa seperti gambar ini:
+                                        <img src="/asets/fitur/presensi/presensi4.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Lalu anda pilih kehadiran siswa.
+                                    </p>
+                                    <p>
+                                        <b>4. Mengubah Kehadiran Siswa</b>
+                                        <br>
+                                        Mengubah kehadiran siswa sama seperti mengisi kehadiran siswa. Anda hanya perlu klik tombol <span style="background-color:lightgrey">Ubah</span> seperti gambar:
+                                        <img src="/asets/fitur/presensi/presensi5.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Lalu silahkan anda pilih kehadiran siswa tersebut.
+                                    </p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close </button>
