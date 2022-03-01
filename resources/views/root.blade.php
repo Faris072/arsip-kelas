@@ -549,7 +549,7 @@
                                     <br>
                                     <h5><b>Panduan Fitur Mapel</b></h5>
                                     <p>
-                                        <b>1. Membuat Mapel</b>
+                                        <b>Membuat Mapel</b>
                                         <br>
                                         Langkah pertama utnuk membuat mapel adalah dengan masuk di kelas yang anda ingin tambahkan mapel. Lalu anda klik tobol <span style="background-color:lightgrey">Setting Kelas</span>,
                                         Maka akan muncul pengaturan kelas seperti gambar ini:
@@ -574,15 +574,18 @@
                     </div>
                 </div>
                 <div class="col-md-6 py-5">
-                    <div class="card m-auto" style="max-width: 25rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#warpath">
+                    <div class="card m-auto" style="max-width: 25rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#nilai">
                         <img class="card-img-top" src="/asets/fitur/nilai/nilai.png" alt="Card image cap" style="height:200px;" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Nilai</h5>
-                            <p class="card-text">Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang...</p>
+                            <p class="card-text">
+                                Fitur nilai digunakan utnuk memberi nilai untuk siswa yang ada di kelas anda. Anda bissa meambahkan nilai berdasarkan mapel yang anda pilih di kelas tersebut.
+                                Untuk lebih lengkapnya anda bisa klik card ini...
+                            </p>
                         </div>
                     </div>
                     <!-- Modal -->
-                    <div class="modal fade" id="warpath" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="nilai" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xl" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -592,9 +595,31 @@
                                     </button>
                                 </div>
                                 <div class="modal-body p-5" style="height:72vh; overflow:auto;">
-                                    <img src="beranda/warpath.jpg" style="width:100%;">
+                                    <center><img src="/asets/fitur/nilai/nilai.png" style="width:50vw;" loading="lazy"></center>
                                     <br><br>
-                                    <p>Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang musuh, upgrade dan masih banyak lagi. game ini dimainkan secara daring (online) sehingga pemain bisa merasakan serunya berperang dan bersekutu dengan player lain. di game ini juga ada envent yang menarik dan juga bisa bekerja sama dengan player lain.</p>
+                                    <p>
+                                        Fitur nilai digunakan utnuk memberi nilai untuk siswa yang ada di kelas anda. Anda bissa meambahkan nilai berdasarkan mapel yang anda pilih di kelas tersebut.
+                                        <br>
+                                        Untuk lebih jelasnya langsung ke Panduan Fitur Nilai.
+                                    </p>
+                                    <br>
+                                    <h5><b>Panduan Fitur Nilai</b></h5>
+                                    <p>
+                                        <h5>Menambahkan Nilai dan Mengubah Nilai</h5>
+                                        <br>
+                                        Cara menambahkan nilai adalah dengan masuk di mapel yang ingin anda berikan nilai. Kemudian anda akan ditampilkan daftar siswa yang ada di kelas anda seperti berikut:
+                                        <img src="/asets/fitur/nilai/nilai1.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Untuk menambahkan nilai, anda dapat klik dropdown <span style="background-color:lightgrey">Tambah</span> yang ada di samping data siswa yang akan anda beri nilai.
+                                        Lalu anda masukkan nilai yang ada di kolom input tersebut seperti gambar ini:
+                                        <img src="/asets/fitur/nilai/nilai2.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Lalu anda klik tombol tambah.
+                                        <br>
+                                        Jika anda ingin mengubah nilai yang telah anda isikan, maka anda klik dropdown edit yang ada di samping nilai siswa sama seperti sebelum anda menambahkan nilai. Selengkapnya
+                                        <img src="/asets/fitur/nilai/nilai3.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Lalu ubah nilainya yang ada di kolom input nilai.
+                                        <img src="/asets/fitur/nilai/nilai4.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Setelah itu anda klik tombol ubah.
+                                    </p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close </button>
@@ -622,7 +647,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body p-5" style="height:72vh; overflow:auto;">
-                                    <img src="beranda/warpath.jpg" style="width:100%;">
+                                    <center><img src="/asets/fitur/mapel/mapel.png" style="width:50vw;" loading="lazy"></center>
                                     <br><br>
                                     <p>Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang musuh, upgrade dan masih banyak lagi. game ini dimainkan secara daring (online) sehingga pemain bisa merasakan serunya berperang dan bersekutu dengan player lain. di game ini juga ada envent yang menarik dan juga bisa bekerja sama dengan player lain.</p>
                                 </div>
