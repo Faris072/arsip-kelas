@@ -521,7 +521,10 @@
                         <img class="card-img-top" src="/asets/fitur/mapel/mapel.png" alt="Card image cap" style="height:200px;" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Mapel (Mata Pelajaran)</h5>
-                            <p class="card-text">Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang...</p>
+                            <p class="card-text">
+                                Mapel adalah fitur untuk mengelompokkan nilai berdasarkan mata pelajaran (mapel) tertentu. Misalkan anda ingin menilai siswa kelas tertentu sesuai dengan mata pelajaran
+                                tertentu dan bab tertentu. Anda dapat mengguakan mapel untuk menilai siswa tersebut. Untuk lebih lengkapnya anda bisa klik card ini...
+                            </p>
                         </div>
                     </div>
                     <!-- Modal -->
@@ -535,9 +538,33 @@
                                     </button>
                                 </div>
                                 <div class="modal-body p-5" style="height:72vh; overflow:auto;">
-                                    <img src="beranda/warpath.jpg" style="width:100%;" loading="lazy">
+                                    <center><img src="/asets/fitur/mapel/mapel.png" style="width:50vw;" loading="lazy"></center>
                                     <br><br>
-                                    <p>Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang musuh, upgrade dan masih banyak lagi. game ini dimainkan secara daring (online) sehingga pemain bisa merasakan serunya berperang dan bersekutu dengan player lain. di game ini juga ada envent yang menarik dan juga bisa bekerja sama dengan player lain.</p>
+                                    <p>
+                                        Mapel adalah fitur untuk mengelompokkan nilai berdasarkan mata pelajaran (mapel) tertentu. Misalkan anda ingin menilai siswa kelas tertentu sesuai dengan mata pelajaran
+                                        tertentu dan bab tertentu. Anda dapat mengguakan mapel untuk menilai siswa tersebut.
+                                        <br>
+                                        Untuk lebih jelasnya kita langsung ke Panduan Fitur Mapel.
+                                    </p>
+                                    <br>
+                                    <h5><b>Panduan Fitur Mapel</b></h5>
+                                    <p>
+                                        <b>1. Membuat Mapel</b>
+                                        <br>
+                                        Langkah pertama utnuk membuat mapel adalah dengan masuk di kelas yang anda ingin tambahkan mapel. Lalu anda klik tobol <span style="background-color:lightgrey">Setting Kelas</span>,
+                                        Maka akan muncul pengaturan kelas seperti gambar ini:
+                                        <img src="/asets/fitur/mapel/mapel1.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Lalu anda pilih <span style="background-color:lightgrey">Tambah Mapel</span> dan anda isikan form sesuai dengan validasi yang diminta.
+                                        <img src="/asets/fitur/mapel/mapel2.png" alt="" style="max-width:100%;" loading="lazy">
+                                        <img src="/asets/fitur/mapel/mapel3.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Setelah anda isikan maka akan muncul card mapel seperti gambar ini:
+                                        <img src="/asets/fitur/mapel/mapel4.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Lalu anda bisa masuk ke mapel tersebut kemudian anda bisa mengatur mapel tersebut dengan klik <span style="background-color:lightgrey">bagian kelas / nama mapel / nilai mapel</span>.
+                                        <img src="/asets/fitur/mapel/mapel6.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Maka tampilannya akan seperti ini:
+                                        <img src="/asets/fitur/mapel/mapel7.png" alt="" style="max-width:100%;" loading="lazy">
+
+                                    </p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close </button>
