@@ -629,15 +629,18 @@
                     </div>
                 </div>
                 <div class="col-md-6 py-5">
-                    <div class="card m-auto" style="max-width: 25rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#warpath">
+                    <div class="card m-auto" style="max-width: 25rem; height:100%; box-shadow: 0px 0px 20px 0px grey ;" data-toggle="modal" data-target="#cetak">
                         <img class="card-img-top" src="/asets/fitur/cetak/cetak.png" alt="Card image cap" style="height:200px;" loading="lazy">
                         <div class="card-body">
                             <h5 class="card-title">Cetak</h5>
-                            <p class="card-text">Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang...</p>
+                            <p class="card-text">
+                                Fitur cetak memungkinkan adnda mencetak nilai siswa dari suatu mapel anda. Disana terdapat beberapa tools untuk membantu anda dalam
+                                membuat dokumen cetak. Anda juga dapat menyimpan cetakan anda dalam bentuk PDF. Untuk panduannya, anda dapat klik card ini...
+                            </p>
                         </div>
                     </div>
                     <!-- Modal -->
-                    <div class="modal fade" id="warpath" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="cetak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xl" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -647,9 +650,40 @@
                                     </button>
                                 </div>
                                 <div class="modal-body p-5" style="height:72vh; overflow:auto;">
-                                    <center><img src="/asets/fitur/mapel/mapel.png" style="width:50vw;" loading="lazy"></center>
+                                    <center><img src="/asets/fitur/cetak/cetak.png" style="width:50vw;" loading="lazy"></center>
                                     <br><br>
-                                    <p>Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang musuh, upgrade dan masih banyak lagi. game ini dimainkan secara daring (online) sehingga pemain bisa merasakan serunya berperang dan bersekutu dengan player lain. di game ini juga ada envent yang menarik dan juga bisa bekerja sama dengan player lain.</p>
+                                    <p>
+                                        Fitur cetak memungkinkan adnda mencetak nilai siswa dari suatu mapel anda. Disana terdapat beberapa tools untuk membantu anda dalam
+                                        membuat dokumen cetak. Anda juga dapat menyimpan cetakan anda dalam bentuk PDF.
+                                        <br>
+                                        Untuk panduannya, silahkan baca panduan di bawah ini:
+                                    </p>
+                                    <br>
+                                    <h5><b>Cara Mencetak Nilai</b></h5>
+                                    <p>
+                                        Pertama anda masuk ke mapel. Kemudian di samping kanan atas dari tabel ada tombol <span style="background-color:lightgrey">Cetak</span>, klik tombol tersebut.
+                                        <img src="/asets/fitur/cetak/cetak1.png" alt="" style="max-width:100%;" loading="lazy">
+                                        <br>
+                                        setelah anda klik kemudian anda akan ditampilkan tools dan daftar nilai. Untuk tools <span style="background-color:lightgrey">Edit Header</span> digunakan
+                                        untuk membuat header pada dokumen cetak anda seperti nama dinas, nama sekolah, nama kelas dan lain sebagainya.
+                                        Lalu dibawah edit header terdapat checkbox tanda tangan yang berfungsi untuk menambahkan tanda tangan di dokumen anda.
+                                        Anda dapat memilih letak tanda tangan dengan mencentang checkbox tersebut lalu setelah anda centang pasti akan keluar inputan.
+                                        Inputan itu sebagai nama siapa saja yang akan menandatangani dokumen tersebut.
+                                        <br>
+                                        Setelah anda selesai menggunakan tools tersebut, untuk menerapkannya anda klik tombol <span style="background-color:lightgrey">Terapkan</span> untuk
+                                        melihat hasil edit header atau tanda tangan anda.
+                                        <img src="/asets/fitur/cetak/cetak2.png" alt="" style="max-width:100%;" loading="lazy">
+                                        <img src="/asets/fitur/cetak/cetak3.png" alt="" style="max-width:100%;" loading="lazy">
+                                        <br>
+                                        Ketika sudah dirasa cukup dan anda ingin mencetak dokumen tersebut, maka klik tombol <span style="background-color:lightgrey">Cetak</span>
+                                        <img src="/asets/fitur/cetak/cetak4.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Jika anda menggunakan PC atau laptop dan hasilnya tidak berwarna seperti gambar dibawah,
+                                        <img src="/asets/fitur/cetak/cetak5.png" alt="" style="max-width:100%;" loading="lazy">
+                                        Maka anda klik checkbox <span style="background-color:lightgrey">Grafis Latar Belakang</span> maka akan muncul warna tersebut.
+                                        <img src="/asets/fitur/cetak/cetak6.png" alt="" style="max-width:100%;" loading="lazy">
+                                        <br>
+                                        Jika sudah, anda dapat mencetaknya atau anda simpan sebagai PDF.
+                                    </p>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close </button>
@@ -671,28 +705,17 @@
         <div class="accordion">
             <div class="list">
                 <div class="card">
-                    <h5 class="card-header" data-toggle="collapse" data-target="#apatrading">Apa itu trading? <i class="fas fa-chevron-down pl-2"></i></h5>
-                    <div class="card-body collapse" id="apatrading">
-                        <center><img src="beranda/ml.png" style="width:80%;"></center>
-                        <br>
-                        <div class="container" style="width:83%;">
-                            <p class="card-text">Mobile Legends: Bang Bang adalah sebuah permainan peranti bergerak (Mobile) berjenis MOBA yang dikembangkan dan diterbitkan oleh Moonton.</p>
-                            <a href="#" class="btn btn-primary">Lebih banyak</a>
+                    <div class="header d-flex card-header" data-toggle="collapse" data-target="#lupasandi" style="justify-content:space-between;">
+                        <div class="judul">
+                            <h5>Bagaimana jika saya lupa kata sandi?</h5>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-chevron-down pl-2"></i>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="accordion">
-            <div class="list">
-                <div class="card">
-                    <h5 class="card-header" data-toggle="collapse" data-target="#apainvest">Apa itu investasi? <i class="fas fa-chevron-down pl-2"></i></h5>
-                    <div class="card-body collapse" id="apainvest">
-                        <center><img src="beranda/pubg.jpg" style="width:80%;"></center>
-                        <br>
-                        <div class="container" style="width:83%;">
+                    <div class="card-body collapse" id="lupasandi">
+                        <div class="container">
                             <p class="card-text">PlayerUnknown's Battlegrounds (sering disingkat PUBG) adalah sebuah permainan video dengan genre battle royale, di mana 100 orang sekaligus dapat bermain secara daring. Di dalam permainan ini pemain bisa bermain solo, tim 2 orang, dan tim 4 orang, serta bisa mengundang teman untuk bergabung ke dalam permainan sebagai tim.</p>
-                            <a href="#" class="btn btn-primary">Lebih banyak</a>
                         </div>
                     </div>
                 </div>
@@ -701,58 +724,17 @@
         <div class="accordion">
             <div class="list">
                 <div class="card">
-                    <h5 class="card-header" data-toggle="collapse" data-target="#perbedaan">Apa perbedaan trading dan investasi? <i class="fas fa-chevron-down pl-2"></i></h5>
-                    <div class="card-body collapse" id="perbedaan">
-                        <center><img src="beranda/honkai.jpg" style="width:80%;"></center>
-                        <br>
-                        <div class="container" style="width:83%;">
-                            <p class="card-text">Honkai Impact 3 atau adalah game free-to-play aksi permainan peran 3D mobile game yang dikembangkan oleh miHoYo. Merupakan seri ketiga dari Seri Honkai dan kelanjutan dari Houkai Gakuen, menggunakan banyak karakter yang sama dari judul sebelumnya, dengan cerita baru yang terpisah. Game ini dikenal menggabungkan elemen-elemen dari berbagai genre, dari hack-and-slash, stimulasi sosial, bullet hell, platforming, shoot ‘em up, dan dungeon crawling, yang terdapat di dalam mode single player dan multiplayer.</p>
-                            <a href="#" class="btn btn-primary">Lebih banyak</a>
+                    <div class="header d-flex card-header" data-toggle="collapse" data-target="#apainvest" style="justify-content:space-between;">
+                        <div class="judul">
+                            <h5>Bagaimana cara merubah kata sandi?</h5>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-chevron-down pl-2"></i>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="accordion">
-            <div class="list">
-                <div class="card">
-                    <h5 class="card-header" data-toggle="collapse" data-target="#resikotrading">Apa resiko trading? <i class="fas fa-chevron-down pl-2"></i></h5>
-                    <div class="card-body collapse" id="resikotrading">
-                        <center><img src="beranda/warpath.jpg" style="width:80%;"></center>
-                        <br>
-                        <div class="container" style="width:83%;">
-                            <p class="card-text">Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang musuh, upgrade dan masih banyak lagi. game ini dimainkan secara daring (online) sehingga pemain bisa merasakan serunya berperang dan bersekutu dengan player lain. di game ini juga ada envent yang menarik dan juga bisa bekerja sama dengan player lain.</p>
-                            <a href="#" class="btn btn-primary">Lebih banyak</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="accordion">
-            <div class="list">
-                <div class="card">
-                    <h5 class="card-header" data-toggle="collapse" data-target="#resikoinvest">Apa resiko tnvestasi? <i class="fas fa-chevron-down pl-2"></i></h5>
-                    <div class="card-body collapse" id="resikoinvest">
-                        <center><img src="beranda/warpath.jpg" style="width:80%;"></center>
-                        <br>
-                        <div class="container" style="width:83%;">
-                            <p class="card-text">Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang musuh, upgrade dan masih banyak lagi. game ini dimainkan secara daring (online) sehingga pemain bisa merasakan serunya berperang dan bersekutu dengan player lain. di game ini juga ada envent yang menarik dan juga bisa bekerja sama dengan player lain.</p>
-                            <a href="#" class="btn btn-primary">Lebih banyak</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="accordion">
-            <div class="list">
-                <div class="card">
-                    <h5 class="card-header" data-toggle="collapse" data-target="#tipstradinginvest">Bagaimana tips dan trik trading dan investasi? <i class="fas fa-chevron-down pl-2"></i></h5>
-                    <div class="card-body collapse" id="tipstradinginvest">
-                        <center><img src="beranda/warpath.jpg" style="width:80%;"></center>
-                        <br>
-                        <div class="container" style="width:83%;">
-                            <p class="card-text">Warpath adalah game yang bertemakan perang dimana pemain game dapat mengatur strategi, membuat pertahanan, menyerang musuh, upgrade dan masih banyak lagi. game ini dimainkan secara daring (online) sehingga pemain bisa merasakan serunya berperang dan bersekutu dengan player lain. di game ini juga ada envent yang menarik dan juga bisa bekerja sama dengan player lain.</p>
-                            <a href="#" class="btn btn-primary">Lebih banyak</a>
+                    <div class="card-body collapse" id="apainvest">
+                        <div class="container">
+                            <p class="card-text">PlayerUnknown's Battlegrounds (sering disingkat PUBG) adalah sebuah permainan video dengan genre battle royale, di mana 100 orang sekaligus dapat bermain secara daring. Di dalam permainan ini pemain bisa bermain solo, tim 2 orang, dan tim 4 orang, serta bisa mengundang teman untuk bergabung ke dalam permainan sebagai tim.</p>
                         </div>
                     </div>
                 </div>
