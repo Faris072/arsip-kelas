@@ -44,76 +44,53 @@
         #akunberita:hover {
             color: gold;
         }
+
+        .dropdown-item {
+            color:white;
+        }
     </style>
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:sticky; top:0; z-index:999;">
         <a class="navbar-brand pr-5" href="#" style="font-family: 'Fredericka the Great', cursive;">Arsip Kelas</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse pl-5" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto">
+            <ul class="navbar-nav">
                 <li class="nav-item active p-1">
-                    <a class="nav-link" href="index.php">Beranda<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" id="nav-login">Login<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item p-1">
+                    <a class="nav-link" href="#" id="nav-welcome">Welcome<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item p-1">
+                    <a class="nav-link" href="#" id="nav-adventages">Advantages<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item p-1">
+                    <a class="nav-link" href="#" id="nav-features">Features<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item p-1">
+                    <a class="nav-link" href="#" id="nav-questions">Questions<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item p-1">
+                    <a class="nav-link" href="#" id="nav-aboutme">About Me<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item p-1 dropdown navdropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Programing & Coding
+                        Contact
                     </a>
-                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item disabled" href="#">UX</a>
-                        <a class="dropdown-item" href="#">HTML</a>
-                        <a class="dropdown-item" href="#">CSS</a>
-                        <a class="dropdown-item" href="#">JavaScript</a>
+                    <div class="dropdown-menu bg-dark" style="color:white;" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Whatsapp</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item disabled" href="#">UI</a>
-                        <a class="dropdown-item" href="#">PHP</a>
-                        <a class="dropdown-item" href="#">LARAVEL</a>
-                    </div>
-                </li>
-                <li class="nav-item p-1 dropdown navdropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Trik Game Android
-                    </a>
-                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item disabled" href="#">Game Populer</a>
-                        <a class="dropdown-item" href="#">Mobile Legends</a>
-                        <a class="dropdown-item" href="#">PUBG Mobile</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item disabled" href="#">Game Lainnya</a>
-                        <a class="dropdown-item" href="#">Free Fire</a>
-                        <a class="dropdown-item" href="#">POU</a>
-                    </div>
-                </li>
-                <li class="nav-item p-1 dropdown navdropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Trading & Investasi
-                    </a>
-                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Analisis Fundamental</a>
-                        <a class="dropdown-item" href="#">Analisis Tekhnical</a>
-                    </div>
-                </li>
-                <li class="nav-item p-1 dropdown navdropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Artikel Sehari-hari
-                    </a>
-                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item disabled" href="#">Kesehatan</a>
-                        <a class="dropdown-item" href="#">Covid-19</a>
-                        <a class="dropdown-item" href="#">Comming soon</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item disabled" href="#">Lainnya</a>
-                        <a class="dropdown-item" href="#">Flu</a>
-                        <a class="dropdown-item" href="#">Batuk</a>
+                        <a class="dropdown-item" href="#">Email</a>
                     </div>
                 </li>
             </ul>
-            <a class="nav-link btn btn-primary py-1 ml-0" href="/auth/create">Register</a>
+            <div class="btn-register ml-5">
+                <a class="nav-link btn btn-primary py-1 ml-0" href="/auth/create">Register</a>
+            </div>
         </div>
     </nav>
     <div class="container-fluid">
