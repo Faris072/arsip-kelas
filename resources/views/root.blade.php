@@ -715,7 +715,14 @@
                     </div>
                     <div class="card-body collapse" id="lupasandi">
                         <div class="container">
-                            <p class="card-text">PlayerUnknown's Battlegrounds (sering disingkat PUBG) adalah sebuah permainan video dengan genre battle royale, di mana 100 orang sekaligus dapat bermain secara daring. Di dalam permainan ini pemain bisa bermain solo, tim 2 orang, dan tim 4 orang, serta bisa mengundang teman untuk bergabung ke dalam permainan sebagai tim.</p>
+                            <p class="card-text">
+                                Mohon maaf atas ketidaknyamanannya untuk sementara fitur ubah password otomatis belum tersedia. Mohon untuk menunggu update fitur reset sandi otomatis menggunakan email pada update berikutnya.
+                                Untuk sementara, anda dapat menghubungi call center melalui email atau nomor whatsapp yang tersedia di bawah ini:
+                            </p>
+                            <div class="button-chat">
+                                <a href="https://whatsapp.com/085706389042" class="btn btn-success mr-2">Whatsapp</a>
+                                <a href="https://email.com/arsipkelas.mail@gmail.com" class="btn btn-info">Email</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -734,7 +741,21 @@
                     </div>
                     <div class="card-body collapse" id="apainvest">
                         <div class="container">
-                            <p class="card-text">PlayerUnknown's Battlegrounds (sering disingkat PUBG) adalah sebuah permainan video dengan genre battle royale, di mana 100 orang sekaligus dapat bermain secara daring. Di dalam permainan ini pemain bisa bermain solo, tim 2 orang, dan tim 4 orang, serta bisa mengundang teman untuk bergabung ke dalam permainan sebagai tim.</p>
+                            <p class="card-text">
+                                Jika anda ingin mengubah kata sandi dan anda tidak lupa dengan kata sandi anda, maka anda dapat mengikuti langkah-langkah
+                                berikut ini:
+                                <ul>
+                                    <li>Masuk ke menu <b>Profil.</b></li>
+                                    <li>Klik tombol <b>Setting Profil</b> pada bagian atas kiri.</li>
+                                    <li>Selanjutnya anda scroll pada bagian paling bawah dan akan ada tombol <b>Ubah Password</b>. Klik tombol tersebut.</li>
+                                    <li>Masukkan kata sandi lama anda. Lalu klik tombol <b>Submit</b></li>
+                                    <li>
+                                        Masukkan kata sandi baru anda pada kolom input tersebut. Pastikan kata sandi anda kuat (misalnya terdapat 1 huruf kapital dan terdapat
+                                        huruf karakter simbol dan lebih dari 7 karakter). Lalu jika sudah maka klik tombol <b>Submit</b>.
+                                    </li>
+                                    <li>Password anda berhasil diubah!</li>
+                                </ul>
+                            </p>
                         </div>
                     </div>
                 </div>
