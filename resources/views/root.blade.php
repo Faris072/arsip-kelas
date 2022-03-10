@@ -81,16 +81,13 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Other Web
                     </a>
-                    <div class="dropdown-menu bg-dark" style="color:white;" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item disabled" href="#">Personal Web</a>
                         <a class="dropdown-item" href="#">My Profil</a>
-                        <a class="dropdown-item">Blog</a>
+                        <a class="dropdown-item" href="#">Blog</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item disabled" href="#">Public Web</a>
                         <a class="dropdown-item" href="#">Arsipkelas</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item disabled" href="#">Other</a>
-                        <a class="dropdown-item" href="#">Email</a>
                     </div>
                 </li>
                 <li class="nav-item p-1 dropdown navdropdown">
@@ -253,7 +250,7 @@
             </div>
             <div class="col-md-10">
                 <h5><b>GRATIS</b></h5>
-                <p>Disini anda dapat menikmati layanan ini secara gratis.</p>
+                <p>Disini anda dapat menikmati layanan ini secara gratis. Ayo segera bergabung mumpung masih gratis!</p>
             </div>
         </div>
         <br><br>
@@ -839,19 +836,16 @@
                             <li style="margin-bottom:10px; padding-left:35px; padding-right:35px; list-style:none;">
                                 <b>Other Web</b>
                                 <ul style="padding-left:14px;">
-                                    <li>Pengenalan Programing</li>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
+                                    <li><a href="#" style="color:white;">My Profile</a></li>
+                                    <li><a href="#" style="color:white;">Blog</a></li>
+                                    <li><a href="#" style="color:white;">Arsipkelas</a></li>
                                 </ul>
                             </li>
                             <li style="margin-bottom:10px; padding-left:35px; padding-right:35px; list-style:none;">
                                 <b>Contact</b>
                                 <ul style="padding-left:14px;">
-                                    <li>Pengenalan Programing</li>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
+                                    <li><a href="#" style="color:white;">Whatsapp</a></li>
+                                    <li><a href="#" style="color:white;">Email</a></li>
                                 </ul>
                             </li>
                         </ul>
