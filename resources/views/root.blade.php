@@ -75,7 +75,7 @@
                     <a class="nav-link nav-questions" href="#">General Questions<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item about p-1">
-                    <a class="nav-link nav-about" href="#">About Me<span class="sr-only">(current)</span></a>
+                    <a class="nav-link nav-about" href="#">About<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item p-1 dropdown navdropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -756,7 +756,7 @@
 
     <div class="container-fluid py-5 element-about" style="color:white; background-image: linear-gradient(to right,rgba(66, 116, 255,0.7),rgba(161, 10, 255,0.6)); border:4px solid; border-image: linear-gradient(to right,gold, lime) 30;">
         <center>
-            <h3 style="color:white;"><b>Tentang Saya</b></h3>
+            <h3 style="color:white;"><b>About</b></h3>
         </center>
         <div class="container my-5">
             <div class="row">
@@ -809,7 +809,7 @@
                                     <li><a href="#" class="nav-adventages" style="color:white;">Adventages</a></li>
                                     <li><a href="#" class="nav-features" style="color:white;">Features & Guide</a></li>
                                     <li><a href="#" class="nav-questions" style="color:white;">General Questions</a></li>
-                                    <li><a href="#" class="nav-about" style="color:white;">About Me</a></li>
+                                    <li><a href="#" class="nav-about" style="color:white;">About</a></li>
                                 </ul>
                             </li>
                             <li style="margin-bottom:10px; padding-left:35px; padding-right:35px; list-style:none;">
