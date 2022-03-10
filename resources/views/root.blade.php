@@ -59,22 +59,22 @@
         </button>
         <div class="collapse navbar-collapse pl-5" id="navbarSupportedContent">
             <ul class="navbar-nav mr-5">
-                <li class="nav-item active p-1">
+                <li class="nav-item login active p-1">
                     <a class="nav-link nav-login" href="#" >Login<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item p-1">
+                <li class="nav-item welcome p-1">
                     <a class="nav-link nav-welcome" href="#" >Welcome<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item p-1">
+                <li class="nav-item adventages p-1">
                     <a class="nav-link nav-adventages" href="#">Advantages<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item p-1">
+                <li class="nav-item features p-1">
                     <a class="nav-link nav-features" href="#">Features & Guide<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item p-1">
+                <li class="nav-item questions p-1">
                     <a class="nav-link nav-questions" href="#">General Questions<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item p-1">
+                <li class="nav-item about p-1">
                     <a class="nav-link nav-about" href="#">About Me<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item p-1 dropdown navdropdown">
@@ -862,7 +862,7 @@
         <br>
         <center>
             <p style="color:white;">
-                copyright <i class="fas fa-copyright"></i> 2020 - <?php echo date('Y'); ?>
+                copyright <i class="fas fa-copyright"></i> 2022 - <?php echo date('Y'); ?>
                 <br>
                 Muhammad Faris Shafwan.
             </p>
