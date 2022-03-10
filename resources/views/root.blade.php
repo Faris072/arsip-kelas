@@ -58,24 +58,40 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse pl-5" id="navbarSupportedContent">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mr-5">
                 <li class="nav-item active p-1">
-                    <a class="nav-link" href="#" id="nav-login">Login<span class="sr-only">(current)</span></a>
+                    <a class="nav-link nav-login" href="#" >Login<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item p-1">
-                    <a class="nav-link" href="#" id="nav-welcome">Welcome<span class="sr-only">(current)</span></a>
+                    <a class="nav-link nav-welcome" href="#" >Welcome<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item p-1">
-                    <a class="nav-link" href="#" id="nav-adventages">Advantages<span class="sr-only">(current)</span></a>
+                    <a class="nav-link nav-adventages" href="#">Advantages<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item p-1">
-                    <a class="nav-link" href="#" id="nav-features">Features<span class="sr-only">(current)</span></a>
+                    <a class="nav-link nav-features" href="#">Features & Guide<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item p-1">
-                    <a class="nav-link" href="#" id="nav-questions">Questions<span class="sr-only">(current)</span></a>
+                    <a class="nav-link nav-questions" href="#">General Questions<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item p-1">
-                    <a class="nav-link" href="#" id="nav-aboutme">About Me<span class="sr-only">(current)</span></a>
+                    <a class="nav-link nav-about" href="#">About Me<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item p-1 dropdown navdropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Other Web
+                    </a>
+                    <div class="dropdown-menu bg-dark" style="color:white;" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item disabled" href="#">Personal Web</a>
+                        <a class="dropdown-item" href="#">My Profil</a>
+                        <a class="dropdown-item">Blog</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item disabled" href="#">Public Web</a>
+                        <a class="dropdown-item" href="#">Arsipkelas</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item disabled" href="#">Other</a>
+                        <a class="dropdown-item" href="#">Email</a>
+                    </div>
                 </li>
                 <li class="nav-item p-1 dropdown navdropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -88,7 +104,7 @@
                     </div>
                 </li>
             </ul>
-            <div class="btn-register ml-5">
+            <div class="btn-register ml-5 mx-auto">
                 <a class="nav-link btn btn-primary py-1 ml-0" href="/auth/create">Register</a>
             </div>
         </div>
@@ -123,7 +139,7 @@
         </div>
     </div>
     <br><br>
-    <div class="container">
+    <div class="container element-welcome">
         <center><h3><b>Selamat Datang di Arsip Kelas</b></h3></center>
         <br>
         <p style="text-indent:25px">
@@ -147,7 +163,7 @@
         </p>
     </div>
     <br><br><br>
-    <div class="container">
+    <div class="container element-adventages">
         <center>
             <h3><b>Kelebihan Arsip Kelas</b></h3>
         </center>
@@ -244,7 +260,7 @@
         <br>
     </div>
     <br>
-    <div class="container-fluid" style="background-image: linear-gradient(to right,rgba(66, 116, 255,0.7),rgba(161, 10, 255,0.6)); border:4px solid; border-image: linear-gradient(to right,gold, lime) 30;">
+    <div class="container-fluid element-features" style="background-image: linear-gradient(to right,rgba(66, 116, 255,0.7),rgba(161, 10, 255,0.6)); border:4px solid; border-image: linear-gradient(to right,gold, lime) 30;">
         <br><br>
         <center>
             <h3 style="color: white;"><b>Panduan & Fitur</b></h3>
@@ -674,7 +690,7 @@
         <br><br>
     </div>
     <br><br>
-    <div class="container">
+    <div class="container element-questions">
         <center>
             <h3><b>Prtanyaan Umum</b></h3>
         </center>
@@ -741,14 +757,11 @@
         <br><br><br>
     </div>
 
-    <div class="container-fluid py-5" style="background-image: linear-gradient(to right,rgba(66, 116, 255,0.7),rgba(161, 10, 255,0.6)); border:4px solid; border-image: linear-gradient(to right,gold, lime) 30;">
+    <div class="container-fluid py-5 element-about" style="background-image: linear-gradient(to right,rgba(66, 116, 255,0.7),rgba(161, 10, 255,0.6)); border:4px solid; border-image: linear-gradient(to right,gold, lime) 30;">
         <center>
-            <h3 style="color:white;"><b>Artikel Sehari-hari</b></h3>
+            <h3 style="color:white;"><b>Tentang Saya</b></h3>
         </center>
         <div class="container py-5 m-auto">
-            <center>
-                <h3 style="color:white;">Artikel Teratas</h3>
-            </center>
             <div class="beritautama d-flex" style=" background-image:url(covid2.jpg); width:100%; height:450px; border-radius:30px; filter:brightness(60%);">
                 <div class="container p-5" style="margin:auto 0px;">
                     <h4 style="color:white;"><b>Lawan Covid</b></h4>
@@ -812,8 +825,19 @@
                 <div class="col-md-9 col-sm-9 py-3">
                     <div class="list" style="color:white;">
                         <ul id="listfooter" class="d-flex" style="flex-wrap:wrap; font-size:12px;">
-                            <li style="margin-bottom:10px; padding:15px; list-style:none;">
-                                <b>Programing & Coding</b>
+                            <li style="margin-bottom:10px; padding-left:35px; padding-right:35px; list-style:none;">
+                                <b>This Web</b>
+                                <ul style="padding-left:14px;">
+                                    <li><a href="#" class="nav-login" style="color:white;">Login</a></li>
+                                    <li><a href="#" class="nav-welcome" style="color:white;">Welcome</a></li>
+                                    <li><a href="#" class="nav-adventages" style="color:white;">Adventages</a></li>
+                                    <li><a href="#" class="nav-features" style="color:white;">Features & Guide</a></li>
+                                    <li><a href="#" class="nav-questions" style="color:white;">General Questions</a></li>
+                                    <li><a href="#" class="nav-about" style="color:white;">About Me</a></li>
+                                </ul>
+                            </li>
+                            <li style="margin-bottom:10px; padding-left:35px; padding-right:35px; list-style:none;">
+                                <b>Other Web</b>
                                 <ul style="padding-left:14px;">
                                     <li>Pengenalan Programing</li>
                                     <li>HTML</li>
@@ -821,26 +845,8 @@
                                     <li>JavaScript</li>
                                 </ul>
                             </li>
-                            <li style="margin-bottom:10px; padding:15px; list-style:none;">
-                                <b>Programing & Coding</b>
-                                <ul style="padding-left:14px;">
-                                    <li>Pengenalan Programing</li>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                </ul>
-                            </li>
-                            <li style="margin-bottom:10px; padding:15px; list-style:none;">
-                                <b>Programing & Coding</b>
-                                <ul style="padding-left:14px;">
-                                    <li>Pengenalan Programing</li>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                </ul>
-                            </li>
-                            <li style="margin-bottom:10px; padding:15px; list-style:none;">
-                                <b>Programing & Coding</b>
+                            <li style="margin-bottom:10px; padding-left:35px; padding-right:35px; list-style:none;">
+                                <b>Contact</b>
                                 <ul style="padding-left:14px;">
                                     <li>Pengenalan Programing</li>
                                     <li>HTML</li>
@@ -856,7 +862,7 @@
         <br>
         <center>
             <p style="color:white;">
-                copyright 2020 - <?php echo date('Y'); ?>
+                copyright <i class="fas fa-copyright"></i> 2020 - <?php echo date('Y'); ?>
                 <br>
                 Muhammad Faris Shafwan.
             </p>
