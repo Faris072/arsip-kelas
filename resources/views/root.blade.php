@@ -689,7 +689,7 @@
     <br><br>
     <div class="container element-questions">
         <center>
-            <h3><b>Prtanyaan Umum</b></h3>
+            <h3><b>Pertanyaan Umum</b></h3>
         </center>
         <br><br>
         <div class="accordion">
@@ -754,60 +754,39 @@
         <br><br><br>
     </div>
 
-    <div class="container-fluid py-5 element-about" style="background-image: linear-gradient(to right,rgba(66, 116, 255,0.7),rgba(161, 10, 255,0.6)); border:4px solid; border-image: linear-gradient(to right,gold, lime) 30;">
+    <div class="container-fluid py-5 element-about" style="color:white; background-image: linear-gradient(to right,rgba(66, 116, 255,0.7),rgba(161, 10, 255,0.6)); border:4px solid; border-image: linear-gradient(to right,gold, lime) 30;">
         <center>
             <h3 style="color:white;"><b>Tentang Saya</b></h3>
         </center>
-        <div class="container py-5 m-auto">
-            <div class="beritautama d-flex" style=" background-image:url(covid2.jpg); width:100%; height:450px; border-radius:30px; filter:brightness(60%);">
-                <div class="container p-5" style="margin:auto 0px;">
-                    <h4 style="color:white;"><b>Lawan Covid</b></h4>
-                    <h5 style="color:white;">Ayo Lawan Covid-19 dan ucapkan goodbyee pada covid</h4s>
-                        <br><br>
-                        <img src="beranda/covid.jpg" alt="" style="width:60px; height:60px; border-radius:100%">
-                        <a href="" id="akunberita">Muhammad Faris Shafwan</a>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-7 p-4 ml-2 my-2" style="max-width:100%; background-color:rgba(255, 255, 255,0.4); border-radius:10px; color:rgb(255, 255, 255);">
+                    <img src="/asets/faris.jpg" alt="" style="width:70px; border-radius:100%;">
+                    <br>
+                    <b>Muhammad Faris Shafwan</b>
+                    <br><br>
+                    Halo, Selamat datang di Arsip Kelas! Perkenalkan nama saya Muhammad Faris Shafwan. Saya adalah developer sekaligus owner dari website ini. Saat ini, saya
+                    adalah mahasiswa dari Politeknik Elektronika Negeri Surabaya (PENS). Sebelumnya, saya ucapkan terimakasih atas dukungan dari anda untuk menggunakan
+                    aplikasi website ini. Saya harap anda puas dengan fitur dari website ini dan semoga website ini dapat memberikan
+                    manfaat untuk mempermudah pekerjaan anda. Saran dan masukan anda akan sangat bermanfaat untuk mengembangkan website ini menjadi lebih baik lagi.
+                </div>
+                <div class="col-md-4 p-4 ml-5 my-2" style="max-width:100%; background-color:rgba(0, 0, 0,0.2); border-radius:10px;">
+                    <img src="/asets/habibie.jpg" alt="" style="width:70px; height:70px; object-fit:cover; object-position: right; border-radius:50%;">
+                    <br>
+                    <b>B.J. Habibie</b>
+                    <br><br>
+                    "Di manapun engkau berada selalulah menjadi yang terbaik dan berikan yang terbaik dari yang bisa kita berikan".
+                    <br><br>
+                    "Kesempurnaan tidak datang dengan sendirinya. Kesempurnaan harus diupayakan. Kesempurnaan harus dinilai. Proses dan hasil pekerjaan harus diawasi".
+                    <br><br>
+                    "Salah satu kunci kebahagiayaan adalah gunakan uangmu untuk pengalaman, bukan gunakan uangmu untuk keinginan".
+                </div>
+                <div class="col-12 p-4 my-3" style="border:5px double white; border-radius:10px; font-size:50px;">
+                    <center><b>Terima Kasih!</b></center>
                 </div>
             </div>
-            <br><br><br>
-            <div class="contentberita m-auto">
-                <center>
-                    <h2 style="color:white;">Artikel Lainnya</h2>
-                </center>
-                <div class="row m-auto">
-                    <div class="col-md-3 col-sm-4 m-auto py-3">
-                        <div class="card" style="width: 100%; height:100%;">
-                            <img class="card-img-top" src="beranda/covid2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <a class="card-text" href="#">Some quick example text to build on the card title and make up the bulk of the card's content.</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 m-auto py-3">
-                        <div class="card" style="width: 100%; height:100%;">
-                            <img class="card-img-top" src="beranda/covid2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <a class="card-text" href="#">Some quick example text to build on the card title and make up the bulk of the card's content.</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 m-auto py-3">
-                        <div class="card" style="width: 100%; height:100%;">
-                            <img class="card-img-top" src="beranda/covid2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <a class="card-text" href="#">Some quick example text to build on the card title and make up the bulk of the card's content.</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 m-auto py-3">
-                        <div class="card" style="width: 100%; height:100%;">
-                            <img class="card-img-top" src="beranda/covid2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <a class="card-text" href="#">Some quick example text to build on the card title and make up the bulk of the card's content.</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
         </div>
     </div>
 
