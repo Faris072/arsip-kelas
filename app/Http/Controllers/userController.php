@@ -185,7 +185,7 @@ class userController extends Controller
             $namafoto = $request->file('foto_profil')->getClientOriginalName();
             $ekstensi = $request->file('foto_profil')->getClientOriginalExtension();
             $fotokelas = mt_rand(1000000000,9999999999) .'.'. $ekstensi;
-            $request->file('foto_profil')->storeAs('/public/profil', $fotokelas);
+            $request->file('foto_profil')->storeAs('/profil', $fotokelas);
             $validatedData['foto_profil'] = $fotokelas;
         }
 

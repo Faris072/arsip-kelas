@@ -106,6 +106,11 @@ Route::post('/jadwal/{id_jadwal}/update','App\Http\Controllers\jadwalController@
 //endjadwal
 
 
+Route::get('/donasi', function(){
+    return view('donasi',[
+        'css' => ''
+    ]);
+});
 
 
 

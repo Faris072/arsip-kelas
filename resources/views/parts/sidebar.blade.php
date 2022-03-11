@@ -18,6 +18,7 @@
             <li><a href="#" class="sidebar-menu" data-url="jadwal" ><i class="far fa-calendar-alt"></i> Jadwal Saya</a></li>
             {{-- <li><a href="#" class="sidebar-menu" data-url="angkatan" ><i class="fas fa-user-cog"></i> Setting Kelas</a></li> --}}
             <li><a href="#" class="sidebar-menu" data-url="profil"><i class="fas fa-user-circle"></i> Profil</a></li>
+            <li><a href="#" class="sidebar-menu" data-url="donasi"><i class="fas fa-hand-holding-usd"></i></i> Donasi</a></li>
             <form action="/auth/logout" method="post">
                 @csrf
                 <li><button id="x" class="sidebar-menu"><i class='fas fa-sign-out-alt'></i> Logout</button></li>

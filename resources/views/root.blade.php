@@ -22,6 +22,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!--link css-->
     <link rel="stylesheet" href="style.css">
+    {{-- Adsense --}}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2121760861721927" crossorigin="anonymous"></script>
 
     <style>
         body{
@@ -95,9 +97,9 @@
                         Contact
                     </a>
                     <div class="dropdown-menu bg-dark" style="color:white;" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Whatsapp</a>
+                        <a class="dropdown-item" href="https://wa.wizard.id/1d1439" target="_blank">Whatsapp</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Email</a>
+                        <a class="dropdown-item" target="_blank" href="mailto:arsipkelas.mail@gmail.com">Email</a>
                     </div>
                 </li>
             </ul>
@@ -710,8 +712,8 @@
                                 Untuk sementara, anda dapat menghubungi call center melalui email atau nomor whatsapp yang tersedia di bawah ini:
                             </p>
                             <div class="button-chat">
-                                <a href="https://whatsapp.com/085706389042" class="btn btn-success mr-2">Whatsapp</a>
-                                <a href="https://email.com/arsipkelas.mail@gmail.com" class="btn btn-info">Email</a>
+                                <a href="https://wa.wizard.id/1d1439" target="_blank" class="btn btn-success mr-2">Whatsapp</a>
+                                <a href="mailto:arsipkelas.mail@gmail.com" class="btn btn-info">Email</a>
                             </div>
                         </div>
                     </div>
@@ -765,10 +767,15 @@
                     <br>
                     <b>Muhammad Faris Shafwan</b>
                     <br><br>
-                    Halo, Selamat datang di Arsip Kelas! Perkenalkan nama saya Muhammad Faris Shafwan. Saya adalah developer sekaligus owner dari website ini. Saat ini, saya
-                    adalah mahasiswa dari Politeknik Elektronika Negeri Surabaya (PENS). Sebelumnya, saya ucapkan terimakasih atas dukungan dari anda untuk menggunakan
-                    aplikasi website ini. Saya harap anda puas dengan fitur dari website ini dan semoga website ini dapat memberikan
-                    manfaat untuk mempermudah pekerjaan anda. Saran dan masukan anda akan sangat bermanfaat untuk mengembangkan website ini menjadi lebih baik lagi.
+                    <p>
+                        Halo, Selamat datang di Arsip Kelas! Perkenalkan nama saya Muhammad Faris Shafwan. Saya adalah developer sekaligus owner dari website ini. Saat ini, saya
+                        adalah mahasiswa dari Politeknik Elektronika Negeri Surabaya (PENS).
+                    </p>
+                    <p>
+                        Saya ucapkan terimakasih atas dukungan dari anda untuk menggunakan
+                        aplikasi website ini. Saya harap anda puas dengan fitur dari website ini dan semoga website ini dapat memberikan
+                        manfaat untuk mempermudah pekerjaan anda. Saran dan masukan anda akan sangat bermanfaat untuk mengembangkan website ini menjadi lebih baik lagi.
+                    </p>
                 </div>
                 <div class="col-md-4 p-4 ml-5 my-2" style="max-width:100%; background-color:rgba(0, 0, 0,0.2); border-radius:10px;">
                     <img src="/asets/habibie.jpg" alt="" style="width:70px; height:70px; object-fit:cover; object-position: right; border-radius:50%;">
@@ -779,14 +786,12 @@
                     <br><br>
                     "Kesempurnaan tidak datang dengan sendirinya. Kesempurnaan harus diupayakan. Kesempurnaan harus dinilai. Proses dan hasil pekerjaan harus diawasi".
                     <br><br>
-                    "Salah satu kunci kebahagiayaan adalah gunakan uangmu untuk pengalaman, bukan gunakan uangmu untuk keinginan".
+                    "Salah satu kunci kebahagiaan adalah gunakan uangmu untuk pengalaman, bukan gunakan uangmu untuk keinginan".
                 </div>
                 <div class="col-12 p-4 my-3" style="border:5px double white; border-radius:10px; font-size:50px;">
                     <center><b>Terima Kasih!</b></center>
                 </div>
             </div>
-
-
         </div>
     </div>
 
@@ -823,8 +828,8 @@
                             <li style="margin-bottom:10px; padding-left:35px; padding-right:35px; list-style:none;">
                                 <b>Contact</b>
                                 <ul style="padding-left:14px;">
-                                    <li><a href="#" style="color:white;">Whatsapp</a></li>
-                                    <li><a href="#" style="color:white;">Email</a></li>
+                                    <li><a href="https://wa.wizard.id/1d1439" target="_blank" style="color:white;">Whatsapp</a></li>
+                                    <li><a href="mailto:arsipkelas.mail@gmail.com" style="color:white;">Email</a></li>
                                 </ul>
                             </li>
                         </ul>
