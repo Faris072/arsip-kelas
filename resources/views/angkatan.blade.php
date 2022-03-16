@@ -69,7 +69,7 @@
 <br>
 
 @foreach ($angkatan as $akt)
-<div class="data">
+<div class="data wrap-kategori" style="background-color:rgba(14, 118, 255, 0.13); border-radius:10px;">
     <div class="kategori pb-2 mt-3 pr-3" data-toggle="collapse" data-target="#akt{{ $akt->angkatan }}">
         <table width="100%">
             <tr>
@@ -81,12 +81,12 @@
         </table>
     </div>
     <div class="collapse angkatan" id="akt{{ $akt->angkatan }}">
-        <div class="row d-flex p-3" style="justify-content:space-between;">
+        <div class="row d-flex p-3">
             @foreach ($datas as $data)
                 @if($data->angkatan == $akt->angkatan)
                 <div class="col-md-4 p-1 pb-3">
                     {{-- card --}}
-                    <div class="card m-0" style="width: 100%; height:100%;">
+                    <div class="card m-0 wrap-kategori" style="width: 100%; height:100%;">
                         @if($data->foto_kelas)
                         <img class="card-img-top" width="250px" height="200px" src="/storage/fotokelas/{{ $data->foto_kelas }}" alt="Card image cap">
                         @else

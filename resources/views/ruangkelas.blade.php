@@ -256,13 +256,13 @@
     </div>
     <br><br>
     <div class="kelas">
-        <div class="row d-flex p-3" style="justify-content:space-between;">
+        <div class="row d-flex p-3">
             <?php $i = 10; ?>
             @foreach ($mapel as $m)
                 <?php $i--; ?>
                 <div class="col-md-4 p-1 pb-3 card-mapel">
                     {{-- card --}}
-                    <div class="card m-0" style="width: 100%; height:100%;">
+                    <div class="card m-0 wrap-kategori" style="width: 100%; height:100%;">
                         <h5 class="card-header"><b>{{ $m->mapel }}</b></h5>
                         <div class="card-body p-3" style="padding:1vw;">
                             <h5 class="card-title" style=""><b>{{ $m->nama_nilai }}</b></h5>
