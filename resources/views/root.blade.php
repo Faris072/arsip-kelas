@@ -2,7 +2,7 @@
 <html lang="id">
 
 <head>
-    <title>Homepage</title>
+    <title>Arsip Kelas</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
