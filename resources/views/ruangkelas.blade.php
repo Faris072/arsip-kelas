@@ -260,11 +260,11 @@
             <?php $i = 10; ?>
             @foreach ($mapel as $m)
                 <?php $i--; ?>
-                <div class="col-md-4 col-6 p-0 pb-3 card-mapel">
+                <div class="col-md-4 p-1 pb-3 card-mapel">
                     {{-- card --}}
                     <div class="card m-0" style="width: 100%; height:100%;">
                         <h5 class="card-header"><b>{{ $m->mapel }}</b></h5>
-                        <div class="card-body" style="padding:1vw;">
+                        <div class="card-body p-3" style="padding:1vw;">
                             <h5 class="card-title" style=""><b>{{ $m->nama_nilai }}</b></h5>
                             <p class="card-text text-muted">Date: <span>{{ date('d-m-Y', strtotime($m->tanggal_mapel)) }}</span> | <span>{{ $m->kelas->nama_kelas }}</span></p>
                             <div class="btn-card d-flex" style="justify-content:space-between;">

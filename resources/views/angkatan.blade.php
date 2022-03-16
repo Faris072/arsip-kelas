@@ -84,7 +84,7 @@
         <div class="row d-flex p-3" style="justify-content:space-between;">
             @foreach ($datas as $data)
                 @if($data->angkatan == $akt->angkatan)
-                <div class="col-md-4 col-6 p-0 pb-3">
+                <div class="col-md-4 p-1 pb-3">
                     {{-- card --}}
                     <div class="card m-0" style="width: 100%; height:100%;">
                         @if($data->foto_kelas)
@@ -92,7 +92,7 @@
                         @else
                         <img class="card-img-top" width="250px" height="200px" src="/storage/fotokelas/default.jpg" alt="Card image cap">
                         @endif
-                        <div class="card-body" style="padding:1vw;">
+                        <div class="card-body p-3" style="padding:1vw;">
                             <h5 class="card-title" style=""><b>{{ $data->nama_kelas }}</b></h5>
                             <p class="card-text"><span>{{ $data->angkatan }}</span></p>
                             <div class="btn-card d-flex" style="justify-content:space-between;">

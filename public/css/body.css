@@ -213,6 +213,13 @@ body {
     border-radius: 3px;
     padding-top: 15px;
     color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.wrap-kategori:hover{
     box-shadow: 0px 0px 10px -0px rgba(0, 0, 0, 0.5);
 }
 
