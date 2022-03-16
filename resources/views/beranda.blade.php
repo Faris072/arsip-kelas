@@ -23,11 +23,11 @@
     @if ($n->id_mapel == $loopnilai || $i == 6)
 
     @else
-    <div class="col-md-4 col-6 p-0 pb-3 card-nilai">
+    <div class="col-md-4 p-0 pb-3 card-nilai">
         {{-- card --}}
         <div class="card m-0" style="width: 100%; height:100%;">
             <h5 class="card-header"><b>{{ $n->mapel }}</b></h5>
-            <div class="card-body" style="padding:1vw;">
+            <div class="card-body p-3" style="padding:1vw;">
                 <h5 class="card-title" style=""><b>{{ $n->nama_nilai }}</b></h5>
                 <p class="card-text text-muted">Date:
                     <span>{{ date('d-m-Y', strtotime($n->tanggal_mapel)) }}</span> |
@@ -88,11 +88,11 @@
     @foreach ($mapel as $m)
     {{-- @dd($m->id_kelas) --}}
         <?php $i--; ?>
-        <div class="col-md-4 col-6 p-0 pb-3 card-mapel">
+        <div class="col-md-4 p-0 pb-3 card-mapel">
             {{-- card --}}
             <div class="card m-0" style="width: 100%; height:100%;">
                 <h5 class="card-header"><b>{{ $m->mapel }}</b></h5>
-                <div class="card-body" style="padding:1vw;">
+                <div class="card-body p-3" style="padding:1vw;">
                     <h5 class="card-title" style=""><b>{{ $m->nama_nilai }}</b></h5>
                     <p class="card-text text-muted">Date:
                         <span>{{ date('d-m-Y', strtotime($m->tanggal_mapel)) }}</span> |
@@ -147,7 +147,7 @@
 </div>
 <div class="row d-flex p-3" style="justify-content:space-between;">
     @foreach ($datas as $data)
-        <div class="col-md-4 col-6 p-0 pb-3 card-kelas">
+        <div class="col-md-4 p-0 pb-3 card-kelas">
             {{-- card --}}
             <div class="card m-0" style="width: 100%; height:100%;">
             @if ($data->foto_kelas)
@@ -157,7 +157,7 @@
             <img class="card-img-top" width="250px" height="200px"
                 src="/storage/fotokelas/default.jpg" alt="Card image cap">
             @endif
-                <div class="card-body" style="padding:1vw;">
+                <div class="card-body p-3" style="padding:1vw;">
                     <h5 class="card-title" style=""><b>{{ $data->nama_kelas }}</b></h5>
                     <p class="card-text"><span>{{ $data->angkatan }}</span></p>
                     <div class="btn-card d-flex" style="justify-content:space-between;">

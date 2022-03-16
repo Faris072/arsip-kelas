@@ -118,6 +118,16 @@
                     <form action="/auth/login" method="POST">
                         @csrf
                         <center><h4><b>Login Arsip Kelas</b></h4></center>
+                        @if (session()->get('loginError'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Email atau password anda salah!</strong>
+                            <br>
+                            Jika anda belum mempunyai akun, silahkan register <a href="/auth/create" target="_blank">di sini.</a>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        @endif
                         <br>
                         <input type="email" class="form-control" name="email" placeholder="email">
                         <br>
